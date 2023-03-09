@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/dl_frag_zjd_yzt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/supl_frag_zjd_yzt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="200dp"
+        sothree:umanoShadowHeight="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cl_frag_zjd_yzt_map">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map_frag_zjd_yzt_zjdgl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:id="@+id/rl_frag_zjd_yzt_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/mapback"
+                android:transitionName="location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/bt_frag_zjd_yzt_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:onClick="showMyLocation"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/login_home" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="12dp"
+                android:padding="3dp"
+                android:id="@+id/rl_frag_zjd_yzt_point"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mapback"
+                android:transitionName="location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--                button_selector-->
+                <ImageButton
+                    android:id="@+id/bt_frag_zjd_yzt_point"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:onClick="showMyLocation"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/button_selector_active_src_point" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:padding="3dp"
+                android:id="@+id/rl_frag_zjd_yzt_kuang"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mapback"
+                android:transitionName="location"
+                app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjd_yzt_point"
+                app:layout_constraintEnd_toEndOf="parent">
+                <!--                button_selector-->
+                <ImageButton
+                    android:id="@+id/bt_frag_zjd_yzt_kuang"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:onClick="showMyLocation"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/button_selector_active_src_kuang" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:padding="3dp"
+                android:id="@+id/rl_frag_zjd_yzt_search"
+                app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjd_yzt_kuang"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mapback"
+                android:transitionName="location"
+                app:layout_constraintEnd_toEndOf="parent">
+                <!--                button_selector-->
+                <ImageButton
+                    android:id="@+id/bt_frag_zjd_yzt_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:onClick="showMyLocation"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search_black" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_frag_zjd_yzt_clear"
+                android:padding="3dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/mapback"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjd_yzt_search">
+                <!--                android:onClick="clearClick"-->
+                <ImageButton
+                    android:id="@+id/bt_frag_zjd_yzt_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clear_icon" />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--点查-->
+            <LinearLayout
+                android:id="@+id/map_point_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/point_map_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextColor="@color/black">
+
+                </com.google.android.material.tabs.TabLayout>
+                <!--android:background="@color/bg_gray"-->
+                <com.jymj.zhglxt.widget.NoScrollViewPager
+                    android:id="@+id/point_map_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.jymj.zhglxt.widget.NoScrollViewPager>
+
+
+            </LinearLayout>
+            <!--框查-->
+            <LinearLayout
+                android:id="@+id/map_frame_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/frame_map_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:tabIndicatorColor="@color/colorPrimary"
+                        app:tabSelectedTextColor="@color/colorPrimary"
+                        app:tabTextColor="@color/black"></com.google.android.material.tabs.TabLayout>
+
+                    <Button
+                        android:id="@+id/frame_toPDF"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:text="导出"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+
+                <!--android:background="@color/bg_gray"-->
+                <com.jymj.zhglxt.widget.NoScrollViewPager
+                    android:id="@+id/frame_map_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.jymj.zhglxt.widget.NoScrollViewPager>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <!--左边抽屉菜单-->
+    <RelativeLayout
+        android:id="@+id/rl_frag_zjd_yzt_right"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/white">
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

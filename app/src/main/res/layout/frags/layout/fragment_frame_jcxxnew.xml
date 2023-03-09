@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/kxxyjbg_drawer_layout"
+    android:background="@color/white"
+    tools:context=".zjd.fragment.FrameJCXXNewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        com.jymj.hczzhglxt.widget.MyScrollView-->
+        <ScrollView
+            android:id="@+id/kxxyjbg_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/baobaiobag"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_10"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_kxxfxbg_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="黄村镇综合管理系统"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="可 行 性 研 究 报 告"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_txxyjbg_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:text="生成日期  2019.04.27 "
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!--基础信息-->
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/frame_scrool0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/title_shape"
+                        android:text="一、基础信息"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+                <!--基本情况-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="基本情况"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_jbqk_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_jbqk_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_jbqk_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="涉及村："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_sjc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="某某村" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="宅基地宗数："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_zjdzs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx宗" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="宅基地建筑总面积："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_zjdjzmj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx㎡" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="宅基地占地总面积："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_zjdzdmj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx㎡" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总人口数："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_zrks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx人" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总户数："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_zhs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx户" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="户均宅基地总面积："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_rjzjdzmj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx㎡" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="流动人口："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_ldrk_rk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx㎡" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="流动面积："
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/frame_jcxxnew_ldrk_mj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx人" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="horizontal">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/frame_nfn_pct"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--房屋信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool2"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal"
+                    android:background="#409EFF"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:text="房屋信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_fwxx_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_fwxx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/arrow_down_icon"
+                        android:padding="8dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_fwxx_ll"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:padding="@dimen/dp_10"
+                        android:id="@+id/frame_fwxx_bct"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内房屋信息统计图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/frame_fwxx_pct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内宅基地信息统计图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <HorizontalScrollView
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="#78E3FE"
+                                android:layout_marginTop="10dp"
+                                >
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="村名" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:text="四分及以下" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="占比" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:text="四分-六分" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="占比" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:text="六分-八分" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="占比" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:text="八分及以上" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="占比" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    style="@style/table_title_textview"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:text="总计" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:descendantFocusability="blocksDescendants"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/frame_fwxx_rlv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+                <!--土现信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool3"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="土现信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_txxx_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_txxx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_txxx_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/frame_txxx_bct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:padding="@dimen/dp_10"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内土地利用现状统计图"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        />
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/frame_txxx_pct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="一级分类占比统计图"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="一级分类"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="二级分类"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="小计"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="合计"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+                                <RelativeLayout
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/frame_txxx_rlv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+                <!--土规信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool4"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="土规信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_tgxx_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_tgxx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_tgxx_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/frame_tgxx_bct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:padding="@dimen/dp_10"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内土规统计图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:fillViewport="true"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="村名"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="类型"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="面积"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="合计"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+                                <RelativeLayout
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/frame_tgxx_rlv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+                <!--非宅信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool5"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="非宅信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_fzxx_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_fzxx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_fzxx_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/frame_fzxx_bct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:padding="@dimen/dp_10"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内非宅统计图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:fillViewport="true"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="行业类型"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="占地面积"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="建筑面积"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        style="@style/title_textview"
+                                        android:text="数量"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+                                <RelativeLayout
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/frame_fzxx_rlv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+                <!--城规信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool6"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="城规信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_cgxx_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_cgxx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/frame_cgxx_zwxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无信息"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    />
+                <!--资源使用-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool7"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="资源使用"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_zysy_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_zysy_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_zysy_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/frame_zysy_pct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内土地资源占比饼状图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        >
+
+
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="类型" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="占比" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="面积" />
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/frame_zysy_rlv"
+                        >
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="待开发" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="待提升" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="国有建设用地" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="面积"
+                            android:background="#78E3FE"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_dkfmj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_dtsmj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_gymj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="占比"
+                            android:background="#78E3FE"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_dkfzb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_dtszb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_gyzb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="特交水" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="未开发" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="已开发" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="面积"
+                            android:background="#78E3FE"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_tjsmj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_wkfmj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_ykfmj"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="占比"
+                            android:background="#78E3FE"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_tjszb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_wkfzb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zysy_ykfzb"
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--流动人口-->
+
+                <LinearLayout
+                    android:id="@+id/frame_scrool8"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="流动人口"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/frame_jcxxnew_ldrk_mx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="查看明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_ldrk_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/arrow_down_icon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_ldrk_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/frame_ldrk_pct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="框选范围内土地资源占比饼状图"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        >
+
+
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="村名" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="人数" />
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/table_title_textview"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#78E3FE"
+                            android:text="占比" />
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/frame_ldrk_rlv"
+                            >
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--业务信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="10dp"
+                    >
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/title_shape"
+                        android:text="二、业务信息"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+                <!--宅基地管理信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal"
+                    android:background="#409EFF"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:text="宅基地管理信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        />
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_zjdgl_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/arrow_down_icon"
+                        android:padding="8dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_jcxxnew_zjdgl_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:id="@+id/frame_jcxxnew_zjdgl_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="申请"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_sq11"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="进行中:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_sq21"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="已完成:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_sq31"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="被驳回:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eeeeee"
+                        />
+                    <LinearLayout
+                        android:id="@+id/frame_jcxxnew_zjdgl_fj"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="翻建"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_fj11"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="进行中:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_fj21"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="已完成:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_fj31"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="被驳回:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eeeeee"
+                        />
+                    <LinearLayout
+                        android:id="@+id/frame_jcxxnew_zjdgl_lz"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="流转"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_lz11"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="进行中:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_lz21"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="已完成:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_lz31"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="被驳回:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eeeeee"
+                        />
+                    <LinearLayout
+                        android:id="@+id/frame_jcxxnew_zjdgl_tc"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="退出"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_tc11"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="进行中:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_tc21"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="已完成:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdgl_tc31"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="被驳回:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/frame_zjdxc_ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="宅基地违法巡查"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdxc_tv11"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="进行中:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/frame_zjdxc_tv21"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="已完成:0宗"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--环保监察信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal"
+                    android:background="#409EFF"
+                    android:layout_marginTop="1dp"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:text="环保监察信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_marginLeft="@dimen/dp_10"/>
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_hbjc_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/arrow_down_icon"
+                        android:padding="8dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_hbjc_ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/frame_hbjc_tv11"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="进行中:0宗"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/frame_hbjc_tv21"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="已完成:0宗"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal"
+                    android:background="#409EFF"
+                    android:layout_marginTop="1dp"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:text="宅基地巡查信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_marginLeft="@dimen/dp_10"/>
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_zjdxc_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/arrow_down_icon"
+                        android:padding="8dp"
+                        />
+                </LinearLayout>
+                <!--土地巡查信息-->
+                <LinearLayout
+                    android:id="@+id/frame_scrool12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:orientation="horizontal"
+                    android:background="#409EFF"
+                    android:layout_marginTop="1dp"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:text="土地巡查信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_marginLeft="@dimen/dp_10"/>
+                    <ImageView
+                        android:id="@+id/frame_jcxxnew_tdxc_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/arrow_down_icon"
+                        android:padding="8dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/frame_tdxc_l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/frame_tdxc_tv11"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="进行中:0宗"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/frame_tdxc_tv21"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="已完成:0宗"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/iv_kxxyjbg_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/button_bag_styles"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/ic_mulu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="目录"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/ll_kxxyjbg_left"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="目录"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_kxxyjbg_ml"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

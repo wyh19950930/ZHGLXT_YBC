@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/ll_item_tj"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tv_tj_cm"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="村名"
+        android:paddingLeft="4dp"
+        android:gravity="left" />
+
+    <TextView
+        android:id="@+id/tv_tj_lz"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="流转"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_tj_grzl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="个人租赁"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tv_tj_cjt"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="村集体"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tv_tj_hj"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="合计"
+        android:gravity="center" />
+    <LinearLayout
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:background="#F6F7FB"
+        android:gravity="center">
+        <ImageView
+            android:src="@drawable/back_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

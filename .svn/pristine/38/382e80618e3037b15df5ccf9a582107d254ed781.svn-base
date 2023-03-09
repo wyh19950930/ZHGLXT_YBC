@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dl_frag_zjdgl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<!--    xmlns:sothree="http://schemas.android.com/tools"-->
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoShadowHeight="4dp"
+        app:umanoAnchorPoint="0.39"
+        app:umanoFadeColor="#00ffffff"
+        android:gravity="bottom"
+        sothree:umanoOverlay="true"
+        android:background="@color/white"
+        android:id="@+id/supl_frag_zjdgl">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rjhj_cl_map_act">
+                <!--<ViewStub
+                android:id="@+id/vs_viewstub_sv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/item_map"/>-->
+                <com.amap.api.maps2d.MapView
+                    android:id="@+id/map_frag_zjdgl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <View
+                    android:background="@color/gray"
+                    android:id="@+id/view_frag_zjdgl_top"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:visibility="gone"
+                    android:id="@+id/tl_frag_zjd"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabBackground="@drawable/tablayout_green"
+                    app:tabMaxWidth="@dimen/dp_200"
+                    app:tabMinWidth="65dp"
+                    />
+                <com.google.android.material.tabs.TabLayout
+                    android:visibility="gone"
+                    android:id="@+id/tl_frag_cy"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabBackground="@drawable/tablayout_blue"
+                    app:tabMaxWidth="@dimen/dp_200"
+                    app:tabMinWidth="65dp"
+                    />
+                <!--<com.google.android.material.tabs.TabLayout
+                    app:tabMode="fixed"
+                    android:visibility="gone"
+                    android:id="@+id/tl_frag_tx"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabBackground="@drawable/tablayout_yellow"
+                    app:tabMaxWidth="@dimen/dp_200"
+                    app:tabMinWidth="65dp"
+                    />-->
+
+                <com.jymj.zhglxt.widget.tablayout.DropdownTabLayout
+                    app:tabMode="fixed"
+                    android:visibility="gone"
+                    android:id="@+id/tl_frag_tx"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabBackground="@drawable/tablayout_yellow"
+                    app:tabMaxWidth="@dimen/dp_200"
+                    app:tabMinWidth="65dp">
+
+                </com.jymj.zhglxt.widget.tablayout.DropdownTabLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:visibility="gone"
+                    android:id="@+id/tl_frag_shzl"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#ffffff"
+                    app:tabTextColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabBackground="@drawable/tablayout_red"
+                    app:tabMaxWidth="@dimen/dp_200"
+                    app:tabMinWidth="65dp"
+                    app:tabMode="scrollable"
+                    />
+                <!--<com.google.android.material.tabs.TabLayout
+                    app:tabBackground="@drawable/tablayout_item_pressed"
+                    android:background="@color/white"
+                    android:id="@+id/tl_frag_zjd"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />-->
+                <com.jymj.zhglxt.widget.zdybj.TuLiColorLayout
+                    android:id="@+id/tlcl_frag_zjdgl_tl"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/view_frag_zjdgl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/tv_frag_zjgl_rjhj_add"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="36sp"
+                    android:textColor="@color/red"
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <!--<RelativeLayout
+                    android:id="@+id/rl_frag_zjdgl_layer"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="52dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="layer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/bt_frag_zjdgl_layer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_layers" />
+                </RelativeLayout>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:overScrollMode="never"
+                    android:id="@+id/rlv_frag_zjdgl_tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/rl_all_icon_container"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/popback"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/rl_all_icon_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp">
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_layer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_layer"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/layers_icon"
+                            android:scaleType="fitCenter" />
+                        <!--            button_selector_active_src_layers-->
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_czsjsx"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_layer"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:padding="8dp"
+                            android:id="@+id/bt_frag_zjdgl_czsjsx"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/czsjsx" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_yzt"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_layer"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_yzt"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_yzt" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_yd"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_yzt"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_yd"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_yd" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_zjd"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_yd"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_zjd"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_zjd" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_cy"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_zjd"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_cy"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_qy" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_shzl"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/rl_frag_zjdgl_cy"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="layer">
+
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_shzl"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_shzl" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/tv_frag_zjdgl_add2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="36sp"
+                    android:textColor="@color/red"
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:id="@+id/rl_frag_zjdgl_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/bt_frag_zjdgl_location"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:onClick="showMyLocation"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/login_home" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/ll_point_frag_zjdgl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:padding="3dp"
+                        android:id="@+id/rl_frag_zjdgl_point"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_point"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_point" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_gddw_add"
+                        android:layout_marginTop="12dp"
+                        android:padding="3dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_gddw_add"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_gddw_add" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:padding="3dp"
+                        android:id="@+id/rl_frag_zjdgl_add"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_point"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_add"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gddw_add_black" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:padding="3dp"
+                        android:id="@+id/rl_frag_zjdgl_update"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_add"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_update"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gddw_update_black" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:padding="3dp"
+                        android:id="@+id/rl_frag_zjdgl_kuang"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_update"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_kuang"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:onClick="showMyLocation"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/button_selector_active_src_kuang" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:padding="3dp"
+                        android:id="@+id/rl_frag_zjdgl_search"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_kuang"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/mapback"
+                        android:transitionName="location"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <!--                button_selector-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_search"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/search_black" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_suan_ctglmk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_search">
+
+                        <ImageButton
+                            android:id="@+id/bt_suan_ctglmk"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:padding="9dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ce" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_clear"
+                        android:padding="3dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_suan_ctglmk">
+                        <!--                android:onClick="clearClick"-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_clear"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/clear_icon" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_frag_zjdgl_tjfx"
+                        android:padding="3dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rl_frag_zjdgl_clear">
+                        <!--                android:onClick="clearClick"-->
+                        <ImageButton
+                            android:id="@+id/bt_frag_zjdgl_tjfx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_selector"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_tjfx" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_frag_zjdgl_tuli"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/mapback"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_tuli"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/id_frag_zjdgl_tuli"
+                    android:layout_width="100dp"
+                    android:layout_height="250dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/mapback"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_point_frag_zjdgl"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="图例" />
+
+                        <ImageView
+                            android:id="@+id/iv_frag_zjdgl_suo_fang"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/ic_suofang" />
+                    </LinearLayout>
+
+                    <com.jymj.zhglxt.widget.zdybj.TuLiColorVerticalLayout
+                        android:id="@+id/tlcl_frag_zjdgl_tl_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+<!--        app:umanoScrollableView="@+id/sv_dddddddd"-->
+        <!--            android:fillViewport="true"-->
+       <!-- <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_dddddddd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <com.jymj.zhglxt.widget.MyViewPager
+                    android:id="@+id/vp_frag_yzt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <!--        宅基地-->
+                <LinearLayout
+                    android:id="@+id/ll_frag_zjd"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dcdcdc"/>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_frag_zjdgl_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tab_sp"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_sp_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tab_sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="审批"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:id="@+id/view_frag_zjdgl_tab_sp"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tab_sp"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tab_fj"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_fj_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tab_fj"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="翻建"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_tab_fj"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tab_fj"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tab_xc"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_xc_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tab_xc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="巡查"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_tab_xc"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tab_xc"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tab_cz"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_cz_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tab_cz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="出租"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_tab_cz"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tab_cz"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.jymj.zhglxt.widget.MyViewPager
+                        android:id="@+id/vp_frag_zjd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <!--        产业-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_frag_cy"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dcdcdc"/>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_frag_zjdgl_nyyq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_nyyq"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_sp_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_nyyq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="农业园区"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:id="@+id/view_frag_zjdgl_nyyq"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_nyyq"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_cyyq"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_fj_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_cyyq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="产业园区"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_cyyq"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_cyyq"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_wl"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_xc_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_wl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="文旅"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_wl"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_wl"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_dkf"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_cz_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_dkf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="待开发"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_dkf"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_dkf"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+<!--                    com.jymj.newhczglxy.widget.NoScrollViewPager-->
+                    <com.jymj.zhglxt.widget.MyViewPager
+                        android:id="@+id/vp_frag_cy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <!--        土现-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_frag_tx"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dcdcdc"/>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_frag_zjdgl_tdsy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tdsy"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_sp_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tdsy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="土地使用"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:id="@+id/view_frag_zjdgl_tdsy"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tdsy"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_tdqs"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_fj_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_tdqs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="土地权属"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_tdqs"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_tdqs"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <com.jymj.zhglxt.widget.MyViewPager
+                        android:id="@+id/vp_frag_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <!--        社会治理-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_frag_shzl"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dcdcdc"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_frag_shzl_rjhj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+<!--                        app:tabIndicatorColor="@android:color/transparent"-->
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tlt_frag_zjdgl_rjhj"
+                            android:elevation="2dp"
+                            app:tabIndicatorColor="#4CA2FE"
+                            app:tabIndicatorHeight="2dp"
+                            app:tabSelectedTextColor="#4CA2FE"
+                            app:tabTextColor="#666666"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:tabMaxWidth="200dp"
+                            app:tabMinWidth="65dp"
+                            />
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/rlt_frag_shzl_rjhj"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_sp_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_shzl_rjhj"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人居环境"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:id="@+id/view_frag_shzl_rjhj"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_shzl_rjhj"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/rlt_frag_shzl_gddw"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_fj_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_shzl_gddw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="固定点位"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_shzl_gddw"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_shzl_gddw"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_frag_zjdgl_ldrk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_ldrk"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_sp_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_ldrk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="流动人口"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:id="@+id/view_frag_zjdgl_ldrk"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_ldrk"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_rjhj"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_fj_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_rjhj"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人居环境"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_rjhj"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_rjhj"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlt_frag_zjdgl_wfxc"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/zjd_xc_background">
+
+                            <TextView
+                                android:id="@+id/tv_frag_zjdgl_wfxc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="违法巡查"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <View
+                                android:visibility="gone"
+                                android:id="@+id/view_frag_zjdgl_wfxc"
+                                android:layout_width="30dp"
+                                android:layout_height="2.5dp"
+                                android:background="@color/white"
+                                android:layout_below="@+id/tv_frag_zjdgl_wfxc"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+<!--                    com.jymj.newhczglxy.widget.NoScrollViewPager-->
+                    <com.jymj.zhglxt.widget.MyViewPager
+                        android:id="@+id/vp_frag_shzl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="图层选择"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_yxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/image_yxt" />
+
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_yxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+                                <!--                                android:background="#4ca2fc"  ic_check_4ca2fc-->
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv__frag_layer_yxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="影像图"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_frag_layer_tdt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/tdt_bzdt" />
+                                <!--                                image_tdly-->
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_tdt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+
+                                    android:visibility="gone" />
+                                <!--                                android:src="@drawable/ic_check_4ca2fc"-->
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv__frag_layer_tdt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="天地图"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_dt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/osm_bzdt" />
+<!--                                image_yxt-->
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_dt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+                                <!--                                android:background="#4ca2fc"  ic_check_4ca2fc-->
+
+                            </RelativeLayout>
+<!--                            标准地图-->
+                            <TextView
+                                android:id="@+id/tv__frag_layer_dt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="底图"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_gtgh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/image_gzfa" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_gtgh"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv__frag_layer_gtgh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="村庄规划"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_tdlyxz"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/image_tdly" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_tdlyxz"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+
+                                    android:visibility="gone" />
+                                <!--                                android:src="@drawable/ic_check_4ca2fc"-->
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv__frag_layer_tdlyxz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="土地利用现状"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_jjfb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/icon_jzdj" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:id="@+id/iv_frag_layer_jjfb"
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="基准地价"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frag_layer_cyfz"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/icon_cyyq" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:id="@+id/iv_frag_layer_cyfz"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+                                <!--                                android:src="@drawable/ic_check_4ca2fc"-->
+                            </RelativeLayout>
+<!--                            产业园区-->
+                            <TextView
+                                android:id="@+id/tv__frag_layer_cyfz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="POI"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="invisible"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/image_gzfa" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="村庄规划"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="invisible"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/icon_jzdj" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary1" />
+                                <ImageView
+                                    android:layout_gravity="bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/border_radius_primary"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="基准地价"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_frag_zjdgl_sjyzt"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="项目"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="住有所居"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="产业发展"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="基础设施"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="拆除腾退"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="生态建设"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:drawableTop="@drawable/layer_sj_selector"
+                                android:text="公共服务"
+                                android:textColor="@drawable/layer_selector_textcolor"
+                                />
+                            <View
+                                android:layout_weight="2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"/>
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_frag_layer_sj"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </RelativeLayout>
+                    </LinearLayout>-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="地图显示（一张图）"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_frag_layer_yzt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                        <include
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/ice_layer_yzt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/item_yzt_rbt_include" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <!--<LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_frag_cwtd_lntz"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="拆违腾地（历年台账）"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <include
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_cwtd_include"
+                    />
+
+            </LinearLayout>-->
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

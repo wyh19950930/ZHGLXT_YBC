@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_zjd_cyyq_gyyq"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rjhj_zg_rlt"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/tv_item_zjd_cyyq_gyyq_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未下发"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2.5dp"
+            />
+        <View
+            android:id="@+id/view_item_zjd_cyyq_gyyq_tab"
+            android:layout_width="15dp"
+            android:layout_height="2.5dp"
+            android:background="@drawable/mapback_ffffff"
+            android:layout_below="@+id/tv_item_zjd_cyyq_gyyq_tab"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"/>
+        <TextView
+            android:id="@+id/tv_item_zjd_cyyq_gyyq_wxf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="158"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="1.5dp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

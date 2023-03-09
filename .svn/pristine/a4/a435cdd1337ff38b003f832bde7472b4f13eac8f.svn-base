@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<!--    android:id="@+id/item_cwtd_lnxz"-->
+    <com.jymj.zhglxt.widget.FlowRadioGroup
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/item_cwtd_lnxz_2017tz"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="2017年台账"
+            android:textSize="12dp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+        <CheckBox
+            android:id="@+id/item_cwtd_lnxz_2018tz"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="2018年台账"
+            android:textSize="12dp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+        <CheckBox
+            android:id="@+id/item_cwtd_lnxz_2019tz"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="2019年台账"
+            android:textSize="12dp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+        <CheckBox
+            android:id="@+id/item_cwtd_lnxz_2020tz"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="2020年台账"
+            android:textSize="12dp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+
+
+    </com.jymj.zhglxt.widget.FlowRadioGroup>
+</LinearLayout>

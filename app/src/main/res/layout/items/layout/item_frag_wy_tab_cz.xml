@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_wy_tab_cz"
+        android:minHeight="35dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_item_wy_tab_cz_cqr"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="产权人"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_item_wy_tab_cz_mph"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="门牌号"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_item_wy_tab_cz_area"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="面积（㎡）"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_item_wy_tab_cz_time"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_item_wy_tab_cz_status"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="共9间/修5间"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:background="#ECA00E"
+            android:gravity="center"
+            android:layout_marginRight="30dp"/>
+
+
+        </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"
+        android:layout_marginLeft="14dp"/>
+
+
+</LinearLayout>

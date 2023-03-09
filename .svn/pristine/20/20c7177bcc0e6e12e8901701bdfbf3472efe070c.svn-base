@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--选择器-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--按下状态显示样式-->
+    <!--<item android:state_pressed="true">
+        &lt;!&ndash;分层&ndash;&gt;
+        <layer-list>
+            &lt;!&ndash;分层 第一层&ndash;&gt;
+            <item android:bottom="8dp">
+                <shape>
+                    <solid android:color="#ffaaaaaa" />
+                </shape>
+            </item>
+            &lt;!&ndash;分层 第二层&ndash;&gt;
+            <item>
+                <shape>
+                    <corners android:bottomLeftRadius="4dp"
+                        android:bottomRightRadius="4dp"
+                        android:topLeftRadius="1dp"
+                        android:topRightRadius="1dp" />
+                    <solid android:color="#ffaaaaaa" />
+                    <padding android:bottom="1dp"
+                        android:left="1dp"
+                        android:right="1dp"
+                        android:top="0dp" />
+                </shape>
+            </item>
+            &lt;!&ndash;分层 第三层&ndash;&gt;
+            <item>
+                <shape>
+                    <corners android:bottomLeftRadius="3dp"
+                        android:bottomRightRadius="3dp"
+                        android:topLeftRadius="1dp"
+                        android:topRightRadius="1dp" />
+                    <solid android:color="@android:color/holo_green_light" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>-->
+<!--    正常状态显示样式-->
+    <item>
+        <layer-list>
+
+            <item >
+                <shape>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/white"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <item >
+                <shape>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/white"/>
+                    <corners android:radius="5dp"/>
+                </shape>
+            </item>
+
+
+
+        </layer-list>
+    </item>
+</selector>

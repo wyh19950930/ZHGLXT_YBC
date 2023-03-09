@@ -1,0 +1,76 @@
+package com.jymj.zhglxt.zjd.contract
+
+import com.jymj.zhglxt.rjhj.bean.yl.tdly.TdlyDetail
+import com.jymj.zhglxt.zjd.bean.bcjc.BcTdlyEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BczdqkEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BczhandqkEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BczzdqkEntity
+import com.jymj.zhglxt.zjd.bean.tdxg.GhVO
+import com.jymj.zhglxt.zjd.bean.tdxg.QsVO
+import com.jymj.zhglxt.zjd.bean.tdxg.TdlyVO
+import com.jymj.zhglxt.zjd.bean.tdxg.YztSktVO
+import com.jymj.zhglxt.zjd.bean.yzt.tx.TxPolygonEntity
+import com.jymj.zhglxt.zjd.bean.zjdyd.ApplyLandEntity
+import com.setsuna.common.base.BaseModel
+import com.setsuna.common.base.BasePresenter
+import com.setsuna.common.base.BaseView
+
+interface TdlyContract {
+    /*interface Model:BaseModel{
+//        fun getCyfz(proId:String):String
+    }*/
+    interface View:BaseView{
+        fun onPolygonTx(list: MutableList<TdlyVO>)
+        fun onPolygonDetailTx(tdlyDetail: List<TdlyVO>)
+        fun onPolygonSkt(list: MutableList<YztSktVO>)
+        fun onPolygonDetailSkt(tdlyDetail: List<YztSktVO>)
+        fun onPolygonQs(list: MutableList<QsVO>)
+        fun onPolygonDetailQs(tdlyDetail: List<QsVO>)
+        fun onPolygonGh(list: MutableList<GhVO>)
+        fun onPolygonDetailGh(tdlyDetail: List<GhVO>)
+        fun onBcjcGetTdly(tdlyDetail: BcTdlyEntity)
+        fun onBcjcTdlySave(tdlyDetail: String)
+        fun onBcjcTdlyUpdate(tdlyDetail: String)
+        fun onBcjcYears(tdlyDetail: List<String>)
+
+
+        fun returnBcjcAddZhengdqk(msg: String)
+        fun returnBcjcUpdateZhengdqk(msg: String)
+        fun returnBchcZhengdqk(msg: List<BczzdqkEntity>)
+        fun returnBchcZhengdqkAll(msg: List<BczzdqkEntity>)
+        fun returnBchcGetKnzd(msg: List<BczzdqkEntity>)//BczdqkEntity
+        fun returnBcjcAddZhandqk(msg: String)
+        fun returnBcjcUpdateZhandqk(msg: String)
+        fun returnBchcZhandqk(msg: List<BczhandqkEntity>)
+        fun returnBchcZhandqkAll(msg: List<BczhandqkEntity>)
+        fun returnBchcGetInzhand(msg: List<BczhandqkEntity>)
+    }
+    companion object {
+        abstract class Presenter:BasePresenter<View,BaseModel>(){
+            abstract fun getTxPolygon(points: String)
+            abstract fun getTxPolygonDetail(points: String, pageSize: Int, currPage: Int)
+            abstract fun getSktPolygon(points: String)
+            abstract fun getSktPolygonDetail(points: String, pageSize: Int, currPage: Int)
+            abstract fun getQsPolygon(points: String)
+            abstract fun getQsPolygonDetail(points: String, pageSize: Int, currPage: Int)
+            abstract fun getGhPolygon(points: String)
+            abstract fun getGhPolygonDetail(points: String, pageSize: Int, currPage: Int)
+            abstract fun getBcjcGetTdly(code: String,year: String)
+            abstract fun getBcjcTdlySave(bcTdlyEntity : BcTdlyEntity)
+            abstract fun getBcjcTdlyUpdate(bcTdlyEntity : BcTdlyEntity)
+            abstract fun getBcjcYears()
+
+
+            abstract fun getBcjcAddZhengdqk(edtity: ArrayList<BczzdqkEntity>)
+            abstract fun getBcjcUpdateZhengdqk(edtity: ArrayList<BczzdqkEntity>)
+            abstract fun getBchcZhengdqk(code:String,years:List<String>)
+            abstract fun getBchcZhengdqkAll(code:String,years:List<String>)
+            abstract fun getBchcGetKnzd(code:String,years:List<String>)
+            abstract fun getBcjcAddZhandqk(edtity: BczhandqkEntity)
+            abstract fun getBcjcUpdateZhandqk(edtity: BczhandqkEntity)
+            abstract fun getBchcZhandqk(code:String,years:List<String>)
+            abstract fun getBchcZhandqkAll(code:String,years:List<String>)
+            abstract fun getBchcGetInzhand(code:String,years:List<String>)
+        }
+    }
+}

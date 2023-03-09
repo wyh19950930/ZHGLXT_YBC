@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_environmental2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+          android:background="@drawable/popback"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:textStyle="bold"
+              android:textColor="@color/black"
+              android:textSize="18sp"
+              android:gravity="center"
+              android:text="房屋"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"/>
+          <View
+              android:background="@color/gray"
+              android:layout_width="match_parent"
+              android:layout_height="0.2dp"/>
+          <LinearLayout
+              android:id="@+id/ll_zhen_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="问题类型:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <Spinner
+                  android:spinnerMode="dialog"
+                  android:id="@+id/sp_pop_fjxc_zg"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:minHeight="50dp"
+              android:id="@+id/ll_cun_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="备注:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <EditText
+                  android:text="备注"
+                  android:id="@+id/tv_cun_fan_jian_remark"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <TextView
+              android:textSize="15sp"
+              android:paddingLeft="10dp"
+              android:gravity="center_vertical"
+              android:textColor="@color/black"
+              android:text="查看文件"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rlv_fan_zgupfile"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <!--<TextView
+
+          android:text="+"
+          android:layout_width="100dp"
+          android:layout_height="100dp"/>-->
+          <LinearLayout
+              android:gravity="center"
+              android:background="@drawable/bg_item_photo"
+              android:layout_width="100dp"
+              android:layout_height="100dp">
+              <TextView
+                  android:textColor="@color/red"
+                  android:id="@+id/tv_fan_zg_upfile_jia"
+                  android:textSize="32dp"
+                  android:text="+"
+                  android:gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/ll_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/ll_pop_environmental2">
+
+              <Button
+                  android:id="@+id/bt_close_fan_jian_zg"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/gray"
+                  android:text="关闭" />
+
+              <Button
+                  android:id="@+id/bt_upload_fan_jian_zg"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/blue"
+                  android:text="下发"
+                  android:textColor="@color/white" />
+              <!--            确定-->
+          </LinearLayout>
+      </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

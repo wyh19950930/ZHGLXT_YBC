@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.jymj.zhglxt.widget.BubbleView
+        android:visibility="gone"
+        android:id="@+id/bv_view_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+<RelativeLayout
+    android:id="@+id/rl_item_marker2_yuan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/iv_item_marker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_hbjc_dcl_zs"/>
+<!--    colorPrimary-->
+    <TextView
+        android:gravity="center"
+        android:textSize="13sp"
+        android:layout_centerInParent="true"
+        android:id="@+id/item_marker_position1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp"
+        android:textStyle="bold"
+        android:text="速度"
+        />
+</RelativeLayout>
+
+</LinearLayout>

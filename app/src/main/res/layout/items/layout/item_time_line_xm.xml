@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_item_time_line_xm"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view_item_time_line_xm_start"
+            android:layout_marginTop="7dp"
+            android:background="#01BA76"
+            android:layout_width="25dp"
+            android:layout_height="2.5dp"/>
+        <Button
+            android:layout_toRightOf="@+id/view_item_time_line_xm_start"
+            android:id="@+id/iv_item_time_line_xm_name"
+            android:background="@drawable/bt_actiive_xmjz_green"
+            android:layout_width="14dp"
+            android:layout_height="14dp"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_item_time_line_xm_name"
+            android:id="@+id/tv_item_time_line_xm_name"
+            android:layout_marginTop="7.5dp"
+            android:text="选中"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_item_time_line_xm_name"
+            android:id="@+id/tv_item_time_line_xm_time"
+            android:layout_marginTop="1.5dp"
+            android:text="xxx"
+            android:textColor="#999999"
+            android:textSize="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_toRightOf="@+id/iv_item_time_line_xm_name"
+            android:id="@+id/view_item_time_line_xm_end"
+            android:layout_marginTop="7dp"
+            android:background="#01BA76"
+            android:layout_width="25dp"
+            android:layout_height="2.5dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

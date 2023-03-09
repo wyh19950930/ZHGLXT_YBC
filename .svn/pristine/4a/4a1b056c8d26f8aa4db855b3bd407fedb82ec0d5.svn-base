@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="270dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_ncp"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="主要种植农产品" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_mj"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="面积(亩)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_cb"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="成本(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_rg"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="人工(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_zz"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="种子(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_fl"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="肥料(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_ny"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="农药(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_jxzy"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="机械作业(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_zxssr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="总销售收入(元)" />
+
+</LinearLayout>

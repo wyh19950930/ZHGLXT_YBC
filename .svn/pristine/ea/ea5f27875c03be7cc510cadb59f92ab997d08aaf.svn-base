@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="80dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/item_bcjc_zhengdqk_year"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="2022"/>
+  
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_zdsj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_zdmj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_gyzdmj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_gybcf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_kfmj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_kfbcf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_qtmj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_zhengdqk_qtbcf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/ll_act_tjfx"
+    tools:context="com.jymj.zhglxt.zjd.activity.yzt.TjfxActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/ic_act_tjfx_back"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_left_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="统计分析"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <com.jymj.zhglxt.widget.zdybj.MeTitleLayout1
+        app:attr_name="要素图层"
+        app:attr_color="#12C483"
+        app:attr_isshow_right="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_act_tjfx_qylx"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:id="@+id/et_act_tjfx_cj"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="请选择村界"
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/inverted_triangle_style_green" />
+            <!--            inverted_triangle_style_grey-->
+        </LinearLayout>
+        <View
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:id="@+id/ll_act_tjfx_qttc"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:id="@+id/et_act_qygl_detail_qzcsj"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="请选择其他图层"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/inverted_triangle_style_green" />
+        </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc"/>
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reset_option_icon"
+            android:layout_gravity="center"
+            android:padding="11dp"/>
+
+    </LinearLayout>
+    <View
+        android:background="#F6F7FB"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <com.jymj.zhglxt.widget.zdybj.MeTitleLayout1
+        app:attr_name="图层列表"
+        app:attr_color="#12C483"
+        app:attr_isshow_right="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.jymj.zhglxt.widget.zdybj.TagCloudLayout
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tcl_act_tjfx_tclb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_act_tjfx_yjfx"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/bt_actiive_12c483"
+        android:layout_margin="15dp"
+        android:text="一键分析"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"/>
+</LinearLayout>

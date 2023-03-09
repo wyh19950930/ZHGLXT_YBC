@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/item_frame_rkmx_top"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_frame_rkmx_cm"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="村名" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_xm"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/gantta_list_textview_width"
+        android:layout_height="match_parent"
+        android:text="姓名" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_sex"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="性别" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_age"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="年龄" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_hb"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="户别" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_shgx"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="社会关系" />
+    <TextView
+        android:id="@+id/item_frame_rkmx_address"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:text="地址" />
+
+</LinearLayout>

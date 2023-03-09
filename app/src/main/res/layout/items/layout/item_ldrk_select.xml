@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/ll_ldrk_select_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_ldrk_select_xm"
+            style="@style/table_title_textview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="姓名" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_xb"
+            style="@style/table_title_textview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="性别" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_hzxm"
+            style="@style/table_title_textview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="户主姓名" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_jzdz"
+            style="@style/table_title_textview"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="居住地址" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_szc"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="所在村" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_hylx"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="行业类型" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_gzdz"
+            style="@style/table_title_textview"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="工作地址" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_whcd"
+            style="@style/table_title_textview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="文化程度" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_sfzh"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="身份证号" />
+        <TextView
+            android:id="@+id/tv_ldrk_select_jzzh"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="居住证号" />
+        <!-- <TextView
+             android:textColor="@color/blue"
+             android:id="@+id/tv_ldrk_select_update"
+             style="@style/table_title_textview"
+             android:layout_width="50dp"
+             android:layout_height="match_parent"
+             android:text="修改" />-->
+        <TextView
+            android:textColor="@color/red"
+            android:id="@+id/tv_ldrk_select_delete"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="删除" />
+    </LinearLayout>
+
+</LinearLayout>

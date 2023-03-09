@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:id="@+id/tvNameRenItem"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvSexRenItem"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvNameRenItem"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvAgeRenItem"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvSexRenItem"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvRelRenItem"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvAgeRenItem"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvHuRenItem"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvRelRenItem"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPIDRenItem"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvHuRenItem"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tvWorkRenItem"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/tvPIDRenItem"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

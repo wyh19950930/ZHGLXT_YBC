@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_item_yzt_dc_czlb"
+        android:background="#A9BEE4"
+        android:minHeight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_item_yzt_dc_czlb"
+            android:src="@drawable/back_right_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_width="15dp"
+            android:layout_height="15dp"/>
+        <TextView
+            android:id="@+id/tv_item_yzt_dc_czlb_xzqymc"
+            android:gravity="center"
+            android:text="现状企业名称"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_item_yzt_dc_czlb_xzlxr"
+            android:gravity="center"
+            android:text="行政联系人"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_item_yzt_dc_czlb_zcdz"
+            android:gravity="center"
+            android:text="注册地址"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_item_yzt_dc_czlb_jyzt"
+            android:gravity="center"
+            android:text="经营状态"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_item_yzt_dc_czlb1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.jymj.zhglxt.widget.zdybj.TextListLayout
+            android:id="@+id/tll_item_yzt_dc_czlb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.5dp"
+            android:layout_marginRight="17dp" />
+    </LinearLayout>
+
+</LinearLayout>

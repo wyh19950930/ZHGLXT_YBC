@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swlt_tv_item_bcqh_ncpadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="种植农产品"
+                    android:textColor="#333333"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_zzncp"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="面积"
+                    android:textColor="#333333"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_mj"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="成本（元）"
+                    android:textColor="#333333"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_cb"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="人工（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_rg"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="种子（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_zz"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="肥料（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_fl"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="农药（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_ny"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="机械作业（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_jxzy"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="总销售收入（元）"
+                    android:textColor="#666666"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/item_bcqh_ncqadd_et_zxssr"
+                    android:background="@drawable/shape_list_table_title2"
+                    android:textColorHint="@color/white"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_bcqh_ncpadd_det"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="#D63A3B"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+</LinearLayout>

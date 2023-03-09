@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jymj.zhglxt.zjd.activity.HjgxtActivity">
+<!--    @mipmap/xingkong_bg-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/white" />
+    <!--    xingkong_bg  xxxxx-->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="366dp">
+        <com.jymj.zhglxt.widget.gxt.HVScrollView
+            android:id="@+id/hvScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.jymj.zhglxt.widget.gxt.StarAirLayout
+                    android:id="@+id/shaderImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </com.jymj.zhglxt.widget.gxt.HVScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="关系图"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:transitionName="title" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/acib_act_hjgxt_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/back_left_icon"
+            android:transitionName="icon" />
+    </RelativeLayout>
+
+    <com.jymj.zhglxt.widget.TextViews
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tvs_act_yzt_hjgxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.jymj.zhglxt.widget.TextViews>
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>-->
+
+</RelativeLayout>

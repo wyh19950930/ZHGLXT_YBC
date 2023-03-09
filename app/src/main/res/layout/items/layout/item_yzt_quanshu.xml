@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_yzt_qs_qsdw"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="权属单位" />
+
+        <TextView
+            android:id="@+id/tv_yzt_qs_qs"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="权属" />
+
+        <TextView
+            android:id="@+id/tv_yzt_qs_mj"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="面积(平米)" />
+
+    </LinearLayout>
+</LinearLayout>

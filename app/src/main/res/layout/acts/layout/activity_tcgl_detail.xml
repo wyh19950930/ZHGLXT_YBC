@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:id="@+id/tcgl_top"
+    >
+
+    <RelativeLayout
+        android:id="@+id/ll_tcgl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_tcgl_title_sx"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="材料审批"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:onClick="backToFront"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/left_arrow" />
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/ib_tc_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map_tcgl_check_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.jymj.basemessagesystem.ui.views.Legend
+                android:id="@+id/legend_tcgl_check_info"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:id="@+id/tcgl_info_ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_marginLeft="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+
+                    <TextView
+                        android:id="@+id/tcgl_info_cm"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="村名:xxx"
+                        />
+
+                    <TextView
+                        android:id="@+id/tcgl_info_hz"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="户主:xxx"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+
+                    <TextView
+                        android:id="@+id/tcgl_info_mph"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="门牌号:xxx"
+                        />
+
+                    <TextView
+                        android:id="@+id/tcgl_info_area"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="面积:xxx"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+
+                    <TextView
+                        android:id="@+id/tcgl_info_name"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="申请人姓名:xxx"
+                        />
+
+                    <TextView
+                        android:id="@+id/tcgl_info_sqrdh"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="申请人电话:xxx"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+
+                    <TextView
+                        android:id="@+id/tcgl_info_jjlxdh"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="紧急联系电话:xxx"
+                        />
+
+                    <TextView
+                        android:id="@+id/tcgl_info_bzyj"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="备注意见:xxx"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:focusableInTouchMode="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:id="@+id/recy_tcgl_check_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tcgl_info_ll1"
+                android:paddingTop="8dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_tcgl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/popback"
+                android:orientation="horizontal"
+             >
+                <!--android:visibility="gone"-->
+                <Button
+                    android:id="@+id/bt_tcgl_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/bt_selector_green"
+                    android:gravity="center"
+                    android:text="下一步"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bt_tcgl_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/bt_tcgl_back"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/bt_selector_red"
+                    android:gravity="center"
+                    android:text="驳回"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/bt_tcgl_pass"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

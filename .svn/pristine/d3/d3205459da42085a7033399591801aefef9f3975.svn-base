@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/tv_item_hylxt_color"
+            android:layout_marginLeft="5dp"
+            android:background="#FF660F"
+            android:layout_width="8dp"
+            android:layout_height="8dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:minWidth="70dp"
+            android:id="@+id/tv_item_hylxt_name"
+            android:layout_marginLeft="4dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:text="教育"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginRight="3dp"
+            android:id="@+id/tv_item_hylxt_count"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:textColor="#FF660F"
+            android:text="152"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+package com.jymj.zhglxt.zjd.bean.jsjb;
+
+public class JsjbBean {
+
+    private int id;
+    private String text;
+    private boolean isCheck;
+    private boolean isDeleteShow=false;
+
+    public JsjbBean(int id,String text, boolean isCheck) {
+        this.id = id;
+        this.text = text;
+        this.isCheck = isCheck;
+    }
+    public JsjbBean(int id,String text, boolean isCheck, boolean isDeleteShow) {
+        this.id = id;
+        this.text = text;
+        this.isCheck = isCheck;
+        this.isDeleteShow = isDeleteShow;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public boolean isCheck() {
+        return isCheck;
+    }
+
+    public void setCheck(boolean check) {
+        isCheck = check;
+    }
+
+    public boolean isDeleteShow() {
+        return isDeleteShow;
+    }
+
+    public void setDeleteShow(boolean deleteShow) {
+        isDeleteShow = deleteShow;
+    }
+}

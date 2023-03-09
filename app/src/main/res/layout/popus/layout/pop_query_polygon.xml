@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_query_polygon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_pop_cyfz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popback"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="村名" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="宗数" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="占地面积(公顷)" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="建筑面积(万平方米)"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_pop_cyfz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="土现利用汇总" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="类型" />
+                <!--（集体）-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="面积(公顷)" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_txhz_cyfz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="类型(国有)" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="面积(公顷)" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_txhz_cyfz_gy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_pop_cyfz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/popback"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_mj_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_hu_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pie_mj_polygon" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:visibility="gone"
+                    android:id="@+id/pie_work_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pie_hu_polygon" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_sex_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pie_work_polygon" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_cbs_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/pie_sex_polygon">
+
+                    <CheckBox
+                        android:id="@+id/cb_man_polygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:checked="true"
+                        android:text="@string/man"
+                        app:layout_constraintEnd_toStartOf="@+id/cb_woman_polygon" />
+
+                    <CheckBox
+                        android:id="@+id/cb_woman_polygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/woman"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sexOther_polygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:checked="true"
+                        android:text="@string/other"
+                        app:layout_constraintStart_toEndOf="@+id/cb_woman_polygon" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

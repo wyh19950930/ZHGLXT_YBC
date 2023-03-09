@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_cesuan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--    android.support.constraint.ConstraintLayout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_ceSuan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/ceSuanTable"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@null"
+            android:onClick="backToFront"
+            android:scaleType="fitXY"
+            android:src="@drawable/left_arrow" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@null"
+            android:onClick="toPDF"
+            android:text="导出"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+
+   <!-- <com.jymj.hczzhglxt.widget.MyHorizontalScrollView
+        android:id="@+id/hsv_cesuan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jymj.hczzhglxt.widget.RecyclerScrollView
+            android:id="@+id/sv_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/clCeSuanPDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/clCeSuanTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/tv_title"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCountCeSuan"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/count" />
+
+                    <TextView
+                        android:id="@+id/tvProjectCeSuan"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/project" />
+
+                    <TextView
+                        android:id="@+id/tvQuantitieCeSuan"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/quantitie" />
+
+                    <TextView
+                        android:id="@+id/tvUnitCeSuan"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/unit" />
+
+                    <TextView
+                        android:id="@+id/tvBilpriceCeSuan"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/bilprice" />
+
+                    <TextView
+                        android:id="@+id/tvQuaunitCeSuan"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/quaunit" />
+
+                    <TextView
+                        android:id="@+id/tvSumcostCeSuan"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="@string/sumcost" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    &lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/clCeSuanTitle"&ndash;&gt;
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyCeSuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ce_suan_fwlx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:background="#BDE1FF"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="房屋类型" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="建筑面积(万㎡)" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="销售单价(元/㎡)" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="金额(万元)" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_base_data_fd1"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="独立式住宅(200㎡)" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj1"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="8.36" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj1"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je1"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="独立式住宅(75%以内)" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj2"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0.72" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj2"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="6500" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je2"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="4580" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="独立式住宅(75%以外)" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj3"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="3.46" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj3"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="8500" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je3"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="29410" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:background="#F8CDAD"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="合计" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj4"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="12.54" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj4"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je4"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="34090" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="村民自主楼" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj5"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0.25" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj5"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="5500" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je5"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="1375" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="村民、村集体自筹" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_jzmj6"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_xsdj6"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_dlszz_je6"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0万元" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_ce_suan_fwlx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:background="#BDE1FF"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="房屋类型" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="建筑面积(万㎡)" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="销售单价(元/㎡)" />
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="金额(万元)" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="不分户部分(&lt; 4分)" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:text="独立式住宅(200㎡)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_jzmj1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:text="5.2" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_xsdj1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_je1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:text="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="独立式住宅(75%以内)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_jzmj2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="5.2" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_xsdj2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_je2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="独立式住宅(75%以外)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_jzmj3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="5.2" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_xsdj3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_je3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="#DBDBDB"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="小计" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_jzmj4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="7.8" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_xsdj4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_bfgbf_je4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="22100" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:text="分户部分" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="独立式住宅(200㎡)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_jzmj1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="4.01" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_xsdj1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_je1"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="独立式住宅(75%以内)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_jzmj2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="0.925" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_xsdj2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="6500" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_je2"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="601.25" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="独立式住宅(75%以外)" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_jzmj3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="5.38" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_xsdj3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="8500" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_je3"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="45730" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="#DBDBDB"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:text="小计" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_jzmj4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="9.4825" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_xsdj4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="" />
+
+                                <TextView
+                                    android:id="@+id/tv_base_data_fhbf_je4"
+                                    style="@style/tv_base_content"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="46331.25" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:background="#F8CBAD"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="合计" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_hj_jzmj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="17.2825" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_hj_xsdj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_hj_je"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="68431.25" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="村民自主楼" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cmzzl_jzmj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0.25" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cmzzl_xsdj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="5500" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cmzzl_je"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="1375" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/table_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="村民、村集体自筹" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cm_cjtzc_jzmj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cm_cjtzc_xsdj"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tv_base_data_cm_cjtzc_je"
+                            style="@style/tv_base_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="0万元" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_cesuan_ms1"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(1)用地方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="为实现最大化公平，每家每户在现状宅基地的基础上无偿退1/3，作为交通及公服用地。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(2)建筑规模："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="免费置换，置换后建筑面积根据本地实际情况确定。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="(3)补偿方面："
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00201)宅基地无偿退出;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:inputType="textMultiLine"
+                                android:singleLine="false"
+                                android:ellipsize="none"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00202)房屋及地上物分段补偿，免费置换200㎡规模，不进行补偿。宅院小于4分且建筑面积在宅院面积75%以内，重置成新价和房屋装修及其他附属物定额补偿1300元/㎡；宅院小于4分，建筑75%以外，只给房屋综合定额补偿1000元/㎡；宅院大于4分，且建筑在4分以上部分，只给定额补偿500元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00203)房屋周转费，按宅基地面积75%补助，补助标准为40元/㎡·月 ，发放三年;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00204)工程配合奖，即规定的腾退期限届满前搬迁的，每宗宅基地可享受工程配合奖励，10万元/宗;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00205)搬家补助费，按宅基地面积给予补助，标准为40元/㎡，一次性发放;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00206)未建房奖励，对宅基地内的空地部分，给予未建房奖励，标准为1380元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00207)设备迁移费按相关标准给予补助。"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_cesuan_ms2"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(1)用地方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="遵循宅基地相关规定，按照现状宅基地的75%免费置换，25%无偿退出作为交通及公服用地。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(2)建筑规模："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="免费置换，置换后建筑面积根据本地实际情况确定。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="(3)补偿方面："
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00201)宅基地无偿退出;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:inputType="textMultiLine"
+                                android:singleLine="false"
+                                android:ellipsize="none"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00202)房屋及地上物分段补偿，免费置换200㎡规模，不进行补偿。宅院小于4分且建筑面积在宅院面积75%以内，重置成新价和房屋装修及其他附属物定额补偿1300元/㎡；宅院小于4分，建筑75%以外，只给房屋综合定额补偿1000元/㎡；宅院大于4分，且建筑在4分以上部分，只给定额补偿500元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00203)房屋周转费，按宅基地面积75%补助，补助标准为40元/㎡·月 ，发放三年;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00204)工程配合奖，即规定的腾退期限届满前搬迁的，每宗宅基地可享受工程配合奖励，10万元/宗;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00205)搬家补助费，按宅基地面积给予补助，标准为40元/㎡，一次性发放;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00206)未建房奖励，对宅基地内的空地部分，给予未建房奖励，标准为1380元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00207)设备迁移费按相关标准给予补助。"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_cesuan_ms3"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(1)用地方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="免费置换，置换新宅用地面积200㎡。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(2)建筑规模："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="置换后建筑面积根据本地实际情况确定。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="(3)补偿方面："
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00201)宅基地退出补偿，200㎡以内免费置换，3-4分部分按区域补偿价100%补偿，4-6分按50%补偿，6分以上无补偿;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:inputType="textMultiLine"
+                                android:singleLine="false"
+                                android:ellipsize="none"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00202)房屋及地上物分段补偿，免费置换200㎡规模，不进行补偿。宅院小于4分且建筑面积在宅院面积75%以内，重置成新价和房屋装修及其他附属物定额补偿1300元/㎡；宅院小于4分，建筑75%以外，只给房屋综合定额补偿1000元/㎡；宅院大于4分，且建筑在4分以上部分，只给定额补偿500元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00203)房屋周转费，按宅基地面积75%补助，补助标准为40元/㎡·月 ，发放三年;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00204)工程配合奖，即规定的腾退期限届满前搬迁的，每宗宅基地可享受工程配合奖励，10万元/宗;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00205)搬家补助费，按宅基地面积给予补助，标准为40元/㎡，一次性发放;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00206)未建房奖励，对宅基地内的空地部分，给予未建房奖励，标准为1380元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00207)设备迁移费按相关标准给予补助。"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(4)回购方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="200㎡房屋免费置换，超出部分在现状宅院面积75%以内，按照6500元/㎡回购，超出75部分按8500元/㎡回购。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_cesuan_ms4"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(1)用地方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="免费置换，按照人均50㎡确定置换新宅用地面积。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(2)建筑规模："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="置换后建筑面积根据本地实际情况确定。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="(3)补偿方面："
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00201)宅基地退出补偿，200㎡以内免费置换，3-4分部分按区域补偿价100%补偿，4-6分按50%补偿，6分以上无补偿;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:inputType="textMultiLine"
+                                android:singleLine="false"
+                                android:ellipsize="none"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00202)房屋及地上物分段补偿，免费置换200㎡规模，不进行补偿。宅院小于4分且建筑面积在宅院面积75%以内，重置成新价和房屋装修及其他附属物定额补偿1300元/㎡；宅院小于4分，建筑75%以外，只给房屋综合定额补偿1000元/㎡；宅院大于4分，且建筑在4分以上部分，只给定额补偿500元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00203)房屋周转费，按宅基地面积75%补助，补助标准为40元/㎡·月 ，发放三年;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00204)工程配合奖，即规定的腾退期限届满前搬迁的，每宗宅基地可享受工程配合奖励，10万元/宗;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00205)搬家补助费，按宅基地面积给予补助，标准为40元/㎡，一次性发放;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00206)未建房奖励，对宅基地内的空地部分，给予未建房奖励，标准为1380元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00207)设备迁移费按相关标准给予补助。"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(4)回购方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="200㎡房屋免费置换，超出部分在现状宅院面积75%以内，按照6500元/㎡回购，超出75部分按8500元/㎡回购。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_cesuan_ms5"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(1)用地方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="为保障户有所居，在用地允许的情况下，制定相关标准，允许分宗分院，按最终分宗分院后确定置换新宅宗数，新宅用地面积为200㎡/宗。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(2)建筑规模："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="置换后建筑面积根据本地实际情况确定。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="(3)补偿方面："
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00201)宅基地退出补偿，不分院的宅基地补偿标准200㎡以内免费置换，3-4分部分按区域补偿价100%补偿，4-6分按50%补偿，6分以上无补偿;进行分院的，无补偿;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:inputType="textMultiLine"
+                                android:singleLine="false"
+                                android:ellipsize="none"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00202)房屋及地上物分段补偿，分院后,免费置换200㎡规模，不进行补偿。宅院小于4分且建筑面积在宅院面积75%以内，重置成新价和房屋装修及其他附属物定额补偿1300元/㎡；宅院小于4分，建筑75%以外，只给房屋综合定额补偿1000元/㎡；宅院大于4分，且建筑在4分以上部分，只给定额补偿500元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00203)房屋周转费，按宅基地面积75%补助，补助标准为40元/㎡·月 ，发放三年;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00204)工程配合奖，即规定的腾退期限届满前搬迁的，每宗宅基地可享受工程配合奖励，10万元/宗;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00205)搬家补助费，按宅基地面积给予补助，标准为40元/㎡，一次性发放;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00206)未建房奖励，对宅基地内的空地部分，给予未建房奖励，标准为1380元/㎡;"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:maxWidth="640dp"
+                                android:layout_margin="2dp"
+                                android:text="\u3000\u00207)设备迁移费按相关标准给予补助。"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="(4)回购方面："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="未进行分户的按照200㎡房屋免费置换，超出部分在现状宅院面积75%以内，按照6500元/㎡回购，超出75部分按8500元/㎡回购；进行分户的，分户后建筑面积达到200㎡的，按照200㎡房屋免费置换，超出部分在现状宅院面积75%以内，按照6500元/㎡回购，超出75部分按8500元/㎡回购；分户后建筑面积小于200㎡的，免费置换同等建筑面积，剩余部分按相关标准回购。"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.jymj.hczzhglxt.widget.RecyclerScrollView>
+
+    </com.jymj.hczzhglxt.widget.MyHorizontalScrollView>-->
+
+</LinearLayout>

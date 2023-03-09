@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/item_frame_ylmx_top"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_frame_ylmx_bh"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="编号"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/item_frame_ylmx_cm"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="村名" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_address"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:text="地址" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_hs"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="户数" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_zdmj"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="占地面积(㎡)" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_jzmj"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="建筑面积(㎡)" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_rk"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="人口" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_nong"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="农" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_fnong"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="非农" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_wlrk"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="非农" />
+    <TextView
+        android:id="@+id/item_frame_ylmx_isxz"
+        android:textColor="@color/black"
+        style="@style/table_title_textview"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="是否闲置" />
+</LinearLayout>

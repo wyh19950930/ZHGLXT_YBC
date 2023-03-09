@@ -1,0 +1,2093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".zjd.fragment.PointJCXXFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/title_shape"
+            android:gravity="center_vertical"
+            android:text="一张图点查"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+<!--    com.jymj.hczzhglxt.widget.MyScrollView-->
+<!--    ScrollView-->
+    <com.jymj.zhglxt.widget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/popback">
+<!--        RelativeLayout-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            android:id="@+id/cl_point_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/point_ylxx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="#409EFF"
+                android:gravity="center_vertical"
+                android:text="院落信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_ylxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/point_ylxx"
+                android:orientation="horizontal">
+                <!--                260dp-->
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvsPoint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2">
+
+                </com.jymj.zhglxt.widget.TextViews>
+                <!--                300dp-->
+                <com.github.mikephil.charting.charts.RadarChart
+                    android:id="@+id/pointRadar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvsPoint"
+                    android:layout_weight="3"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/hsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_ylxx">
+<!--                RelativeLayout-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+<!--                    RelativeLayout-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/clPointTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/blue">
+
+                        <TextView
+                            android:id="@+id/tvNamePoint"
+                            android:layout_width="55dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="姓名" />
+
+                        <TextView
+                            android:id="@+id/tvSexPoint"
+                            android:layout_width="35dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvNamePoint"
+                            android:gravity="center"
+                            android:text="性别" />
+
+                        <TextView
+                            android:id="@+id/tvAgePoint"
+                            android:layout_width="35dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvSexPoint"
+                            android:gravity="center"
+                            android:text="年龄" />
+
+                        <TextView
+                            android:id="@+id/tvRelPoint"
+                            android:layout_width="85dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvAgePoint"
+                            android:gravity="center"
+                            android:text="与户主关系" />
+
+                        <TextView
+                            android:id="@+id/tvHuPoint"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvRelPoint"
+                            android:gravity="center"
+                            android:text="户籍性质" />
+
+                        <TextView
+                            android:id="@+id/tvPIDPoint"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvHuPoint"
+                            android:gravity="center"
+                            android:text="身份证号"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvWorkPoint"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/tvPIDPoint"
+                            android:gravity="center"
+                            android:text="就业情况"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyPoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clPointTitle">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout
+                android:id="@+id/ll_jcxx_qyxx"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hsv">
+                <TextView
+                    android:id="@+id/tv_jcxx_qyxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="企业信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+                <LinearLayout
+                    android:id="@+id/ll_jcxx_qyxx1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_jcxx_qyxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                    <LinearLayout
+                        android:id="@+id/ll_jcxx_qyxx2"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_name"
+                                android:layout_weight="1"
+                                android:text="名称"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_cm"
+                                android:layout_weight="1"
+                                android:text="村名"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qs"
+                                android:layout_weight="1"
+                                android:text="权属"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_zdmj"
+                                android:layout_weight="1"
+                                android:text="占地面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_jzmj"
+                                android:layout_weight="1"
+                                android:text="建筑面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_zjxh"
+                                android:layout_weight="1"
+                                android:text="证件序号"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_tdsyr"
+                                android:layout_weight="1"
+                                android:text="土地使用人"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_dswsyqr"
+                                android:layout_weight="1"
+                                android:text="地上物所有权人"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_fwjcnd"
+                                android:layout_weight="1"
+                                android:text="房屋建成年代"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_ydqx"
+                                android:layout_weight="1"
+                                android:text="用地期限"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_remark"
+                                android:layout_weight="1"
+                                android:text="备注"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_jcxx_qyxx3"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="30dp">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:id="@+id/tv_jcxx_qyxx3_qymc"
+                            android:layout_weight="1"
+                            android:text="企业名称"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:id="@+id/tv_jcxx_qyxx3_yyzz"
+                            android:layout_weight="1"
+                            android:text="营业执照"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_yqgqss"
+                                android:layout_weight="1"
+                                android:text="央企/国企/市属"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_gxqy"
+                                android:layout_weight="1"
+                                android:text="高薪企业(国高新/村高新)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_zcdz"
+                                android:layout_weight="1"
+                                android:text="注册地址"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_sfss"
+                                android:layout_weight="1"
+                                android:text="是否上市"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_frxm"
+                                android:layout_weight="1"
+                                android:text="法人姓名"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_lxfs"
+                                android:layout_weight="1"
+                                android:text="联系方式"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_zczj"
+                                android:layout_weight="1"
+                                android:text="注册资金(万元)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_wzqyzczj"
+                                android:layout_weight="1"
+                                android:text="外资企业注册资金(万元)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_gsygbs"
+                                android:layout_weight="1"
+                                android:text="公司员工(本市)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_gsygwq"
+                                android:layout_weight="1"
+                                android:text="公司员工(外阜)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_dwss"
+                                android:layout_weight="1"
+                                android:text="单位宿舍"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_gc"
+                                android:layout_weight="1"
+                                android:text="各村"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_margin="5dp"
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"/>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_jyzt"
+                                android:layout_weight="1"
+                                android:text="经营状态"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_qyfzr"
+                                android:layout_weight="1"
+                                android:text="企业负责人"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_fzrlxfs"
+                                android:layout_weight="1"
+                                android:text="联系方式"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_yxdz"
+                                android:layout_weight="1"
+                                android:text="邮箱地址"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_hylx"
+                                android:layout_weight="1"
+                                android:text="行业类别"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_zycp"
+                                android:layout_weight="1"
+                                android:text="主要产品"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_yysr"
+                                android:layout_weight="1"
+                                android:text="营业收入(万元)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_gyzczz"
+                                android:layout_weight="1"
+                                android:text="工业资产总值(万元)"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_jydz"
+                                android:layout_weight="1"
+                                android:text="经营地址"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_symj"
+                                android:layout_weight="1"
+                                android:text="使用面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_czmj"
+                                android:layout_weight="1"
+                                android:text="出租面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_qyxx3_shymj"
+                                android:layout_weight="1"
+                                android:text="剩余面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_jcxx_zjxx"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_qyxzmc"
+                                android:layout_weight="1"
+                                android:text="企业现状名称"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_tdsyz"
+                                android:layout_weight="1"
+                                android:text="土地使用者"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_tdyt"
+                                android:layout_weight="1"
+                                android:text="土地用途"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_syqlx"
+                                android:layout_weight="1"
+                                android:text="使用权类型"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_syqmj"
+                                android:layout_weight="1"
+                                android:text="使用权面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tv_jcxx_dymj"
+                                android:layout_weight="1"
+                                android:text="独用面积"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp">
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/tv_jcxx_zzrq"
+                                android:layout_weight="1"
+                                android:text="终止日期"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <TextView
+                            android:textSize="15sp"
+                            android:paddingLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="证件资料"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"/>
+                        <RelativeLayout
+                            android:descendantFocusability="blocksDescendants"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_jcxx_zjxx"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_ldrk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_qyxx"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_ldrk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="流动人口"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_jcxx_ldrk1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:text="姓名" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:text="性别" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:text="户主姓名" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:text="户籍地址" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:text="所在村" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:text="行业类型" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:text="工作地址" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:text="文化程度" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:text="身份证号" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:text="居住证号" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:text="操作" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rlv_jcxx_ldrk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_dc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_ldrk"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_dc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="待拆信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_dc"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_yc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_dc"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_yc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="已拆信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_yc"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_sd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_yc"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_sd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="湿地信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_sd"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_lh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_sd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_lh"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="绿化信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_lh"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_jcxx_ct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_lh"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_ct"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="拆腾信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_ct"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_jcxx_sy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_ct"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_sy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="农用地信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_sy"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_fk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_sy"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_fk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="复垦信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_fk"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jcxx_gy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_fk"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_gy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="国有信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_gy"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_jcxx_fz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_gy"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_jcxx_fz"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="非宅信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.jymj.zhglxt.widget.TextViews
+                    android:id="@+id/tvs_jcxx_fz"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/point_ylxx"
+                    android:layout_marginTop="5dp">
+
+                </com.jymj.zhglxt.widget.TextViews>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/point_dkxx_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_jcxx_fz"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_point_dkxx_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="地块信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+
+                <TextView
+                    android:id="@+id/point_dkxx_zwsj"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:visibility="gone" />
+
+                <HorizontalScrollView
+                    android:id="@+id/point_dkxx_hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="村名"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="类型"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="面积"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="权属性质"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="地类名称"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+<!--                        RelativeLayout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/point_dkxx_rlv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@color/white">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/point_tx_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/point_dkxx_ll"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_point_jcxx_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="土现信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="村名："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tx_cm_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="面积(公顷)："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tx_mj_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地类编码："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tx_dlbm_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="权属性质："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tx_qsxz_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地类名称："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tx_dlmc_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/point_tx_zwsj"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:visibility="gone" />
+
+                <HorizontalScrollView
+                    android:id="@+id/point_tx_hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="村名"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="地类编码"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="面积"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="类型"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="地类名称"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+<!--                        RelativeLayout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/point_tx_rlv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@color/white">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/point_tx_ll"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/point_zjdglxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="宅基地管理信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:id="@+id/ll_point_zjdglxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="当事人姓名" />
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="当事人电话" />
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="情况" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_zjdglxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/point_hbjcxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="环保监察信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:id="@+id/ll_point_hbjcxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="编号" />
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="分配部门" />
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="记录时间" />
+
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="预警" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_hbjcxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/point_zjdxcxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="宅基地巡查信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_point_zjdxcxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="村名" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="门牌号" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="户主名称" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="违法情况" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="目前状态" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="备注" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rlv_zjdxcxx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/point_tdxcxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="土地巡查信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_point_tdxcxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="村名" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="门牌号" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="户主名称" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="违法情况" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="目前状态" />
+
+                            <TextView
+                                style="@style/table_title_textview"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="备注" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rlv_tdxcxx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/point_tg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/point_tx_ll"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_point_jcxx_tg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="土规信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/point_tg_zwsj"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:visibility="gone" />
+
+                <HorizontalScrollView
+                    android:id="@+id/point_tg_hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="村名"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="面积"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="地类名称"
+                                android:textColor="#333333"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+<!--                        RelativeLayout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/point_tg_rlv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@color/white">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="村名："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tg_cm_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地块编码："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tg_dkbm_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地类名称："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tg_dlmc_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="面积："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/point_tg_mj_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxx"
+                            android:textColor="#555555" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/point_cg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/point_tg_ll"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_point_jcxx_cgxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="城规信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/point_cg_zwsj"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/point_cg_lll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="地块编码："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/point_cg_dkbm_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxx"
+                                android:textColor="#555555" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="用地类型："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/point_cg_ydlx_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxx"
+                                android:textColor="#555555" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="面积(公顷)："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/point_cg_mj_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxx"
+                                android:textColor="#555555" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="容积率："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/point_cg_rjl_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxx"
+                                android:textColor="#555555" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="建筑规模："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/point_cg_jzgm_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxx"
+                                android:textColor="#555555" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.jymj.zhglxt.widget.MyScrollView>
+</LinearLayout>

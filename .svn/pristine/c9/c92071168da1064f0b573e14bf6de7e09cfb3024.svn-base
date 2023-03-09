@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_z"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="14dp"
+            android:textColor="#333333"
+            android:text="行政区" />
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_sh"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="申请" />
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="核实" />
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_ys"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="审批" />
+
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_tg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="验收" />
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_wc"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="完成" />
+        <TextView
+            android:id="@+id/tv_zjdfj_tj_list_bh"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="驳回" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_zjdfj_tj_list_dj"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="登记" />
+
+
+
+        <LinearLayout
+            android:id="@+id/tv_zjdfj_tj_list_see"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:background="#F6F7FB"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/back_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"
+        android:layout_marginLeft="14dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+package com.jymj.zhglxt.zjd.activity.zjdgl
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.jymj.zhglxt.R
+
+class BcqhNhjtjcActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_bcqh_nhjtjc)
+    }
+}

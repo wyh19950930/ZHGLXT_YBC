@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_table_fjxc"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_bh"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="14dp"
+            android:textColor="#333333"
+            android:text="编号" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_cm"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="#333333"
+            android:text="村名" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_hzmc"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="户主名称" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_mph"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="门牌号" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_yj"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="预警" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_jlr"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="记录人" />
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_jlsj"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="记录时间" />
+
+
+        <TextView
+            android:id="@+id/tv_item_fjxc_bhcs"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:text="驳回次数" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"
+        android:layout_marginLeft="14dp"/>
+
+</LinearLayout>

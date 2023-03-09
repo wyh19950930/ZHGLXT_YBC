@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mapback_ffffff"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_setting_clear_map"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="清除地图缓存"
+            android:textSize="16sp"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/tv_setting_clear_pic"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="清除图片缓存"
+            android:textSize="16sp"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/tv_setting_clear_baobiao"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="清除报表缓存"
+            android:textSize="16sp"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_setting_clear_video"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:gravity="center"
+            android:text="清除视频缓存"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/bt_setting_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/mapback_449eef"
+                android:text="关闭"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

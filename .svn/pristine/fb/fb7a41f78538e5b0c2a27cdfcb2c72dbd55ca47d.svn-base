@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="com.jymj.zhglxt.xm.activity.XmTzDetailActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/iv_act_xmtzdetail_back"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_left_icon"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:text="梦归处·养心地"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_act_xmtzdetail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/xm_tz_share_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            />
+        <ImageView
+            android:id="@+id/iv_act_xmtzdetail_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/xm_tz_more_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_act_xm_tz_detail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                >
+
+            </com.youth.banner.Banner>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingTop="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="梦归处·养心地"
+                    android:textSize="21sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="作为田园综合体，不应是单一功能的载体，而应实现要素聚集，承载生活服务、产业发展、文化中心等多元职能。"                   android:textColor="#999999"
+                    android:textSize="13sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <com.jymj.zhglxt.widget.zdybj.MeTitleLayout2
+                    android:id="@+id/mtl_act_xm_tz_detail_xmyd"
+                    app:attr_name="项目用地"
+                    android:layout_marginLeft="15.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f5f5f5"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_act_xm_tz_detail_xmyd"
+                    android:background="#f5f5f5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333333"
+                            android:text="用地规模："/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:text="项目点状配套设施用地4.89亩（3257㎡）"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333333"
+                            android:text="建筑规模："/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:text="项目点状配套设施用地4.89亩（3257㎡）"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333333"
+                            android:text="场地面积："/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:text="项目点状配套设施用地4.89亩（3257㎡）"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_act_xm_tz_detail_xmwz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginLeft="15.5dp"
+                        android:textSize="16sp"
+                        android:textColor="#333333"
+                        android:text="项目位置"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="北京市"
+                            android:textColor="#666666"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center|right"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="北京市房山区黄山店"
+                            android:textColor="#666666"
+                            android:textSize="10sp"
+                            android:gravity="center|right"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:src="@drawable/xm_tz_point_icon"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f5f5f5"/>
+
+                <com.jymj.zhglxt.widget.zdybj.MeTitleLayout2
+                    android:id="@+id/mtl_act_xm_tz_detail_xmjs"
+                    app:attr_name="项目介绍"
+                    android:layout_marginLeft="15.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_act_xm_tz_detail_xmjs"
+                    android:background="#f5f5f5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_act_xm_tz_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="微信"
+            android:textSize="10sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/xm_tz_wx_icon"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="客服"
+            android:textSize="10sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/xm_tz_kf_icon"/>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bt_actiive_ed742e"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/xm_tz_gxq_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="感兴趣"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

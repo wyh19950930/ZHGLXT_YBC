@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/bt_actiive_xaiyoubai_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/bt_actiive_shangbai_blue2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/margin_zdkd"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加信息"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+
+    <com.jymj.zhglxt.widget.SizeLimitView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/margin_zdgd">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+<!--                选择年份-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="年份"
+                    android:textColor="#333333" />
+
+<!--                android:drawableRight="@drawable/back_down_icon"-->
+                <TextView
+                    android:id="@+id/tv_pop_add_jtszcjtjjzysrqk"
+                    android:textColor="#4CA2FE"
+                    android:hint=""
+                    android:gravity="center_vertical|right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/pop_add_cjtjjzysrqk_spr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#cccccc" />
+            
+            <com.jymj.zhglxt.widget.EnableLinearLayout
+                android:id="@+id/pop_add_cjtjjzysrqk_ell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="1.主营业务收入"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入主营业务收入"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_zyywsr"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="2.地、山、林、厂房等出租"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入地、山、林、厂房等出租"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_sdlcf"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="3.投资收益(股权收益等)"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入投资收益(股权收益等)"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_tzsy"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="4.营业外收入"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入营业外收入"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_yywsr"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="村级公益事业专项补助经费"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入村级公益事业专项补助经费"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_cjgysy"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="村党组织服务群众经费"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入村党组织服务群众经费"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_cdzzfw"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="美丽乡村建设与管护资金"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入美丽乡村建设与管护资金"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_mlxc"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="其他政策性补助"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入其他政策性补助"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_qtzcbz"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="其他(注明来源)"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:hint="请输入其他(注明来源)"
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_qtsy"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="合计"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/pop_add_cjtjjzysrqk_et_hj"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+            </com.jymj.zhglxt.widget.EnableLinearLayout>
+            
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_sxjg"
+                android:layout_marginTop="@dimen/margin_sxjg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_bggd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="操作人姓名"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:background="@drawable/shape_list_table_title2"
+                    android:id="@+id/pop_add_cjtjjzysrqk_et_czrname"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pop_add_cjtjjzysrqk_ll_reject"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="驳回原因"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/pop_add_cjtjjzysrqk_et_reject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    </com.jymj.zhglxt.widget.SizeLimitView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:visibility="gone"
+            android:id="@+id/pop_add_cjtjjzysrqk_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+ <!--       <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0" />-->
+        <TextView
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:id="@+id/pop_add_cjtjjzysrqk_reject"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="驳回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>
+        <TextView
+            android:id="@+id/pop_add_cjtjjzysrqk_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

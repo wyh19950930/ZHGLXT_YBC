@@ -1,0 +1,39 @@
+package com.jymj.zhglxt.zjd.contract
+
+import com.jymj.zhglxt.zjd.bean.bcjc.BcSktEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BcrkbdqkEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BczdqkEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.BczhandqkEntity
+import com.jymj.zhglxt.zjd.bean.bcjc.bcqh.JtcyjcEntity
+import com.jymj.zhglxt.zjd.bean.cygl.NydVo
+import com.jymj.zhglxt.zjd.bean.cygl.YztNyyqEntity
+import com.jymj.zhglxt.zjd.bean.yzt.cj.CJEntity
+import com.jymj.zhglxt.zjd.bean.zjdyd.ApplyLandEntity
+import com.setsuna.common.base.BaseModel
+import com.setsuna.common.base.BasePresenter
+import com.setsuna.common.base.BaseView
+
+interface BcqhContract {
+    /*interface Model:BaseModel{
+//        fun getCyfz(proId:String):String
+    }*/
+    interface View:BaseView{
+        fun returnBcjcYears(msg: List<String>)
+        fun returnBcjcjtList(msg: List<JtcyjcEntity>)
+        fun returnBcqhUpload(msg: List<JtcyjcEntity>)
+        fun returnBcjcjtImportData(msg: String)
+        fun returnBcqhDetail(msg: List<JtcyjcEntity>)
+
+    }
+    companion object {
+        abstract class Presenter:BasePresenter<View,BaseModel>(){
+            abstract fun getBcjcYears()
+            abstract fun getBcjcjtList(code:String,years:String)
+            abstract fun getBcqhUpload(jtcyjcEntity: JtcyjcEntity)
+            abstract fun getBcjcjtImportData(code:String,years:String,years1:String)
+            abstract fun getBcqhDetail(code:String,sorting:Int,id:Long)
+
+
+        }
+    }
+}

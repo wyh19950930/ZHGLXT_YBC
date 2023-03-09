@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_ppt_yjfj_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.zjd.activity.zjdgl.PropertyYlfjActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="院落房间"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:transitionName="title" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/iv_at_property_ylfj_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/back_left_icon"
+            android:transitionName="icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dddddd" />
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/supl_act_ppt_ylfj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:paddingBottom="15dp"
+        app:umanoAnchorPoint="0.39"
+        app:umanoFadeColor="#00ffffff"
+        app:umanoOverlay="true"
+        app:umanoPanelHeight="0dp"
+        app:umanoScrollableView="@id/rlt_act_ppt_yjfj"
+        app:umanoShadowHeight="4dp">
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map_act_ppt_yjfj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.amap.api.maps2d.MapView>
+        <RelativeLayout
+            android:id="@+id/rlt_act_ppt_yjfj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="院落信息"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="6dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ewm_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:text="二维码"
+                                android:textColor="#12C583"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="144dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_act_ppt_add_fz_smewm"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/bg_border_stroke_green"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_act_ppt_add_fz_ewmfh"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_centerInParent="true" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="#dddddd" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="门牌号"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actppt_ylfj_mph"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="产权人"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actppt_ylfj_cqr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="建成时间"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actppt_ylfj_jcsj"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="建筑面积"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actppt_ylfj_jzmj"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#f6f7fb" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp">
+
+
+                            <ImageView
+                                android:id="@+id/iv_actppt_ylfj_sj1"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true" />
+
+
+                            <RelativeLayout
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="视角一"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="10dp">
+
+
+                            <ImageView
+                                android:id="@+id/iv_actppt_ylfj_sj2"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true" />
+
+
+                            <RelativeLayout
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="视角二"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginRight="19.5dp"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="房间编号"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_actppt_ylfj_lszk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp"
+                            android:layout_marginRight="9dp"
+                            android:text="历史租客"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_actppt_ylfj_fjbh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="8dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="房屋照片"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rlv_actppt_ylfj_fwzp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginRight="19.5dp"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/bt_actppt_ylfj_newadd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="13.5dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/bt_actiive_12c483"
+                android:text="新增入住信息"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

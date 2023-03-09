@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_modify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mapback_ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="信息提示"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="#e0e0e0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="12.5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bt_idcard_tips_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="该用户之前已有上传的信息，是否自动显示出来？"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            android:background="#e0e0e0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bt_idcard_tips_yes"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#4CA2FE"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:background="#e0e0e0"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/bt_idcard_tips_no"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <!--<android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/til_username_modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名">
+
+            <EditText
+                android:id="@+id/edt_username_modify"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_pwdold_modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:hint="请输入旧密码">
+
+            <EditText
+                android:id="@+id/edt_pwdold_modify"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_pwdnew_modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:hint="请输入新密码">
+
+            <EditText
+                android:id="@+id/edt_pwdnew_modify"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_pwdrepeat_modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:hint="新密码确认">
+
+        <EditText
+            android:id="@+id/edt_pwdrepeat_modify"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </android.support.design.widget.TextInputLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_cancel_modify"
+                android:layout_margin="5dp"
+                android:background="@color/gray"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:text="关闭"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/bt_modify_pwd"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:text="修改"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>-->
+    </LinearLayout>
+</RelativeLayout>

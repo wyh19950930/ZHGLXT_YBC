@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.zjd.fragment.yzt.FrameJCXXFragment">
+
+
+    <com.jymj.zhglxt.widget.MyScrollView
+        android:id="@+id/frame_jcxx_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:background="#409EFF"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/point_ylxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center_vertical"
+                    android:text="院落信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+                <TextView
+                    android:id="@+id/frame_ylxx_mx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:text="查看明细"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+
+                    android:paddingRight="@dimen/dp_10"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/frame_jcxx_yl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_down_icon"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frame_fw_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_mj_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_hu_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />  </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_work_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:visibility="gone" /></RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_sex_polygon"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" /></RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:background="#409EFF"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="#409EFF"
+                    android:gravity="center_vertical"
+                    android:text="土现信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+                <TextView
+                    android:id="@+id/frame_txxx_mx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:text="查看明细"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/frame_txxx_yl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_down_icon"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/frame_jcxx_tx_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/frame_tx_pchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:background="#409EFF"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center_vertical"
+                    android:text="土规信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+                <TextView
+                    android:id="@+id/frame_tgxx_mx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:text="查看明细"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/frame_tgxx_yl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_down_icon"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/frame_jcxx_tg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/frame_tg_pchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" /></RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:background="#409EFF"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center_vertical"
+                    android:text="城规信息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+                <TextView
+                    android:id="@+id/frame_cgxx_mx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:text="查看明细"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/frame_cgxx_yl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_down_icon"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/frame_jcxx_cg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/frame_cg_pchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" /></RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.jymj.zhglxt.widget.MyScrollView>
+
+</LinearLayout>

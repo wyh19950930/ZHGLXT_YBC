@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv_rjriver_name"
+            android:text="名称"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_bpld"
+            android:text="包片领导"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_bcgb"
+            android:text="包村干部"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_bclx"
+            android:text="包村联系"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_hjzg"
+            android:text="环境专管员"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_zglx"
+            android:text="专管联系"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_xcry"
+            android:text="巡查人员"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_rjriver_xclx"
+            android:text="巡查联系"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+</LinearLayout>

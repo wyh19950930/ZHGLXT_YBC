@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_rjhj_hbdetails_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".rjhj.activity.RjhjHbDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/tv_act_rjhj_hbdetails_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="11dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="11dp"
+            android:src="@drawable/back_left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="环保详情"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.amap.api.maps2d.MapView
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps2d.MapView>
+
+    <ScrollView
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_act_rjhj_hbdetails_xxxx"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="2.5dp"
+                    android:layout_height="13dp"
+                    android:background="#409EFF"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="详细信息"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_gravity="center"
+                    />
+                <ImageView
+                    android:id="@+id/iv_act_rjhj_hbdetails_xxxx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_down_icon"
+                    android:layout_marginRight="11.5dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#666666"/>
+            <LinearLayout
+                android:id="@+id/ll_act_rjhj_hbdetails_xxxx_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="类型"
+                            android:textColor="#999999"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_act_rjhj_hbdetails_lx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="公厕管护"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="科室负责人"
+                            android:textColor="#999999"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_act_rjhj_hbdetails_ksfzr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="xx镇"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="责任部门"
+                            android:textColor="#999999"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_act_rjhj_hbdetails_zrbm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="xx"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:layout_marginRight="14.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系方式"
+                            android:textColor="#999999"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_act_rjhj_hbdetails_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="xx"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f6f7fb"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_act_rjhj_hbdetails_xc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/progress_green"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="巡查"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+                        android:layout_marginTop="7.5dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#999999"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:id="@+id/ll_act_rjhj_hbdetails_zg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/progress_green"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="整改"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+                        android:layout_marginTop="7.5dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#999999"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:id="@+id/ll_act_rjhj_hbdetails_sh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/progress_blue"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="审核"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+                        android:layout_marginTop="7.5dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#999999"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:id="@+id/ll_act_rjhj_hbdetails_xz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/progress_grey"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="销账"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+                        android:layout_marginTop="7.5dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--巡查-->
+            <include layout="@layout/act_rjhj_hbdetails_xc_include"/>
+
+            <!--整改-->
+            <include layout="@layout/act_rjhj_hbdetails_zg_include"
+                android:visibility="gone"/>
+
+            <!--审核-->
+            <include layout="@layout/act_rjhj_hbdetails_sh_include"
+                android:visibility="gone"/>
+
+            <!--驳回-->
+            <include layout="@layout/act_rjhj_hbdetails_bh_include"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_act_rjhj_hbdetails_update"
+            android:layout_width="70dp"
+            android:layout_height="39dp"
+            android:background="@drawable/bt_actiive_ff660f"
+            android:text="修改"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_act_rjhj_hbdetails_xf"
+            android:layout_width="70dp"
+            android:layout_height="39dp"
+            android:background="@drawable/bt_actiive_409eff"
+            android:text="下发"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_act_rjhj_hbdetails_zg"
+            android:layout_width="70dp"
+            android:layout_height="39dp"
+            android:background="@drawable/bt_actiive_d63a3b"
+            android:text="整改"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_act_rjhj_hbdetails_th"
+            android:layout_width="70dp"
+            android:layout_height="39dp"
+            android:background="@drawable/bt_actiive_d63a3b"
+            android:text="退回"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_act_rjhj_hbdetails_wj"
+            android:layout_width="90dp"
+            android:layout_height="39dp"
+            android:background="@drawable/bt_actiive_tou_kuangff660f"
+            android:text="完结"
+            android:textSize="16sp"
+            android:textColor="#FF660F"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

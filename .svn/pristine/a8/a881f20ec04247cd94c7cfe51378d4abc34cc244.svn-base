@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_act_cbbsjsx"
+    tools:context="com.jymj.zhglxt.zjd.activity.zjdgl.CbbsjsxActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_act_cbbsjsx_back"
+            android:src="@drawable/back_left_icon"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:text="村庄表数据筛选"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_act_cbbsjsx_dclb"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="导出列表"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_act_cbbsjsx_srzc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_color="#FE7151"
+                app:attr_name="搜索筛选"
+                app:attr_src="@drawable/item_title_down" />
+            <LinearLayout
+                android:id="@+id/ll_act_cbbsjsx_srzc"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/ll_act_cbbsjsx_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+<!--                        EditText-->
+                        <MultiAutoCompleteTextView
+                            android:id="@+id/et_act_user_list_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/gray_cbbsjsx_edit_background"
+                            android:drawableRight="@drawable/ic_search_user"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:hint="搜索村名"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#333333"
+                            android:text="搜索结果"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <RelativeLayout
+                            android:descendantFocusability="blocksDescendants"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_act_cbbsjsx_ssjg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_act_cbbsjsx_sjfw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_color="#FE7151"
+                app:attr_name="时间范围"
+                app:attr_src="@drawable/item_title_down" />
+            <LinearLayout
+                android:id="@+id/ll_act_cbbsjsx_sjfw"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvl_act_cbbsjsx_tclb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>-->
+                <com.jymj.zhglxt.widget.zdybj.TagCloudLayout
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tcl_act_cbbsjsx_tclb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_act_cbbsjsx_qyfw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_color="#FE7151"
+                app:attr_name="区域范围"
+                app:attr_leftname="添加区域"
+                app:attr_leftcolor="#409EFF"
+                app:attr_src="@drawable/item_title_down" />
+            <LinearLayout
+                android:id="@+id/ll_act_cbbsjsx_qyfw"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/rlv_act_cbbsjsx_qyfw"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_act_cbbsjsx_sxsc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_color="#FE7151"
+                app:attr_name="属性筛查"
+                app:attr_leftname="添加属性"
+                app:attr_leftcolor="#409EFF"
+                app:attr_src="@drawable/item_title_down" />
+            <LinearLayout
+                android:id="@+id/ll_act_cbbsjsx_sxsc"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/rlv_act_cbbsjsx_sxsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_act_cbbsjsx_bgsc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_color="#FE7151"
+                app:attr_name="表格筛查"
+                app:attr_src="@drawable/item_title_down" />
+            <LinearLayout
+                android:id="@+id/ll_act_cbbsjsx_bgsc"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <!-- <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_act_cbbsjsx_bgsc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>-->
+                <com.jymj.zhglxt.widget.zdybj.TagCloudLayout
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tcl_act_cbbsjsx_bgsc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_act_cbbsjsx_bgsc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <!--<com.jymj.zhglxt.widget.zdybj.TagCloudLayout
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tcl_act_cbbsjsx_bgsc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>-->
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/but_act_cbbsjsx_czsctj"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#ff660f"
+            android:background="@drawable/bt_actiive_tou_kuangff660f"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="重置筛查条件 "
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/but_act_cbbsjsx_kssc"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/mapback_449eef"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="开始筛查"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

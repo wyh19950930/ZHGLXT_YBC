@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_yewu_det_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".zjd.activity.FrameYewuDeteil">
+
+    <!--申请-->
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_sq_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/homepage_list_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="宅基地申请列表"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_sqgl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="添加"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="村名"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="门牌号"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请状态"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请人"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请时间"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="电话"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="备注"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_sqgl_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--翻建-->
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_fj_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/homepage_list_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="宅基地翻建列表"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_fjgl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="新建"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="村名"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="门牌号"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请状态"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请人"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请时间"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="电话"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="备注"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_fjgl_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--流转-->
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_lz_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/homepage_list_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="宅基地流转列表"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="村名"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="门牌号"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请状态"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请人"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请时间"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="电话"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="备注"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_lzgl_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--退出-->
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_tc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/homepage_list_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="宅基地退出列表"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_tcgl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="添加"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="村名"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="门牌号"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请状态"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请人"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="申请时间"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="电话"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="备注"
+                        android:textColor="#333333"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_tcgl_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--环保监察-->
+
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_hbqc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_map_hbjc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabSelectedTextColor="#00c5FF" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="村名" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="问题状态"
+                         />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="记录人"
+                         />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="@dimen/longtext"
+                        android:layout_height="match_parent"
+                        android:text="问题情况" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="分配部门" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="记录时间"
+                         />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="科室姓名" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="科室电话" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:text="科室备注" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:text="备注" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="操作" />
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="编号" />
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="行政区"
+                        />
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="位置"
+                        />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="责任单位"
+                        />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="状态" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="姓名" />
+
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="时间"
+                        />
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="预警"
+                        />
+                    <TextView
+                        style="@style/table_title_textview"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="操作" />
+                </LinearLayout>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/recy_environmental_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.jcodecraeer.xrecyclerview.XRecyclerView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--违法巡查-->
+
+    <LinearLayout
+        android:id="@+id/frame_yewu_det_wfxc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/homepage_list_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="违法情况汇总表"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_wfxc_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+
+                android:layout_marginRight="5dp"
+                android:text="添加"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.jymj.zhglxt.widget.MyHorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:scrollbarStyle="insideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="村名"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/wfxc_tv_hz"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="户主"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/wfxc_tv_mph"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="门牌号"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="状态"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="录入人"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="记录时间"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="违法描述"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="解决时间"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="备注"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="操作"
+                        android:textColor="#222222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/wfxc_rlv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+
+                        android:layout_marginEnd="@dimen/dp_10">
+                        <!--android:layout_marginStart="@dimen/dp_10"-->
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.jymj.zhglxt.widget.MyHorizontalScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

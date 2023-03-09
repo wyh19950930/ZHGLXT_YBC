@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/fwcz_aaa"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:background="@drawable/title_chage_ylzs">
+
+                <TextView
+                    android:id="@+id/tv_act_pptcz_ylzs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="xx"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="24.5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="院落总数（宗）"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6.5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wy_ylzs_icon"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/title_chage_fjs">
+
+                <TextView
+                    android:id="@+id/tv_act_pptcz_fjs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="xx"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="24.5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="房间数（间）"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6.5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wy_fjs_icon"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="21.5dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            >
+            <View
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:background="#12C583"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房屋出租列表"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:background="#12C583"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/mapback_ffffff2"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/hssearch_czlb"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+                <com.jymj.zhglxt.widget.ClearEditText
+                    android:id="@+id/et_act_wy_cz_search"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:hint="请输入门牌号、产权人"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:maxLength="9"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_act_wy_cz_search"
+                android:padding="11dp"
+                android:textColor="@color/white"
+                android:text="搜索"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:background="#F0F0F0"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="产权人"
+                            android:textColor="#333333"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="门牌号"
+                            android:textColor="#333333"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="面积（㎡）"
+                            android:textColor="#333333"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="时间"
+                            android:textColor="#333333"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="返租状态"
+                            android:textColor="#333333"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#666666"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.jymj.zhglxt.widget.OptimizedRecyclerViewZhen
+                            android:id="@+id/rlv_ppt_tab_cz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </com.jymj.zhglxt.widget.OptimizedRecyclerViewZhen>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:background="#00000000">
+
+                <RelativeLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_ppt_tab_cz_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

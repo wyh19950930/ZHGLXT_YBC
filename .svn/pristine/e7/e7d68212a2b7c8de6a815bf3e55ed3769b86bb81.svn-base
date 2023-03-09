@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvCountCeSuanItem1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvProjectCeSuanItem1"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvQuantitieCeSuanItem1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvUnitCeSuanItem1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvBilpriceCeSuanItem1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvQuaunitCeSuanItem1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvSumcostCeSuanItem1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"/>
+</LinearLayout>

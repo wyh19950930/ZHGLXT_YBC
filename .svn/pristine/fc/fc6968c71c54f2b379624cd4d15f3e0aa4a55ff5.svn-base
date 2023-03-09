@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_cm"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="村名"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_4"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/gantta_list_textview_width"
+        android:layout_height="match_parent"
+        android:text="四分及以下"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_4zb"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="占比"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_46"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/gantta_list_textview_width"
+        android:layout_height="match_parent"
+        android:text="四分-六分"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_46zb"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="占比"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_68"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/gantta_list_textview_width"
+        android:layout_height="match_parent"
+        android:text="六分-八分"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_68zb"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="占比"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_8"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/gantta_list_textview_width"
+        android:layout_height="match_parent"
+        android:text="八分及以上"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_8zb"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="占比"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/frame_fwxx_rlv_zj"
+        style="@style/table_title_textview"
+        android:layout_width="@dimen/raise_title_text"
+        android:layout_height="match_parent"
+        android:text="总计"
+        android:textColor="@color/black" />
+
+</LinearLayout>

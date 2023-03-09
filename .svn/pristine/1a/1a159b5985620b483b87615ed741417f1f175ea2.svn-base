@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_fjxc_list_szd"
+        android:layout_weight="1.4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginLeft="14dp"
+        android:textColor="#333333"
+        android:text="所在地" />
+    <TextView
+        android:id="@+id/tv_fjxc_list_szsl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="总数量" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_fjxc_list_xcl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="巡查量" />
+
+    <TextView
+        android:id="@+id/tv_fjxc_list_zgl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="整改量" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_fjxc_list_dcl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="待处理" />
+    <TextView
+        android:id="@+id/tv_fjxc_list_shl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="审核量" />
+    <TextView
+        android:id="@+id/tv_fjxc_list_ywc"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="已完成" />
+    <TextView
+        android:id="@+id/tv_fjxc_list_yql"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="逾期量" />
+    <TextView
+        android:id="@+id/tv_fjxc_list_bhl"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:text="驳回量" />
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:background="#F6F7FB"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/back_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"
+        android:layout_marginLeft="14dp"/>
+
+</LinearLayout>

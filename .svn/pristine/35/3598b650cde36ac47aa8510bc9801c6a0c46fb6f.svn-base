@@ -1,0 +1,287 @@
+package com.jymj.zhglxt.zjd.fragment.shzl
+
+
+import android.content.Intent
+import android.graphics.Color
+import android.view.*
+import androidx.fragment.app.Fragment
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener
+import com.bigkoo.pickerview.view.OptionsPickerView
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.BaseViewHolder
+
+import com.jymj.zhglxt.R
+import com.jymj.zhglxt.rjhj.activity.HBJCDetailActivity
+import com.jymj.zhglxt.util.FileUtilsFjxc
+import com.jymj.zhglxt.util.PopuTjfxUtils
+import com.jymj.zhglxt.util.TimeUtil
+import com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+import com.jymj.zhglxt.zjd.activity.zjdgl.BcqhNhjtjcActivity
+import com.jymj.zhglxt.zjd.bean.bcjc.bcqh.JtcyjcEntity
+import com.jymj.zhglxt.zjd.contract.BcqhContract
+import com.jymj.zhglxt.zjd.fragment.ZjdglFragment
+import com.jymj.zhglxt.zjd.fragment.ZjdglFragment.Companion.supl_frag_zjdgl1
+import com.jymj.zhglxt.zjd.presenter.BcqhPresenter
+import com.setsuna.common.base.BaseFragment
+import com.setsuna.common.base.BaseModel
+import com.setsuna.common.baseapp.AppCache
+import com.setsuna.common.commonutils.TimeUtils
+import com.setsuna.common.commonutils.ToastUtils
+import com.setsuna.common.commonwidget.LoadingDialog
+import kotlinx.android.synthetic.main.activity_cbbsjsx.*
+import kotlinx.android.synthetic.main.fragment_bcqh.*
+import java.io.File
+import java.text.SimpleDateFormat
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * 百村千户
+ */
+class BcqhFragment : BaseFragment<BcqhPresenter, BaseModel>(),BcqhContract.View {
+    override fun returnBcqhDetail(msg: List<JtcyjcEntity>) {
+
+    }
+
+    override fun returnBcqhUpload(msg: List<JtcyjcEntity>) {
+
+    }
+
+    override fun lazyLoad() {
+    }
+
+    override fun getLayoutResource(): Int {
+        return R.layout.fragment_bcqh
+    }
+
+    override fun initPresenter() {
+        mPresenter.setVM(this,mModel)
+    }
+
+    override fun initViews() {
+    }
+
+    override fun initDatas() {
+        diaoyong()
+    }
+    var split = ""
+    private val yearsList = ArrayList<String>()
+    private val allYearsList = ArrayList<String>()
+    private val yearsListNull = ArrayList<String>()
+    override fun returnBcjcYears(msg: List<String>) {
+        yearsList.clear()
+        allYearsList.clear()
+        allYearsList.addAll(msg)
+        yearsList.add(msg.get(0))
+        if (AppCache.getInstance().type!=4||AppCache.getInstance().duties==1){
+            mPresenter.getBcjcjtList(AppCache.getInstance().code,"")
+            mtl_frag_bcqh_selecttime.addText = ""
+        }else {
+            mPresenter.getBcjcjtList(AppCache.getInstance().code, yearsList.get(0))
+            mtl_frag_bcqh_selecttime.addText = msg.get(0)
+        }
+        mtl_frag_bcqh_selecttime.setOnTitleListLister(object: MeTitleLayout.OnTitleListLister{
+
+            override fun onClick(name: String?) {
+                if (name.equals("添加")){
+
+                        val pvOptions: OptionsPickerView<String> = OptionsPickerBuilder(activity, OnOptionsSelectListener { options1, option2, options3, v ->
+                            //                        setCheck(quList,options1)
+                            mtl_frag_bcqh_selecttime.addText = msg.get(options1)
+                            split = msg.get(options1).substring(0,msg.get(options1).length-1)
+                            yearsList.clear()
+                            yearsList.add(mtl_frag_bcqh_selecttime.addText)
+                            mPresenter.getBcjcjtList(AppCache.getInstance().code,yearsList.get(0))
+
+//                        getZhenList(xzqList,quList.get(options1).code)
+                        })
+                                .isDialog(true)
+                                .isAlphaGradient(true)
+                                .build<String>()
+                        pvOptions.setSelectOptions(msg.indexOf(mtl_frag_bcqh_selecttime.addText))
+                        pvOptions.setPicker(msg)
+                        pvOptions.setTitleText("年份选择")
+                        pvOptions.findViewById(R.id.rv_topbar).setBackgroundResource(R.drawable.bt_actiive_shi_ban_white)
+
+
+                        val params = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM)
+                        params.leftMargin = 0
+                        params.rightMargin = 0
+                        val contentContainer = pvOptions.getDialogContainerLayout()
+                        contentContainer.setLayoutParams(params)
+                        pvOptions.getDialog().getWindow()!!.setGravity(Gravity.BOTTOM)
+                        pvOptions.getDialog().getWindow()!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+                        pvOptions.show()
+
+
+                    }
+                }
+            })
+
+    }
+
+    override fun returnBcjcjtList(msg: List<JtcyjcEntity>) {
+        if (msg.size<10&&(AppCache.getInstance().type==4&&AppCache.getInstance().duties!=1)){//提示导入
+            val indexOf = allYearsList.indexOf(yearsList.get(0))
+//            if (indexOf!=0){//如果不是第一个年提示是否导入往年数据
+                PopuTjfxUtils.getInstance().initPopuTime(activity, sv_frag_bcqh_up, allYearsList, object : PopuTjfxUtils.OnBgListLinear {
+                    override fun onClick(bgName: String?) {
+                        mPresenter.getBcjcjtImportData(AppCache.getInstance().code, bgName!!,yearsList.get(0))
+                    }
+
+                })
+//            }
+        }
+
+        rlv_frag_bcqh_jtjclb.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
+        val arrayList = ArrayList<JtcyjcEntity>()
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        arrayList.add(JtcyjcEntity())
+        for (i in arrayList.indices){
+            for (f in msg){
+                if (f.sorting == i+1){
+                    arrayList.set(i,f)
+                }
+            }
+        }
+
+        rlv_frag_bcqh_jtjclb.adapter = object:BaseQuickAdapter<JtcyjcEntity,BaseViewHolder>(R.layout.item_bcjc_nyjtjcb,arrayList){
+            override fun convert(helper: BaseViewHolder?, item: JtcyjcEntity?) {
+                var dateString ="";
+                if (!item!!.createTime.equals("")){
+                    val formatter = SimpleDateFormat(TimeUtil.dateFormatYMDofChinese)
+                    val dateByFormat = TimeUtil.getDateByFormat(item!!.createTime, TimeUtil.dateFormatYMD)
+                    dateString = formatter.format(dateByFormat)
+                }
+
+                helper!!.setText(R.id.tv_item_bcjc_nyktkcb_wjbh, "问卷编码:${item!!.id}")//
+                        .setText(R.id.tv_item_bcjc_nyktkcb_mph, "${item.jtdzxzqmc}${item.mph}")
+                        .setText(R.id.tv_item_bcjc_nyktkcb_time, dateString)
+
+                if (helper!!.adapterPosition+1<10){
+                    helper!!.setText(R.id.tv_bcjc_nyjtjcb_xh, "0${helper!!.adapterPosition+1}")
+                }else{
+                    helper!!.setText(R.id.tv_bcjc_nyjtjcb_xh, "${helper!!.adapterPosition+1}")
+                }
+
+
+                val nyktkcbIssum = helper.getView<TextView>(R.id.tv_item_bcjc_nyktkcb_issum)
+                val nyktkcbWjbh = helper.getView<TextView>(R.id.tv_item_bcjc_nyktkcb_wjbh)
+                val nyjtjcbSee = helper.getView<TextView>(R.id.tv_itme_bcjc_nyjtjcb_see)
+                if (item!!.process!=4){
+                    nyktkcbIssum.setText("未提交")
+                    nyktkcbIssum.setBackgroundResource(R.drawable.bt_actiive_xaiyoubai_orange)
+                    nyktkcbIssum.setTextColor(Color.parseColor("#F98648"))
+                    nyktkcbWjbh.setTextColor(Color.parseColor("#F98648"))
+                }else{
+                    nyktkcbIssum.setText("已提交")
+                    nyktkcbIssum.setBackgroundResource(R.drawable.bt_actiive_xaiyoubai_green)
+                    nyktkcbIssum.setTextColor(Color.parseColor("#20B759"))
+                    nyktkcbWjbh.setTextColor(Color.parseColor("#20B759"))
+
+                }
+                if (item.id!=null){
+                    nyktkcbWjbh.visibility = View.VISIBLE
+                    nyjtjcbSee.setText("点击查看")
+                    nyjtjcbSee.setBackgroundResource(R.drawable.bt_actiive_kong_blue)
+                    nyjtjcbSee.setTextColor(Color.parseColor("#409EFF"))
+                }else{
+                    nyktkcbWjbh.visibility = View.GONE
+                    nyjtjcbSee.setText("立即填写")
+                    nyjtjcbSee.setBackgroundResource(R.drawable.bt_actiive_shi_blue)
+                    nyjtjcbSee.setTextColor(Color.parseColor("#FFFFFF"))
+
+                }
+
+                helper.itemView.setOnClickListener {
+                    val intent = Intent(activity, BcqhNhjtjcActivity::class.java)
+
+                    if (item!!.id!=null){//修改 或查看
+                        if (AppCache.getInstance().type!=4||AppCache.getInstance().duties==1){
+                            intent.putExtra("type",1)
+                            intent.putExtra("code",item.code)
+//                            intent.putExtra("sorting",item.sorting)
+                            intent.putExtra("sorting",helper!!.adapterPosition+1)
+                        }else{
+                            intent.putExtra("type",2)
+                            intent.putExtra("year",yearsList.get(0))
+                            intent.putExtra("id",item.id)
+                            intent.putExtra("sorting",helper!!.adapterPosition+1)
+                        }
+                    }else{//添加
+                        intent.putExtra("type",3)
+                        intent.putExtra("code",AppCache.getInstance().code)
+                        intent.putExtra("year",yearsList.get(0))
+                        intent.putExtra("sorting",helper!!.adapterPosition+1)
+                    }
+                    startActivity(intent)
+                }
+
+            }
+        }
+    }
+
+    override fun returnBcjcjtImportData(msg: String) {
+        if (msg.equals("导入成功")){
+            mPresenter.getBcjcjtList(AppCache.getInstance().code,yearsList.get(0))
+        }
+        ToastUtils.showShort(msg)
+    }
+
+    override fun showLoading(title: String?) {
+        LoadingDialog.showDialogForLoading(activity)
+    }
+
+    override fun stopLoading() {
+        LoadingDialog.cancelDialogForLoading()
+    }
+
+    override fun showErrorTip(msg: String?) {
+        ToastUtils.showShort(msg)
+    }
+
+
+    companion object {
+        /**
+         * 单例，返回给定节编号的此片段的新实例。
+         */
+        @JvmStatic
+        fun newInstance(sectionNumber: Int): BcqhFragment {
+            return BcqhFragment().apply {
+                //                ToastUtils.showShort("${sectionNumber}")
+            }
+        }
+    }
+
+
+
+    fun diaoyong(){
+
+        if (supl_frag_zjdgl1 !=null&&sv_frag_bcqh_up!=null){//&&sv_frag_bcqh_up!=null
+            supl_frag_zjdgl1?.setScrollableView(sv_frag_bcqh_up)//sv_frag_bcqh_up
+
+            mPresenter.getBcjcYears()//百村监测获取年
+        }
+
+    }
+
+
+}

@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/ll_act_nhjtjc_top"
+    tools:context="com.jymj.zhglxt.zjd.activity.zjdgl.BcqhNhjtjcActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="农户家庭监测表"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="2022年"
+            android:textColor="#409EFF"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeeee" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bt_actiive_eeeeee_kuang"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="乡镇"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_xz"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写乡镇信息"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="村"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_cun"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写村信息"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="填表人"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_tbr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写填表人信息"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="主要受访者姓名"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_sfzxm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写受访者姓名"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="主要受访者手机号码"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_sfzsjh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写手机号码"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="家庭地址"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_jtdzxz"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="乡镇(街道)"
+                        android:textSize="13dp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_jtdzcun"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="村(居委会)"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="门牌号"
+                        android:textColor="#3D3D3D"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_act_nhjtjc_mph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="填写受访家庭门牌号"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f5f5f5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="家庭成员基本情况"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_act_nhjtjc_jbqk_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:gravity="right|center"
+                    android:text="添加成员"
+                    android:textColor="#4CA2FE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:orientation="horizontal">
+                
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="成员"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="性别"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="年龄"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="受教育程度"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="户籍"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="长期居住地"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="拥有股份"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="主要收入渠道"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="身体健康状况"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="注：拥有股份中，成员个人股一般为普通股，享受集体经济收益和福利，拥有表决权，如基本股（户籍股）、劳龄股、土地承包经营权等，非成员个人股一般为优先股，不享受福利，也没有表决权。"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f5f5f5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="家庭土地经营及财产情况"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_act_nhjtjc_tdjyccqk_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:gravity="right|center"
+                    android:text="操作"
+                    android:textColor="#4CA2FE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="承包地面积(亩)"
+                        style="@style/table_title_textview"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#f5f5f5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="流转(亩)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="自营(亩)"
+                            style="@style/table_title_textview"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="主要种植农产品"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="面积(亩)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="成本(元)"
+                        style="@style/table_title_textview"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#f5f5f5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="人工(元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="种子(元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="肥料(元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="农药(元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="机械作业(元)"
+                            style="@style/table_title_textview"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="总销售收入(元)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="农业机械(马力)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="私人汽车(辆)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="住宅建筑面积(平方米)"
+                        style="@style/table_title_textview"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="附：
+[1]承包地流转价格 6561  元/亩。
+[2]住宅出租 54121 平方米，出租价格 15421 元/平方米。"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f5f5f5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="家庭收入支出情况"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_act_nhjtjc_srzc_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:gravity="right|center"
+                    android:text="操作"
+                    android:textColor="#4CA2FE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="收入合计(万元)"
+                        style="@style/table_title_textview"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#f5f5f5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="家庭经营收入(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="工资性收入(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="财产性收入(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="转移性收入(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="其他收入(万元)"
+                            style="@style/table_title_textview"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="支出合计"
+                        style="@style/table_title_textview"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#f5f5f5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="生产资料(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="生活消费(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="教育(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="医疗(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="赡养老人(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="社保(万元)"
+                            style="@style/table_title_textview"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="其他支出(万元)"
+                            style="@style/table_title_textview"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="总销售收入(元)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="农业机械(马力)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="私人汽车(辆)"
+                        style="@style/table_title_textview"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="住宅建筑面积(平方米)"
+                        style="@style/table_title_textview"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="附：
+来自村集体经营的收入 25624 元，家庭经营的收入 45122 元。"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f5f5f5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="家庭社会保障与财政需求情况"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_act_nhjtjc_sbyczxq_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:gravity="right|center"
+                    android:text="操作"
+                    android:textColor="#4CA2FE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="参加公益岗位人数"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="获得农业政策性补贴(元)"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="合作社盈余返还（元）"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="参加城镇职工基本医疗保险人数"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="参加城乡基本医疗保险人数"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="参加城镇职工基本养老保险人数"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="参加城乡基本养老保险人数"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="最需要的财政支持项目（选项见备注）"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="最需要的培训项目（选项见备注）"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        style="@style/table_title_textview"
+                        android:text="获取政策信息的主要渠道（选项见备注）"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="注：
+[1]最需要的财政支持项目： A 改水改厕、 B 农村能源节能改造、 C 乡村道路建设、 D 医疗保障、 E 养老保障、 F 就业培训、 G 支持农民合作社发展、 H 扶持壮大集体经济
+[2]最需要的培训项目：A 农业技能、 B 企业上岗培训、 C 农产品销售能力、 D 乡村旅游等服务业培训、 E 基础技能培训、（计算机、外语等）、 F 其他
+[3]获取政策信息的主要渠道：A 电视、广播、 B 抖音、公众号等新媒体、 C 电话手机、 D 报纸杂志、 E 社区展板、 F 村干部传达、 G 亲戚朋友、 H 其他
+[4]最后三列问题为多选，请选三项，并按重要程度排序。"/>
+
+            <Button
+                android:id="@+id/bt_act_nhjtjc_upload"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/bt_actiive_409eff"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

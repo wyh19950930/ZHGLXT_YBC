@@ -1,0 +1,110 @@
+package com.jymj.zhglxt.zjd.bean.xm;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+/**
+ * Created by lc on 2022/11/11.
+ */
+public class BcXmfwEntity {
+    private Long gid;
+    private String xmmc;
+    private String geometry;
+    private String center;
+    private String xmlx;
+    private BigDecimal ydgm;
+    private BigDecimal jzgm;
+    private BigDecimal area;
+    private String zjly;
+
+    private List<BcXmdwEntity> bcXmdwEntityList;
+    private List<BcXmgdfwEntity> bcXmgdfwEntityList;
+
+    public Long getGid() {
+        return gid;
+    }
+
+    public void setGid(Long gid) {
+        this.gid = gid;
+    }
+
+    public String getXmmc() {
+        return xmmc==null?"":xmmc;
+    }
+
+    public void setXmmc(String xmmc) {
+        this.xmmc = xmmc;
+    }
+
+    public String getGeometry() {
+        return geometry;
+    }
+
+    public void setGeometry(String geometry) {
+        this.geometry = geometry;
+    }
+
+    public String getCenter() {
+        return center==null?"":center;
+    }
+
+    public void setCenter(String center) {
+        this.center = center;
+    }
+
+    public String getXmlx() {
+        return xmlx==null?"":xmlx;
+    }
+
+    public void setXmlx(String xmlx) {
+        this.xmlx = xmlx;
+    }
+
+    public BigDecimal getYdgm() {
+        return ydgm==null?BigDecimal.ZERO:ydgm;
+    }
+
+    public void setYdgm(BigDecimal ydgm) {
+        this.ydgm = ydgm;
+    }
+
+    public BigDecimal getJzgm() {
+        return jzgm==null?BigDecimal.ZERO:jzgm;
+    }
+
+    public void setJzgm(BigDecimal jzgm) {
+        this.jzgm = jzgm;
+    }
+
+    public BigDecimal getArea() {
+        return area==null?BigDecimal.ZERO:area;
+    }
+
+    public void setArea(BigDecimal area) {
+        this.area = area;
+    }
+
+    public String getZjly() {
+        return zjly==null?"":zjly;
+    }
+
+    public void setZjly(String zjly) {
+        this.zjly = zjly;
+    }
+
+    public List<BcXmdwEntity> getBcXmdwEntityList() {
+        return bcXmdwEntityList;
+    }
+
+    public void setBcXmdwEntityList(List<BcXmdwEntity> bcXmdwEntityList) {
+        this.bcXmdwEntityList = bcXmdwEntityList;
+    }
+
+    public List<BcXmgdfwEntity> getBcXmgdfwEntityList() {
+        return bcXmgdfwEntityList;
+    }
+
+    public void setBcXmgdfwEntityList(List<BcXmgdfwEntity> bcXmgdfwEntityList) {
+        this.bcXmgdfwEntityList = bcXmgdfwEntityList;
+    }
+}

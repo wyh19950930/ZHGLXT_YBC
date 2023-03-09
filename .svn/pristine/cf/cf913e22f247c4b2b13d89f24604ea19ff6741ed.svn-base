@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swlt_tv_item_cbbsjsx_qyfw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_item_cbbsjsx_qyfw_qu"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                style="@style/table_title_textview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_item_cbbsjsx_qyfw_qu"
+                    android:layout_weight="1"
+                    android:text="请选择区"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_dsj"
+                    style="@style/table_title_textview"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_item_cbbsjsx_qyfw_zhen"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                style="@style/table_title_textview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_item_cbbsjsx_qyfw_zhen"
+                    android:layout_weight="1"
+                    android:text="请选择镇"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_dsj"
+                    style="@style/table_title_textview"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_item_cbbsjsx_qyfw_cun"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                style="@style/table_title_textview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_item_cbbsjsx_qyfw_cun"
+                    android:layout_weight="1"
+                    android:text="请选择村"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_dsj"
+                    style="@style/table_title_textview"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_cbbsjsx_qyfw_det"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#D63A3B"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+</LinearLayout>

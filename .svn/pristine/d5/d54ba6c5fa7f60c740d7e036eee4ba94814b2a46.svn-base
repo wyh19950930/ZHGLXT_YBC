@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="450dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_year"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_srhj"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="收入合计(万元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_jtjysr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="家庭经营收入" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_gzxsr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="工资性收入" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_ccxsr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="财产性收入" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_zyxsr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="转移性收入" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_qtsr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="其他收入" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_zchj"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="支出合计(万元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_sczl"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="生产资料" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_shxf"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="生活消费" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_jy"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="教育" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_yl"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="医疗" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_sylr"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="赡养老人" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_sb"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="社保" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jtsrzcqk_qtzc"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="其他支出" />
+</LinearLayout>

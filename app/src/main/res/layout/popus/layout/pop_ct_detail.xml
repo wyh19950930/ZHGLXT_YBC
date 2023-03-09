@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/tv_pop_ct_detail_jdb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="未动工" />
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_pop_map_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/but_map_qc"
+            android:layout_weight="2"
+            android:text="关闭"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/but_map_tj"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+</LinearLayout>

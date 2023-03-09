@@ -1,0 +1,24 @@
+package com.jymj.zhglxt.xm.contract
+
+import com.jymj.zhglxt.rjhj.bean.SysUserEntity
+import com.setsuna.common.base.BaseModel
+import com.setsuna.common.base.BasePresenter
+import com.setsuna.common.base.BaseView
+import com.setsuna.common.basebean.BaseRespose
+import java.util.ArrayList
+
+interface XmIssueContract {
+    interface Model:BaseModel{
+        fun getBaoBiao(proId:String):String
+    }
+    interface View:BaseView{
+        fun returnAddUser(message: String)
+
+    }
+    companion object {
+        abstract class Presenter:BasePresenter<View,Model>(){
+            abstract fun getAddUser(message: SysUserEntity)
+
+        }
+    }
+}

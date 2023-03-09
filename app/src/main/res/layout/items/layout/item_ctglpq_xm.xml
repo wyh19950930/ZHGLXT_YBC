@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <TextView
+            android:id="@+id/item_ctglpq_xm_mc"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/raise_title_text"
+            android:layout_height="match_parent"
+            android:text="项目名称" />
+
+        <TextView
+            android:id="@+id/item_ctglpq_xm_cddw"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/raise_title_text"
+            android:layout_height="match_parent"
+            android:text="承担单位"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_gm"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/gantta_list_textview_width"
+            android:layout_height="match_parent"
+            android:text="建设规模" />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_ttzt"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/raise_title_text"
+            android:layout_height="match_parent"
+            android:text="腾退状态" />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_zfqk"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/gantta_list_textview_width"
+            android:layout_height="match_parent"
+            android:text="支付情况" />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_zfje"
+            android:textColor="@color/black"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/raise_title_text"
+            android:layout_height="match_parent"
+            android:text="支付金额" />
+
+        <TextView
+            android:id="@+id/item_ctglpq_xm_xg"
+            android:textColor="#317EF3"
+            style="@style/table_title_textview"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="match_parent"
+            android:text="修改"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_cz"
+            android:textColor="#317EF3"
+            style="@style/table_title_textview"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="查看详情" />
+        <TextView
+            android:id="@+id/item_ctglpq_xm_sc"
+            android:textColor="#ff6000"
+            style="@style/table_title_textview"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="删除" />
+
+
+    </LinearLayout>
+</LinearLayout>

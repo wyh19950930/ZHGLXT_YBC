@@ -1,0 +1,43 @@
+package com.jymj.zhglxt.xm.activity
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.jymj.zhglxt.R
+import com.jymj.zhglxt.xm.contract.XmIssueContract
+import com.jymj.zhglxt.xm.presenter.XmIssuePresenter
+import com.setsuna.common.base.BaseActivity
+
+class SearchDzActivity : BaseActivity<XmIssuePresenter, XmIssueContract.Model>(), XmIssueContract.View {
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_search_dz
+    }
+    override fun initPresenter() {
+        mPresenter.setVM(this,mModel)
+    }
+
+    override fun initViews() {
+        
+    }
+
+    override fun initDatas() {
+        
+    }
+
+    override fun returnAddUser(message: String) {
+        
+    }
+
+    override fun showLoading(title: String?) {
+        
+    }
+
+    override fun stopLoading() {
+        
+    }
+
+    override fun showErrorTip(msg: String?) {
+        
+    }
+
+}

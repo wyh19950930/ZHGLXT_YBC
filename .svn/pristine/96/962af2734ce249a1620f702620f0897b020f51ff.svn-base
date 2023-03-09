@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_yzt_dp_xh"
+            style="@style/table_title_textview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="序号" />
+        <TextView
+            android:id="@+id/tv_yzt_dp_jyztmc"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="经营主体名称" />
+        <TextView
+            android:id="@+id/tv_yzt_dp_sslx"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="设施类型" />
+        <TextView
+            android:id="@+id/tv_yzt_dp_jssj"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="建设时间" />
+        <TextView
+            android:id="@+id/tv_yzt_dp_pnmj"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="棚内面积" />
+
+        <TextView
+            android:id="@+id/tv_yzt_dp_baqk"
+            android:layout_weight="1"
+            style="@style/table_title_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="本案情况" />
+
+    </LinearLayout>
+</LinearLayout>

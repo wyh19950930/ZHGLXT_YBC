@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/dp_10"
+    >
+
+        <TextView
+            android:id="@+id/pointjcxx_tx_cm"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="村名"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointjcxx_tx_dlbm"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="地类编码"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointjcxx_tx_mj"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="面积"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/pointjcxx_tx_qsxz"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="权属性质"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/pointjcxx_tx_dlmc"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="地类名称"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+</LinearLayout>

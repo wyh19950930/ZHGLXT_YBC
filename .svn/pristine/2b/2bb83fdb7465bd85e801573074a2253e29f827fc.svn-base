@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.jymj.zhglxt.ui.activity.ShoppingMallWebActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_act_shopping_mall_back"
+            android:src="@drawable/back_left_icon"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:text="商城"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview_act_shopping_mall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+</LinearLayout>

@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_ppt_aff_fz_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.zjd.activity.zjdgl.PropertyAddFzActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="新增返租"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:transitionName="title" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/iv_at_property_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/back_left_icon"
+            android:transitionName="icon" />
+
+    </RelativeLayout>
+<!--
+        app:umanoScrollableView="@id/slv_act_pptaddfz"-->
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/supl_act_pptaddfz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:umanoScrollableView="@id/slv_act_pptaddfz"
+        app:umanoAnchorPoint="0.39"
+        app:umanoFadeColor="#00ffffff"
+        app:umanoOverlay="true"
+        app:umanoPanelHeight="0dp"
+        app:umanoShadowHeight="4dp">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map_act_pptaddfz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.amap.api.maps2d.MapView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <ScrollView
+                android:id="@+id/slv_act_pptaddfz"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="房源核录信息"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="6dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ewm_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:text="二维码"
+                                android:textColor="#12C583"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="144dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/iv_act_ppt_add_fz_ewmfh"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_act_ppt_add_fz_smewm"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/bg_border_stroke_green"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="扫码绑定"
+                                    android:textColor="#12C483"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="宅基地二维码"
+                                    android:textColor="#666666"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="#dddddd" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="门牌号"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_act_pptaddfz_mph"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="产权人"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_act_pptaddfz_cqr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="xxx"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="建成时间"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_act_pptaddfz_jcsj"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:hint="请选择建成时间"
+                                    android:textColor="#333333"
+                                    android:textSize="12sp"
+                                    android:background="@null"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="建筑面积"
+                                    android:textColor="#999999"
+                                    android:textSize="12sp" />
+
+                                <EditText
+                                    android:id="@+id/tv_act_pptaddfz_jzmj"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:hint="请输入建筑面积"
+                                    android:textColor="#333333"
+                                    android:textSize="12sp"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="㎡"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp"
+                                    android:layout_marginLeft="2dp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#999999" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="建筑层数"
+                                        android:textColor="#999999"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_act_pptaddfz_jzcs"
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:hint=""
+                                        android:textColor="#333333"
+                                        android:textSize="12sp"
+                                        android:background="@null"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="层"
+                                        android:textColor="#333333"
+                                        android:textSize="14sp"
+                                        android:layout_marginLeft="2dp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#999999" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="房间数"
+                                        android:textColor="#999999"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_act_pptaddfz_fjs"
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="#333333"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="间"
+                                        android:textColor="#333333"
+                                        android:textSize="14sp"
+                                        android:layout_marginLeft="2dp"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#999999" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#333333"
+                                android:layout_marginTop="4.5dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="4.5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="建筑结构"
+                                        android:textColor="#999999"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_act_pptaddfz_jzjg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:hint=""
+                                        android:textColor="#333333"
+                                        android:textSize="12sp"
+                                        android:background="@null"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#999999" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="返租金额"
+                                        android:textColor="#999999"
+                                        android:textSize="12sp" />
+
+                                    <EditText
+                                        android:id="@+id/tv_act_pptaddfz_fzje"
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:hint="请输入租金"
+                                        android:textColor="#333333"
+                                        android:textSize="12sp"
+                                        android:singleLine="true"
+                                        android:inputType="numberDecimal"
+                                        android:background="@null"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="元"
+                                        android:textColor="#333333"
+                                        android:textSize="14sp"
+                                        android:layout_marginLeft="2dp"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="#999999" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="租期"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_act_pptaddfz_zqq"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:hint="请选择起始时间"
+                                android:paddingRight="12dp"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="0.5dp"
+                                android:background="#333333"/>
+
+                            <TextView
+                                android:id="@+id/tv_act_pptaddfz_zqz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:hint="请选择结束时间"
+                                android:paddingLeft="12.5dp"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                android:background="@null"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#999999" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="备注"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/tv_act_pptaddfz_remark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:hint="请输入备注信息"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#f6f7fb" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="合同资料/院落照片"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_act_ppt_add_fz_htyl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp">
+
+                            <ImageView
+                                android:id="@+id/iv_act_ppt_add_fz_fzht"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_up_file"/>
+
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_act_ppt_add_fz_fzht_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_error_cha1" />
+
+                            <TextView
+                                android:id="@+id/tv_act_ppt_add_fz_fzht"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="35dp"
+                                android:text="返租合同"
+                                android:textColor="#999999"
+                                android:textSize="11sp" />
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rlt_act_ppt_add_fz_fzht"
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="返租合同"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/iv_act_ppt_add_fz_xsht"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_up_file"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_act_ppt_add_fz_xsht_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_error_cha1" />
+
+                            <TextView
+                                android:id="@+id/tv_act_ppt_add_fz_xsht"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="35dp"
+                                android:text="修缮合同"
+                                android:textColor="#999999"
+                                android:textSize="11sp" />
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rlt_act_ppt_add_fz_xsht"
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="修缮合同"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#f6f7fb" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp">
+
+                            <ImageView
+                                android:id="@+id/iv_act_ppt_add_fz_yl1"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_up_file"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_act_ppt_add_fz_yl1_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_error_cha1" />
+
+                            <TextView
+                                android:id="@+id/tv_act_ppt_add_fz_yl1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="35dp"
+                                android:text="院落照片"
+                                android:textColor="#999999"
+                                android:textSize="11sp" />
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rlt_act_ppt_add_fz_yl1"
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="院落照片"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="170dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/iv_act_ppt_add_fz_yl2"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_up_file"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_act_ppt_add_fz_yl2_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_error_cha1" />
+
+                            <TextView
+                                android:id="@+id/tv_act_ppt_add_fz_yl2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="35dp"
+                                android:text="院落照片"
+                                android:textColor="#999999"
+                                android:textSize="11sp" />
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rlt_act_ppt_add_fz_yl2"
+                                android:layout_width="150dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/pic_upload_bottom_radius" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="院落照片"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#f6f7fb" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="15dp"
+                            android:background="#12C583" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="房间详情"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_act_property_add_fz_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="6dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/wy_xzfzroom_add_top" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:text="新增房间"
+                                android:textColor="#12C583"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#333333" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                            android:id="@+id/rlv_act_pptaddfz_room_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp">
+
+                        </com.yanzhenjie.recyclerview.SwipeRecyclerView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </ScrollView>
+            <Button
+                android:id="@+id/bt_act_pptfzadd_upload"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bt_actiive_12c483"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

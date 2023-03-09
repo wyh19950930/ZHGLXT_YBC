@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_table_environmental"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bh_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="编号" />
+        <TextView
+            android:id="@+id/xzq_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="行政区"
+            />
+        <TextView
+            android:id="@+id/xzq_environmental_wtlx"
+            style="@style/table_title_textview"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="问题类型"
+            />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/wz_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="位置"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/zrdw_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="责任单位"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/zt_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="状态" />
+
+        <TextView
+            android:id="@+id/sfws_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="待完善" />
+
+        <TextView
+            android:id="@+id/xm_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/time_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="时间"
+            />
+        <TextView
+            android:id="@+id/yujing_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/yujing_sfcq_environmental"
+            style="@style/table_title_textview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="预警"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

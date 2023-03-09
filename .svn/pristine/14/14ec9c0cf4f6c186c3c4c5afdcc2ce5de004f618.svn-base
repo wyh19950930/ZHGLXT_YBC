@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+   <TextView
+       android:id="@+id/item_bcqh_jttdjyjccqkfu_lzjg"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="2020年承包地流转价格1000元/亩"/>
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqkfu_cz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2020年住宅出租100平方米，出租价格100元/平方米"/>
+
+
+</LinearLayout>

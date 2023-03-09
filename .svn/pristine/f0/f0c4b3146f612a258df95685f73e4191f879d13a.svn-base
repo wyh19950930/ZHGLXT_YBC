@@ -1,0 +1,501 @@
+package com.jymj.zhglxt.zjd.bean.bcjc;
+
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+/**
+ * Created by lc on 2022/7/28.集体资产
+ */
+public class BcjtzcEntity {
+    private Long id;
+    private String xzqmc;
+    private String code;
+    private String jjzzmc;//	集体经济组织（名称）
+    private String clsj;//	成立时间
+    private String ztdjzc;//	是否进行法人主体登记注册  A是，在农业经管部门登记；B是，在市场主管部门登记；C 否
+    private String ggqzcze;//	改革前一年资产总额
+    private String ggqjzcze;//	 净资产总额
+    private String gdzs;//	股东总数
+    private String jtgdzs;//	集体股东总数
+    private String grgdrs;//	成员个人股东人数
+    private String lsgdrs;//	≤60岁股东人数
+    private String jtgzgdrs;//	在集体工作股东人数
+    private String fcygrgdrs;//	非成员个人股东人数
+    private String gbze;//	股本总额
+    private String jtgdgb;//	集体股东股本
+    private String grgdgb;//	成员个人股东股本
+    private String fcygrgdgb;//	非成员个人股东股本
+    private String qtgdgb;//	其他股东股本
+    private String jygljx;//	经营管理绩效
+    private String zzc;//	总资产
+    private String jyxzc;//	经营性资产
+    private String jzc;//	净资产
+    private String jyxsr;//	经营性收入
+    private String zyywsr;//	主营业务收入
+    private String qtywsr;//	其他业务收入
+    private String tzsy;//	投资收益
+    private String lrze;//	利润总额
+    private String sdsfy;//	所得税费用
+    private String jlr;//	净利润
+    private String gjfhze;//	股金分红总额
+    private String grgdfh;//	成员个人股东分红金额
+    private String fcygrgdfh;//	非成员个人股东分红金额
+    private String flfp;//	福利分配总额
+    private String kdzsczc;//	当年扩大再生产支出
+    private String createTime;
+    private String updateTime;
+    private String years;//	年份
+    private String bccl;//	补充材料
+    private String yjsf;//	应交税费
+    private String yjzzs;//	应交增值税
+    private String yjtdzzs;//	应交土地增值税
+    private String yjfcs;//	应交房产税
+    private String yjsds;//	应交所得税
+    private String qtsf;//	其他税费
+    private String gysyzc;//	公益事业支出
+    private String cunname;//	填写名字
+    private String zhenname;//审核名字
+    private String qvname;//	审批名字
+    private String shtime;//	审核时间
+    private String sptime;//	审批时间
+    private Integer process;//	流程  1 村填写  2 镇审核  3 区审批
+    private List<BcrejectedEntity> bcrejectedEntities;
+    public Long getId() {
+        return id == null?0L:id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getXzqmc() {
+        return xzqmc == null?"":xzqmc;
+    }
+
+    public void setXzqmc(String xzqmc) {
+        this.xzqmc = xzqmc;
+    }
+
+    public String getCode() {
+        return code == null?"":code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getJjzzmc() {
+        return jjzzmc == null?"":jjzzmc;
+    }
+
+    public void setJjzzmc(String jjzzmc) {
+        this.jjzzmc = jjzzmc;
+    }
+
+    public String getClsj() {
+        return clsj == null?"":clsj;
+    }
+
+    public void setClsj(String clsj) {
+        this.clsj = clsj;
+    }
+
+    public String getZtdjzc() {
+        return ztdjzc == null?"":ztdjzc;
+    }
+
+    public void setZtdjzc(String ztdjzc) {
+        this.ztdjzc = ztdjzc;
+    }
+
+    public String getGgqzcze() {
+        return ggqzcze == null?"":ggqzcze;
+    }
+
+    public void setGgqzcze(String ggqzcze) {
+        this.ggqzcze = ggqzcze;
+    }
+
+    public String getGgqjzcze() {
+        return ggqjzcze == null?"":ggqjzcze;
+    }
+
+    public void setGgqjzcze(String ggqjzcze) {
+        this.ggqjzcze = ggqjzcze;
+    }
+
+    public String getGdzs() {
+        return gdzs == null?"":gdzs;
+    }
+
+    public void setGdzs(String gdzs) {
+        this.gdzs = gdzs;
+    }
+
+    public String getJtgdzs() {
+        return jtgdzs == null?"":jtgdzs;
+    }
+
+    public void setJtgdzs(String jtgdzs) {
+        this.jtgdzs = jtgdzs;
+    }
+
+    public String getGrgdrs() {
+        return grgdrs == null?"":grgdrs;
+    }
+
+    public void setGrgdrs(String grgdrs) {
+        this.grgdrs = grgdrs;
+    }
+
+    public String getLsgdrs() {
+        return lsgdrs == null?"":lsgdrs;
+    }
+
+    public void setLsgdrs(String lsgdrs) {
+        this.lsgdrs = lsgdrs;
+    }
+
+    public String getJtgzgdrs() {
+        return jtgzgdrs == null?"":jtgzgdrs;
+    }
+
+    public void setJtgzgdrs(String jtgzgdrs) {
+        this.jtgzgdrs = jtgzgdrs;
+    }
+
+    public String getFcygrgdrs() {
+        return fcygrgdrs == null?"":fcygrgdrs;
+    }
+
+    public void setFcygrgdrs(String fcygrgdrs) {
+        this.fcygrgdrs = fcygrgdrs;
+    }
+
+    public String getGbze() {
+        return gbze == null?"":gbze;
+    }
+
+    public void setGbze(String gbze) {
+        this.gbze = gbze;
+    }
+
+    public String getJtgdgb() {
+        return jtgdgb == null?"":jtgdgb;
+    }
+
+    public void setJtgdgb(String jtgdgb) {
+        this.jtgdgb = jtgdgb;
+    }
+
+    public String getGrgdgb() {
+        return grgdgb == null?"":grgdgb;
+    }
+
+    public void setGrgdgb(String grgdgb) {
+        this.grgdgb = grgdgb;
+    }
+
+    public String getFcygrgdgb() {
+        return fcygrgdgb == null?"":fcygrgdgb;
+    }
+
+    public void setFcygrgdgb(String fcygrgdgb) {
+        this.fcygrgdgb = fcygrgdgb;
+    }
+
+    public String getQtgdgb() {
+        return qtgdgb == null?"":qtgdgb;
+    }
+
+    public void setQtgdgb(String qtgdgb) {
+        this.qtgdgb = qtgdgb;
+    }
+
+    public String getJygljx() {
+        return jygljx == null?"":jygljx;
+    }
+
+    public void setJygljx(String jygljx) {
+        this.jygljx = jygljx;
+    }
+
+    public String getZzc() {
+        return zzc == null?"":zzc;
+    }
+
+    public void setZzc(String zzc) {
+        this.zzc = zzc;
+    }
+
+    public String getJyxzc() {
+        return jyxzc == null?"":jyxzc;
+    }
+
+    public void setJyxzc(String jyxzc) {
+        this.jyxzc = jyxzc;
+    }
+
+    public String getJzc() {
+        return jzc == null?"":jzc;
+    }
+
+    public void setJzc(String jzc) {
+        this.jzc = jzc;
+    }
+
+    public String getJyxsr() {
+        return jyxsr == null?"":jyxsr;
+    }
+
+    public void setJyxsr(String jyxsr) {
+        this.jyxsr = jyxsr;
+    }
+
+    public String getZyywsr() {
+        return zyywsr == null?"":zyywsr;
+    }
+
+    public void setZyywsr(String zyywsr) {
+        this.zyywsr = zyywsr;
+    }
+
+    public String getQtywsr() {
+        return qtywsr == null?"":qtywsr;
+    }
+
+    public void setQtywsr(String qtywsr) {
+        this.qtywsr = qtywsr;
+    }
+
+    public String getTzsy() {
+        return tzsy == null?"":tzsy;
+    }
+
+    public void setTzsy(String tzsy) {
+        this.tzsy = tzsy;
+    }
+
+    public String getLrze() {
+        return lrze == null?"":lrze;
+    }
+
+    public void setLrze(String lrze) {
+        this.lrze = lrze;
+    }
+
+    public String getSdsfy() {
+        return sdsfy == null?"":sdsfy;
+    }
+
+    public void setSdsfy(String sdsfy) {
+        this.sdsfy = sdsfy;
+    }
+
+    public String getJlr() {
+        return jlr == null?"":jlr;
+    }
+
+    public void setJlr(String jlr) {
+        this.jlr = jlr;
+    }
+
+    public String getGjfhze() {
+        return gjfhze == null?"":gjfhze;
+    }
+
+    public void setGjfhze(String gjfhze) {
+        this.gjfhze = gjfhze;
+    }
+
+    public String getGrgdfh() {
+        return grgdfh == null?"":grgdfh;
+    }
+
+    public void setGrgdfh(String grgdfh) {
+        this.grgdfh = grgdfh;
+    }
+
+    public String getFcygrgdfh() {
+        return fcygrgdfh == null?"":fcygrgdfh;
+    }
+
+    public void setFcygrgdfh(String fcygrgdfh) {
+        this.fcygrgdfh = fcygrgdfh;
+    }
+
+    public String getFlfp() {
+        return flfp == null?"":flfp;
+    }
+
+    public void setFlfp(String flfp) {
+        this.flfp = flfp;
+    }
+
+    public String getKdzsczc() {
+        return kdzsczc == null?"":kdzsczc;
+    }
+
+    public void setKdzsczc(String kdzsczc) {
+        this.kdzsczc = kdzsczc;
+    }
+
+    public String getCreateTime() {
+        return createTime == null?"":createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime == null?"":updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getYears() {
+        return years == null?"":years;
+    }
+
+    public void setYears(String years) {
+        this.years = years;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    private Long userId;
+
+    public String getBccl() {
+        return bccl == null?"":bccl;
+    }
+
+    public void setBccl(String bccl) {
+        this.bccl = bccl;
+    }
+
+    public String getYjsf() {
+        return yjsf == null?"":yjsf;
+    }
+
+    public void setYjsf(String yjsf) {
+        this.yjsf = yjsf;
+    }
+
+    public String getYjzzs() {
+        return yjzzs == null?"":yjzzs;
+    }
+
+    public void setYjzzs(String yjzzs) {
+        this.yjzzs = yjzzs;
+    }
+
+    public String getYjtdzzs() {
+        return yjtdzzs == null?"":yjtdzzs;
+    }
+
+    public void setYjtdzzs(String yjtdzzs) {
+        this.yjtdzzs = yjtdzzs;
+    }
+
+    public String getYjfcs() {
+        return yjfcs == null?"":yjfcs;
+    }
+
+    public void setYjfcs(String yjfcs) {
+        this.yjfcs = yjfcs;
+    }
+
+    public String getYjsds() {
+        return yjsds == null?"":yjsds;
+    }
+
+    public void setYjsds(String yjsds) {
+        this.yjsds = yjsds;
+    }
+
+    public String getQtsf() {
+        return qtsf == null?"":qtsf;
+    }
+
+    public void setQtsf(String qtsf) {
+        this.qtsf = qtsf;
+    }
+
+    public String getGysyzc() {
+        return gysyzc == null?"":gysyzc;
+    }
+
+    public void setGysyzc(String gysyzc) {
+        this.gysyzc = gysyzc;
+    }
+
+    public String getCunname() {
+        return cunname == null?"":cunname;
+    }
+
+    public void setCunname(String cunname) {
+        this.cunname = cunname;
+    }
+
+    public String getZhenname() {
+        return zhenname == null?"":zhenname;
+    }
+
+    public void setZhenname(String zhenname) {
+        this.zhenname = zhenname;
+    }
+
+    public String getQvname() {
+        return qvname == null?"":qvname;
+    }
+
+    public void setQvname(String qvname) {
+        this.qvname = qvname;
+    }
+
+    public String getShtime() {
+        return shtime;
+    }
+
+    public void setShtime(String shtime) {
+        this.shtime = shtime;
+    }
+
+    public String getSptime() {
+        return sptime;
+    }
+
+    public void setSptime(String sptime) {
+        this.sptime = sptime;
+    }
+
+    public Integer getProcess() {
+        return process==null?0:process;
+    }
+
+    public void setProcess(Integer process) {
+        this.process = process;
+    }
+
+    public List<BcrejectedEntity> getBcrejectedEntities() {
+        if (bcrejectedEntities==null){
+            bcrejectedEntities = new ArrayList<>();
+        }
+        return bcrejectedEntities;
+    }
+
+    public void setBcrejectedEntities(List<BcrejectedEntity> bcrejectedEntities) {
+        this.bcrejectedEntities = bcrejectedEntities;
+    }
+}

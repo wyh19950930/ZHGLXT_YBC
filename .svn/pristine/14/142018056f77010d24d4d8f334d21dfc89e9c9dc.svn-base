@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_point"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popback"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/popback_4ca2fe"
+        android:layout_width="350dp"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv_pop_point_tdxg_dc"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="点查信息"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_pop_point_tdxg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_pop_point_tdxg_dc"
+            android:src="@drawable/ic_reminder"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+    </RelativeLayout>
+    <View
+        android:background="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <ScrollView
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--其他点查-->
+            <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                android:visibility="gone"
+                android:id="@+id/tll_pop_point_tdxg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--院落点查-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_frag_yzt_dc_ylxx1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                        android:id="@+id/tvs_frag_yzt_dc_ylxx1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.5dp"
+                        android:layout_marginRight="17dp" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/hsv_pop_point_tdxg_hbxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clPointTitle2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/blue">
+
+                                <TextView
+                                    android:id="@+id/hbbh"
+                                    android:layout_width="100dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:text="红本编号" />
+
+                                <TextView
+                                    android:id="@+id/hbcm"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="村名"
+                                    android:visibility="gone"
+                                    app:layout_constraintStart_toEndOf="@+id/hbbh" />
+
+                                <TextView
+                                    android:id="@+id/hbxm"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="姓名"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintStart_toEndOf="@+id/hbcm" />
+
+                                <TextView
+                                    android:id="@+id/hbtm"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="题名"
+                                    android:visibility="gone"
+                                    app:layout_constraintStart_toEndOf="@+id/hbxm" />
+
+                                <TextView
+                                    android:id="@+id/hbzrz"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="责任者"
+                                    android:visibility="gone"
+                                    app:layout_constraintStart_toEndOf="@+id/hbtm" />
+
+                                <TextView
+                                    android:id="@+id/hbzdmj"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="占地面积"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintStart_toEndOf="@+id/hbzrz" />
+
+                                <TextView
+                                    android:id="@+id/hbjzmj"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="建筑面积"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintStart_toEndOf="@+id/hbzdmj" />
+
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/hbxcsj"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="形成时间"
+                                    app:layout_constraintStart_toEndOf="@+id/hbjzmj" />
+
+                                <TextView
+                                    android:id="@+id/hbgdnd"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="归档年度"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintStart_toEndOf="@+id/hbxcsj" />
+                                <TextView
+                                    android:id="@+id/hbcz"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:text="操作"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintStart_toEndOf="@+id/hbgdnd" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@+id/clPointTitle2">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyPointhb11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+                            </RelativeLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </HorizontalScrollView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.jymj.zhglxt.widget.TextViews
+                        android:id="@+id/tvs_act_yzt_hjgxt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.jymj.zhglxt.widget.TextViews>
+                </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rlt_yzt_shaderImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+                        <com.jymj.zhglxt.widget.gxt.HVScrollView
+                            android:id="@+id/hvScrollView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.jymj.zhglxt.widget.gxt.StarAirLayout
+                                    android:id="@+id/shaderImage1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                            </RelativeLayout>
+
+                        </com.jymj.zhglxt.widget.gxt.HVScrollView>
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--企业点查 产业园区-->
+            <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                android:visibility="gone"
+                android:id="@+id/tll_pop_point_qyxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.5dp"
+                android:layout_marginRight="17dp" />
+
+            <!--企业点查 农业园区-->
+            <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                android:visibility="gone"
+                android:id="@+id/tll_pop_point_nyyq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--企业点查 待开发-->
+            <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                android:visibility="gone"
+                android:id="@+id/tll_pop_point_dkf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!--社会治理 无违建-->
+            <com.jymj.zhglxt.widget.zdybj.TextListLayout
+                android:visibility="gone"
+                android:id="@+id/tll_pop_point_wwj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_pop_point_tdxg_zhj"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_pop_point_tdxg_zhj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!--    <View
+        android:background="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>-->
+    <TextView
+        android:textColor="#4CA2FE"
+        android:id="@+id/but_pop_point_tdxg_close"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="确定"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+</LinearLayout>

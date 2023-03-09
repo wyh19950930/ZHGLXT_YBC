@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:minHeight="35dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_frag_zjd_cz_cm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:text="村名"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/tv_frag_zjd_cz_czzjd"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="出租宅基地(宗)"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_frag_zjd_cz_czfw"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="出租房屋(间)"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_frag_zjd_cz_ldrk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="流动人口"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="#F6F7FB"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/back_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"
+        android:layout_marginLeft="14dp"/>
+
+
+</LinearLayout>

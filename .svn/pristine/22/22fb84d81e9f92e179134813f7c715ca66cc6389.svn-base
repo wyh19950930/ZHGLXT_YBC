@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    style="@style/table_title_textview">
+    <!--<LinearLayout
+        android:id="@+id/item_ll_zdfjgl_zl"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_item_ydlr_zl_bz"
+            style="@style/table_title_textview"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="名字"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <RelativeLayout
+            android:background="@drawable/shape_list_table_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/iv_item_ydlr_zl_tp"
+                android:src="@color/red"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:id="@+id/iv_item_ydlr_zl_delete"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/delete_r"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+        </RelativeLayout>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_item_ydlr_zl_remark"
+            android:hint="备注"
+            android:minWidth="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<!--    </LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splt_frag_xm_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    app:umanoAnchorPoint="0.3"
+    app:umanoOverlay="true"
+    app:umanoFadeColor="#00ffffff"
+    app:umanoScrollableView="@id/sl_frag_xm_jbqk"
+    sothree:umanoPanelHeight="50dp"
+    sothree:umanoShadowHeight="0dp"
+    tools:context="com.jymj.zhglxt.xm.fragment.XmJbqkFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_frag_xmjbqk_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map_frag_xmjbqk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_frag_xm_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/mapback"
+                android:padding="5dp"
+                android:transitionName="location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/bt_frag_xm_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/login_home" />
+            </RelativeLayout>
+            <!--点查等-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="12dp"
+                android:orientation="vertical"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_frag_xm_point"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_frag_xm_point"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_point" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_frag_xm_point_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_frag_point_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/point_add_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_frag_xm_kuang"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    android:transitionName="location"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_frag_xm_point">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_frag_xm_kuang"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_kuang" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_frag_xm_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    android:transitionName="location"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_frag_xm_kuang">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_frag_xm_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/search_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_frag_xm_clear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_frag_xm_search">
+                    <!--                android:onClick="clearClick"-->
+                    <ImageButton
+                        android:id="@+id/bt_frag_xm_clear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/clear_icon" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/xm_jbqk_bb_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="报表"
+                        android:textColor="#4CA2FE"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_frag_xm_baobiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/popback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xm_jbqk_bb_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="报表"
+                    android:textColor="#4CA2FE"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sl_frag_xm_jbqk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                android:id="@+id/frag_xm_homepage_include"
+                layout="@layout/frag_xm_homepage_include"/>
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/frag_xm_jbqk_slideup_include"
+                layout="@layout/frag_xm_jbqk_slideup_include" />
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

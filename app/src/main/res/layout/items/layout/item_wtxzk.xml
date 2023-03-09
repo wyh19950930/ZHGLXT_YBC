@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:minHeight="35dp"
+            android:layout_weight="4"
+            android:id="@+id/cb_wtxzk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:minWidth="30dp"
+            android:textColor="@color/red"
+            android:id="@+id/et_wtxzk_gwtsl"
+            android:maxLength="3"
+            android:inputType="number"
+            android:text="1"
+            android:hint="数量"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"/>
+</LinearLayout>

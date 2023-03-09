@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/bt_actiive_xaiyoubai_white">
+
+    <RelativeLayout
+        android:background="@drawable/bt_actiive_shangbai_blue2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/margin_zdkd"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="家庭土地经营及财产情况"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"/>
+
+
+    <com.jymj.zhglxt.widget.SizeLimitView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/margin_zdgd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jymj.zhglxt.widget.EnableLinearLayout
+                    android:id="@+id/pop_add_rkbdqk_ell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="承包地面积（亩）"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_cbdmj"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint=""
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="流转（亩）"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_lz"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint=""
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="自营（亩）"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_zy"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint=""
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                </com.jymj.zhglxt.widget.EnableLinearLayout>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="主要种植农产品"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_iv_addncp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bcjc_jh_icon"
+                        android:padding="12dp"/>
+                </LinearLayout>
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_rlv_ncp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="农业机械（马力）"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_nyjx"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="私人汽车（辆）"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_srqc"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="住宅建筑面积（平方米）"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_zzjzmj"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="@color/white"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="附："
+                    android:layout_margin="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[1]承包地流转价格"/>
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_fulzjg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元/亩。"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[2]住宅出租"/>
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_fuzzcz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平方米，"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出租价格"/>
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_et_fuczjg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元/平方米。"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </ScrollView>
+    </com.jymj.zhglxt.widget.SizeLimitView>
+
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_confirm"
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jttdjjjccqk_close"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#4CA2FE"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

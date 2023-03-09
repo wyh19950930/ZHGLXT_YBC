@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.jymj.zhglxt.widget.FlowRadioGroup
+        android:id="@+id/item_yzt_rgp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_xp"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="宅基地"
+            android:textSize="12dp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_xc"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="房屋"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_cz"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="物业"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:visibility="invisible"
+            android:id="@+id/item_yzt_rbt_fj"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_zjd_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="翻建"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_zjd" />
+
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_cyyq"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_cy_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="城镇社区"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_cy" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_dkf"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_cy_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="农村社区"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_cy" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_nyyq"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_cy_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="产业园区"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_cy" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_wl"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_cy_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="农业园区"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_cy" />
+
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_tdly"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_td_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="土地利用"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_td" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_skt"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_td_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="三块田"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_td" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_tdqs"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_td_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="土地权属"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_td" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:visibility="invisible"
+            android:id="@+id/item_yzt_rbt_kjgh"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_td_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="空间规划"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_td" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_ldrk"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_shzl_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="集体资产"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_shzl" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:id="@+id/item_yzt_rbt_rjhj"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_shzl_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="集体收支"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_shzl" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:visibility="invisible"
+            android:id="@+id/item_yzt_rbt_wfxc"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_shzl_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="无违建"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_shzl" />
+<!--        违法巡查-->
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:visibility="invisible"
+            android:id="@+id/item_yzt_rbt_12345"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_shzl_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="12345"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_shzl" />
+
+        <com.jymj.zhglxt.widget.ToggleRadioButton
+            android:visibility="gone"
+            android:id="@+id/item_yzt_rbt_lvhua"
+            android:layout_width="55dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rbt_yzt_shzl_background"
+            android:layout_margin="6dp"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:text="绿化"
+            android:textSize="12sp"
+            android:textColor="@drawable/checkrbtn_shzl" />
+
+    </com.jymj.zhglxt.widget.FlowRadioGroup>
+</LinearLayout>

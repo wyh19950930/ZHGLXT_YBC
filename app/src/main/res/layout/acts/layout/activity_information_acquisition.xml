@@ -1,0 +1,2356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_xxcj_act_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".ldrkgl.home.activity.InformationAcquisitionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="信息采集"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:transitionName="title" />
+
+        <ImageView
+            android:id="@+id/iv_act_xxcj_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:src="@drawable/back_left_icon" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_act_xxcj_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="47dp"
+            android:padding="10dp"
+            android:text="流出"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_act_xxcj_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:padding="10dp"
+            android:text="提交"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="18dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息完成进度"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/progressbar_actiive_quan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1">
+
+        <ProgressBar
+            android:id="@+id/xxcj_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="7.5dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/progressbar_color" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_xxcj_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="20%"
+            android:textColor="#409EFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--基本信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_xxcj_jbxx_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/mapback_ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xxcj_jbxx_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:layout_centerVertical="true"
+                        android:text="基本信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_xxcj_jbxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="待完善"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#999999" />
+
+                    <ImageView
+                        android:id="@+id/iv_xxcj_jbxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/back_right_icon" />
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/ll_xxcj_jbxx_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/mapback_ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="宅基地地址"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_xxcj_jbxx_zjddz"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:hint="宅基地地址"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="姓名"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/et_xxcj_jbxx_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:hint="请输入姓名"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:singleLine="true"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="有无身份证"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_idcard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_idcard_yes"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="有"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_idcard_no"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="无"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="身份证号码"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/etil_xxcj_jbxx_sfzhm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:hintEnabled="false"
+                                >
+                                <EditText
+                                    android:id="@+id/et_xxcj_jbxx_sfzhm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请输入身份证号码"
+                                    android:gravity="right|center"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp"
+                                    android:maxLength="18"
+                                    android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+                                    android:singleLine="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="性别"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_sex"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_sex_man"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="男"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_sex_woman"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="女"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_csrq"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="出生日期"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_marginRight="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_csrq_year"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:background="@null"
+                                    android:text="年"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_csrq_mouth"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:background="@null"
+                                    android:text="月"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_csrq_day"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:background="@null"
+                                    android:text="日"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_zzmm"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="政治面貌"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_zzmm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:text="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jycd"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="教育程度"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_jycd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:text="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="户籍类别"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_hjlb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hjlb_n"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="农业户口"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hjlb_fn"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="非农户口"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hjlb_whk"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="无户口"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="婚姻情况"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_hyzk"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzk_wh"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="未婚"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzk_yh"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="已婚"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzk_lh"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="离婚"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzk_so"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="丧偶"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="联系电话"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/etil_xxcj_jbxx_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:hintEnabled="false"
+                                >
+                                <EditText
+                                    android:id="@+id/et_xxcj_jbxx_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:gravity="right|center"
+                                    android:hint="请输入联系电话"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp"
+                                    android:numeric="integer"
+                                    android:maxLength="11"
+                                    android:singleLine="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_nation"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="民族"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_nation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:text="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_hjdz"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="户籍地址"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_marginRight="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_hjdz_province"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="right"
+                                    android:hint="省"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_hjdz_city"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="right"
+                                    android:text="市"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_hjdz_county"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="right"
+                                    android:text="县"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="详细地址"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/et_xxcj_jbxx_xxaddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:hint="请输入详细地址"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:singleLine="true"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="出生地"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_csd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_csd_bj"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="北京"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_csd_yj"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="原籍"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_csd_qt"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="其他"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="居住证件"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_jzzj"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_jzzj_wu"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="无"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_jzzj_djk"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="登记卡"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_jzzj_jzz"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="居住证"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="婚育证明"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jbxx_hyzm"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzm_wu"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="无"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzm_yjzm"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="原籍证明"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jbxx_hyzm_bszm"
+                                    android:layout_width="70dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="本市证明"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_hylx"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="行业类型"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_hylx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:text="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/view_xxcj_jbxx_message"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50f6f6f6"/>
+                </FrameLayout>
+
+                <!--家庭信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_xxcj_jtxx_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/mapback_ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xxcj_jtxx_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:layout_centerVertical="true"
+                        android:text="家庭信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_xxcj_jtxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="已完善"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#409EFF" />
+
+                    <ImageView
+                        android:id="@+id/iv_xxcj_jtxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/back_right_icon" />
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_xxcj_jtxx_message"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/mapback_ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="家庭户流入"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jtxx_jthlr"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jtxx_jthlr_yes"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="是"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jtxx_jthlr_no"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="否"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="户主"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jtxx_hz"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jtxx_hz_yes"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="是"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jtxx_hz_no"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="否"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="本户外来人口数"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_xxcj_jtxx_bhwlrks"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="0人"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="16岁以下"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="男"
+                                android:textColor="#333333"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_xxcj_jtxx_16manrs"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:text="0人"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="女"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="20dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_xxcj_jtxx_16womanrs"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:text="0人"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jtxx_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="其他人员信息"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/xxcj_add_rk"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="新增"
+                                android:textSize="14sp"
+                                android:textColor="#409EFF"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="12dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#eeeeee" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_xxcj_jtxx_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/view_xxcj_jtxx_message"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50f6f6f6"/>
+                </FrameLayout>
+
+                <!--居住信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_xxcj_jzxx_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/mapback_ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xxcj_jzxx_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:layout_centerVertical="true"
+                        android:text="居住信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_xxcj_jzxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="待完善"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#999999" />
+
+                    <ImageView
+                        android:id="@+id/iv_xxcj_jzxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/back_right_icon" />
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_xxcj_jzxx_message"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/mapback_ffffff"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_lkyjrqq"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="离开原籍日期起"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_lkyjrqq_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_lkyjrqz"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="离开原籍日期止"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_lkyjrqz_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_ljrqq"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="来京日期起"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_ljrqq_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_ljrqz"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="来京日期止"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_ljrqz_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_lxzzdrqq"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="来现在住地日期起"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_lxzzdrqq_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_lxzzdrqz"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="来现在住地日期止"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_xxcj_lxzzdrqz_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="房屋登记表序号"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/et_xxcj_jzxx_fwdjbxh"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:hint="请输入房屋登记表序号"
+                                android:textColor="#999999"
+                                android:textSize="14sp"
+                                android:singleLine="true"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_jzlx"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="居住类型"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_jzxx_jzlx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jzxx_ljyy"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="来京原因"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_jzxx_ljyy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="是否待核实"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgp_xxcj_jzxx_isdhs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jzxx_isdhs_yes"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="是"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbt_xxcj_jzxx_isdhs_no"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/radiobutton_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="否"
+                                    android:textColor="@drawable/radiobutton_textcolor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/view_xxcj_jzxx_message"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50f6f6f6"/>
+
+                </FrameLayout>
+
+                <!--就业及社保信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_xxcj_jyjsbxx_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/mapback_ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xxcj_jyjsbxx_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="55dp"
+                        android:text="就业及社保信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_xxcj_jyjsbxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="待完善"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#999999" />
+
+                    <ImageView
+                        android:id="@+id/iv_xxcj_jyjsbxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/back_right_icon" />
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_xxcj_jyjsbxx_message"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/mapback_ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_jyjsbxx_mqzk"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="目前状况"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_xxcj_jyjsbxx_mqzk"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@null"
+                                    android:hint="请选择"
+                                    android:textColor="#999999"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/back_right_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/view_xxcj_jyjsbxx_message"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50f6f6f6"/>
+
+                </FrameLayout>
+
+                <!--车辆信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_xxcj_clxx_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/mapback_ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xxcj_clxx_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:layout_centerVertical="true"
+                        android:text="车辆信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_xxcj_clxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="已完善"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#409EFF" />
+
+                    <ImageView
+                        android:id="@+id/iv_xxcj_clxx_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/back_right_icon" />
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_xxcj_clxx_message"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/mapback_ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="机动车数量"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="电动车数量"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="摩托车数量"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_xxcj_clxx_jdcsl"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="无"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_xxcj_clxx_ddcsl"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="无"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_xxcj_clxx_mtcsl"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="无"
+                                android:textColor="#999999"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_xxcj_clxx_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="车辆信息"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/xxcj_add_cl"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="新增"
+                                android:textSize="14sp"
+                                android:textColor="#409EFF"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="12dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#eeeeee" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rlv_xxcj_clxx_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/view_xxcj_clxx_message"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50f6f6f6"/>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

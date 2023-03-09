@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+<TextView
+    android:id="@+id/tv_item_wy_fz_fjbh_list"
+    android:layout_width="75dp"
+    android:layout_height="30dp"
+    android:background="@drawable/bt_actiive_wy_fz_room_unchecked"
+    android:text="01-00001"
+    android:textColor="#999999"
+    android:gravity="center"
+    android:layout_margin="8dp"/>
+
+</LinearLayout>

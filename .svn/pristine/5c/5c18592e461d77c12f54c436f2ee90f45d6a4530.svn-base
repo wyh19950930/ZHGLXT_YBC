@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+<!--    tools:context="com.jymj.zhglxt.zjd.fragment.shzl.BcqhFragment"-->
+    <ScrollView
+        android:id="@+id/sv_frag_bcqh_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_frag_bcqh_selecttime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_name="农户家庭监测表"
+                app:attr_hidename="请选择时间"
+                app:attr_color="#F98648"
+                app:attr_isleftcheck="false"
+                app:attr_src="@drawable/item_title_down" />
+            <!--<RelativeLayout
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_frag_bcqh_drsj"
+                    android:gravity="center"
+                    android:textColor="#409EFF"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="导入数据"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_frag_bcqh_jtjclb"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+<!--            </RelativeLayout>-->
+
+        </LinearLayout>
+
+<!--        </RelativeLayout>-->
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_property_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.zjd.activity.zjdgl.PropertyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/iv_at_property_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="xx村"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:transitionName="title" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/iv_at_property_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/back_left_icon"
+            android:transitionName="icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dddddd"/>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoShadowHeight="4dp"
+        app:umanoAnchorPoint="0.39"
+        app:umanoFadeColor="#00ffffff"
+        android:gravity="bottom"
+        sothree:umanoOverlay="true"
+        android:background="@color/white"
+        android:id="@+id/supl_act_property">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map_act_property"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.amap.api.maps2d.MapView>
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:id="@+id/rl_frag_zjdgl_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/mapback"
+                android:transitionName="location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/bt_property_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_selector"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/login_home" />
+            </RelativeLayout>
+            <LinearLayout
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="12dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:padding="3dp"
+                    android:id="@+id/rl_property_point"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_point"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_point" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_property_gddw_add"
+                    android:layout_marginTop="12dp"
+                    android:padding="3dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_gddw_add"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_gddw_add" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="3dp"
+                    android:id="@+id/rl_property_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_property_point"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_add"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gddw_add_black" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="3dp"
+                    android:id="@+id/rl_property_update"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_property_add"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_update"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gddw_update_black" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="3dp"
+                    android:id="@+id/rl_property_kuang"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_property_update"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_kuang"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_selector_active_src_kuang" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="3dp"
+                    android:id="@+id/rl_property_search"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_property_kuang"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapback"
+                    android:transitionName="location"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <!--                button_selector-->
+                    <ImageButton
+                        android:id="@+id/bt_property_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/search_black" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_property_clear"
+                    android:padding="3dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mapback"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_property_search">
+                    <!--                android:onClick="clearClick"-->
+                    <ImageButton
+                        android:id="@+id/bt_property_clear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_selector"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/clear_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_act_property"
+                android:elevation="2dp"
+                app:tabIndicatorColor="#4CA2FE"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="#4CA2FE"
+                app:tabTextColor="#666666"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:tabMaxWidth="200dp"
+                app:tabMinWidth="65dp"
+                android:background="#ffffff"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#333333"/>
+
+            <include layout="@layout/act_property_fwfz_include"
+                android:id="@+id/act_property_fwfz_include"/>
+
+            <include layout="@layout/act_property_fwcz_include"
+                android:id="@+id/act_property_fwcz_include"
+                android:visibility="gone"/>
+
+
+
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

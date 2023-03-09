@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="440dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_year"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_cjgygwrs"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="参加公益岗位人数" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_hdnyzcxbt"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="获得农业政策性补贴(元)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_hzsyyfh"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="合作社盈余返还（元）" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_cjczzgjbyilbxrs"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="参加城镇职工基本医疗保险人数" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_cjcxjbyilbxrs"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="参加城乡基本医疗保险人数" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_cjczzgjbylbxrs"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="参加城镇职工基本养老保险人数" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_cjcxjbylbxrs"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="参加城乡基本养老保险人数" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_zxyczzcxm"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="最需要的财政支持项目（选项见备注）" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_zxypxxm"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="最需要的培训项目（选项见备注）" />
+
+    <TextView
+        android:id="@+id/item_bcqh_shbzyczxqqk_hdzcxxzyqd"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="获取政策信息的主要渠道（选项见备注）" />
+</LinearLayout>

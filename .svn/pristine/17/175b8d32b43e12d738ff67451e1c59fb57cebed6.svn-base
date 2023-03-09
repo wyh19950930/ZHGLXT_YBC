@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.zjd.fragment.shzl.BcqhFragment">
+
+    <ScrollView
+        android:id="@+id/sv_frag_bcqh_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mart_50"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/mtl_frag_bcqh_selecttime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_name="农户家庭监测表"
+                app:attr_hidename="请选择时间"
+                app:attr_color="#F98648"
+                app:attr_isleftcheck="false"
+                app:attr_src="@drawable/item_title_down" />
+            <!--<RelativeLayout
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_frag_bcqh_jtjclb"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+<!--            </RelativeLayout>-->
+
+        </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

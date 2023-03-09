@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<!--    @color/black-->
+    <TextView
+        android:id="@+id/tv_item_bhxx_bhcs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#77FF9400"
+        android:gravity="center"
+        android:text="第一次驳回"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_bhxx_bhcs"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理人:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_clr"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理人电话:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_clrdh"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理时间:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_clsj"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理备注:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_clbz"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="处理文件"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_item_bhxx_clwj"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:id="@+id/ll_item_bhxx_bhpj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驳回评价:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_bhpj"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:id="@+id/ll_item_bhxx_bhsj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驳回时间:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_bhsj"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:id="@+id/ll_item_bhxx_bhr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驳回人:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_bhr"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:id="@+id/ll_item_bhxx_bhrdh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驳回人电话:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_bhrdh"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:minHeight="35dp"
+            android:padding="2dp"
+            android:id="@+id/ll_item_bhxx_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="right"
+                android:minWidth="100dp"
+                android:maxWidth="100dp"
+                style="@style/competent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驳回备注:" />
+
+
+            <TextView
+                android:id="@+id/et_item_bhxx_bhremark"
+                android:background="@drawable/shape_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                style="@style/blue_check_box"
+                android:minWidth="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="驳回文件"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_item_bhxx_xgwj"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</LinearLayout>

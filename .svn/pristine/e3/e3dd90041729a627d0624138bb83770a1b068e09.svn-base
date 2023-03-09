@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/cl_pop_tdkf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/popback"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Switch
+                android:id="@+id/st_tdkf"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/cun_cesuan" />
+            <RelativeLayout
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_cbs_tdkf"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_kxx"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:text="可选项:" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_gcl"
+                android:padding="5dp"
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="是否自筹,自筹金额(万元)："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:maxLength="9"
+                    android:digits="1234567890"
+                    android:inputType="phone|number"
+                    android:hint="请输入内容"
+                    android:id="@+id/edt_quantitle"
+                    android:minWidth="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_dw"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="区位补偿价(元)："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:maxLength="9"
+                    android:digits="1234567890"
+                    android:inputType="phone|number"
+                    android:hint="默认6000"
+                    android:id="@+id/edt_bilprice"
+                    android:text=""
+                    android:minWidth="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_rk"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="置换建筑面积㎡："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+              <!--  <EditText
+                    android:minWidth="50dp"
+                    android:hint="默认300"
+                    android:id="@+id/edt_rk"
+                    android:text="300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />-->
+                <Spinner
+                    android:id="@+id/sp_jzmj_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:minWidth="50dp"
+                    android:spinnerMode="dialog"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_czfw"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center_vertical"
+                    android:text="回收标准(元)："
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <EditText
+                    android:maxLength="9"
+                    android:minWidth="50dp"
+                    android:hint="独立住宅75%以内：默认6500"
+                    android:id="@+id/edt_czfw"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:maxLength="9"
+                    android:id="@+id/edt_dlzzyw"
+                    android:hint="独立住宅75%以外：默认8500"
+                    android:text=""
+                    android:minWidth="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:maxLength="9"
+                    android:id="@+id/edt_zzl"
+                    android:minWidth="50dp"
+                    android:hint="自主楼：默认5500"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_zjdzdmj"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="场地看护费(元/月)："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:maxLength="9"
+                    android:minWidth="50dp"
+                    android:hint="默认4800"
+                    android:id="@+id/edt_zjdzdmj"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_zjdjzmj"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="宅基地建筑面积："
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <EditText
+                    android:id="@+id/edt_zjdjzmj"
+                    android:text=""
+                    android:layout_width="60dp"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:visibility="gone"
+                android:id="@+id/rg_tdkf"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cb_type1"
+                    style="@style/blue_check_box"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="方法一" />
+
+                <RadioButton
+                    android:id="@+id/cb_type2"
+                    style="@style/blue_check_box"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="方法二" />
+
+                <RadioButton
+                    android:id="@+id/cb_type3"
+                    style="@style/blue_check_box"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="方法三" />
+
+                <RadioButton
+                    android:id="@+id/cb_type4"
+                    style="@style/blue_check_box"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="方法四" />
+
+                <RadioButton
+                    android:id="@+id/cb_type5"
+                    style="@style/blue_check_box"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="方法五" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_cancel_tdkf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/cb_gray"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_ok_tdkf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary"
+                    android:text="确定 "
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

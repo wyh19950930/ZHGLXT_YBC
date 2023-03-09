@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <TextView
+        style="@style/table_title_textview"
+        android:id="@+id/tv_ywxx_hbjcxx_bh"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="编号" />
+
+    <TextView
+        style="@style/table_title_textview"
+        android:id="@+id/tv_ywxx_hbjcxx_fpbm"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="分配部门" />
+
+    <TextView
+        style="@style/table_title_textview"
+        android:id="@+id/tv_ywxx_hbjcxx_jlsj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="记录时间" />
+
+    <TextView
+        style="@style/table_title_textview"
+        android:id="@+id/tv_ywxx_hbjcxx_yj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="预警" />
+</LinearLayout>

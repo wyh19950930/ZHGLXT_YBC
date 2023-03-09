@@ -1,0 +1,107 @@
+package com.jymj.zhglxt.zjd.presenter
+
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.jymj.zhglxt.api.ApiConstants
+import com.jymj.zhglxt.ldrkgl.base.BaseNet
+import com.jymj.zhglxt.util.AesEncryptUtils
+import com.jymj.zhglxt.zjd.bean.bcjc.bcqh.JtcyjcEntity
+import com.jymj.zhglxt.zjd.contract.BcqhContract
+import com.lzy.okgo.OkGo
+import com.lzy.okgo.model.Response
+import com.lzy.okgo.request.base.Request
+import com.setsuna.common.basebean.BaseRespose
+import org.json.JSONObject
+
+class BcqhPresenter : BcqhContract.Companion.Presenter(){
+    override fun getBcjcYears() {
+        val jsonObject = JSONObject()
+        val encrypt = AesEncryptUtils.encrypt("{}".toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<String> (ApiConstants.BCJC_GETYEARS).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<List<String>> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<List<String>>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnBcjcYears(json.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })
+    }
+
+    //获取村里的家庭列表    参数：code years   返回实体：List<JtcyjcEntity>
+    override fun getBcjcjtList(code:String,years:String) {
+        val jsonObject = JSONObject()
+        jsonObject.put("code","code")
+        jsonObject.put("years","years")
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<BaseRespose<List<JtcyjcEntity>>> (ApiConstants.BCJCJT_GET_LIST).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<BaseRespose<List<JtcyjcEntity>>>(){
+            override fun onStart(request: Request<BaseRespose<List<JtcyjcEntity>>, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<BaseRespose<List<JtcyjcEntity>>>?) {
+                val cash = response?.body()
+                if (cash != null) {
+//                    val decrypt = AesEncryptUtils.decrypt(cash)
+//                    val json: BaseRespose<List<String>> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<List<String>>?>() {}.type)
+                    if (cash.code==0){
+                        if (cash.data!=null){
+                            mView.returnBcjcjtList(cash.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(cash.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<BaseRespose<List<JtcyjcEntity>>>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })
+    }
+}

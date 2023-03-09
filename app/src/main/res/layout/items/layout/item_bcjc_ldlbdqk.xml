@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="80dp"
+    android:layout_height="330dp">
+
+
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_year"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="2022"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_sjhjjyldlzs"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_xydy30"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_dydy60"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_yc"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_ec"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_sc"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_jtjy"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_cjtjy"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_cjtjjzz"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_ldlbdqk_wcwg"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+
+</LinearLayout>

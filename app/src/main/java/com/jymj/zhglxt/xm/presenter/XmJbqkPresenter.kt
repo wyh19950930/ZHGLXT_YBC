@@ -1,0 +1,402 @@
+package com.jymj.zhglxt.xm.presenter
+
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.jymj.zhglxt.R.drawable.point
+import com.jymj.zhglxt.api.ApiConstants
+import com.jymj.zhglxt.bean.PageUtils
+import com.jymj.zhglxt.ldrkgl.base.BaseNet
+import com.jymj.zhglxt.util.AesEncryptUtils
+import com.jymj.zhglxt.xm.contract.XmJbqkContract
+import com.jymj.zhglxt.zjd.bean.cygl.DkfVO
+import com.jymj.zhglxt.zjd.bean.tdxg.GhVO
+import com.jymj.zhglxt.zjd.bean.xm.BcXmfwEntity
+import com.jymj.zhglxt.zjd.bean.xm.CountVo
+import com.jymj.zhglxt.zjd.bean.xm.ProjectEntity
+import com.lzy.okgo.OkGo
+import com.lzy.okgo.model.Response
+import com.lzy.okgo.request.base.Request
+import com.setsuna.common.baseapp.AppCache
+import com.setsuna.common.basebean.BaseRespose
+import org.json.JSONObject
+
+/**
+ * @Author: Mr.haozi
+ * @CreateDate: 2022/3/30 10:07
+ */
+class XmJbqkPresenter :XmJbqkContract.Companion.Presenter(){
+    //首页统计
+    override fun getPorjectStatistics(code: String) {
+        val jsonObject = JSONObject()
+        jsonObject.put("code", code)
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())
+//        val encrypt = AesEncryptUtils.encrypt("{}".toString())
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        /*OkGo.post<String> (ApiConstants.PROJECTSTATISTICAL).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<CountVo> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<CountVo>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnPorjectStatistics(json.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })*/
+    }
+
+    //项目修改
+    override fun getPorjectUpdate(entity: ProjectEntity) {
+        val gson = Gson()
+        val edtity = gson.toJson(entity)
+        val encrypt = AesEncryptUtils.encrypt(edtity.toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<String> (ApiConstants.PROJECTUPDATE).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<String> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<String>?>() {}.type)
+                    if (json.code==0){
+                        if (json.msg!=null){
+                            mView.returnPorjectUpdate(json.msg)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })
+    }
+
+    //项目详情
+    override fun getPorjectInfo(id: Long) {
+        val jsonObject = JSONObject()
+        jsonObject.put("id", id)
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+       /* OkGo.post<String>(ApiConstants.PROJECTGETINFO).upJson(sss).execute(object :
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView!!.showLoading("正在加载")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<ProjectEntity> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<ProjectEntity>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnPorjectInfo(json.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView!!.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView?.showErrorTip(response?.exception?.message)
+            }
+
+        })*/
+    }
+
+    //项目列表
+    override fun getPorjectList(code:String) {
+        val jsonObject = JSONObject()
+        jsonObject.put("code", code)
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())
+//        val encrypt = AesEncryptUtils.encrypt("{}".toString())
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        /*OkGo.post<String> (ApiConstants.PROJECTGETLIST).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<PageUtils<ProjectEntity>> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<PageUtils<ProjectEntity>>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnPorjectList(json.data.list)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })*/
+    }
+    //百村项目列表
+    override fun getXmList() {
+        val jsonObject = JSONObject()
+        jsonObject.put("code",AppCache.getInstance().code)
+//        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<String> (ApiConstants.PROJECT_GETXMLIST).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {//ProjectEntity
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<List<BcXmfwEntity>> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<List<BcXmfwEntity>>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnPorjectList(json.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                            mView.returnPorjectList(ArrayList<BcXmfwEntity>())
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                        mView.returnPorjectList(ArrayList<BcXmfwEntity>())
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                    mView.returnPorjectList(ArrayList<BcXmfwEntity>())
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+                mView.returnPorjectList(ArrayList<BcXmfwEntity>())
+            }
+
+        })
+    }
+
+    override fun getPorjectSave(entity: ProjectEntity) {
+        val gson = Gson()
+        val edtity = gson.toJson(entity)
+        val encrypt = AesEncryptUtils.encrypt(edtity.toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<String> (ApiConstants.PROJECTSAVE).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<String> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<String>?>() {}.type)
+                    if (json.code==0){
+                        if (json.msg!=null){
+                            mView.returnPorjectSave(json.msg)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })
+    }
+
+    override fun getKjghPoint(point: String) {
+        val jsonObject = JSONObject()
+        jsonObject.put("point", point)
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())//"{\"username\":\"hc"+uName+"\",\"password\":\""+uPwd+"\",\"deviceId\":\""+deviceId+"\"}"
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<BaseRespose<GhVO>>(ApiConstants.POINT_QUERY_KJGH).upJson(sss).execute(object :
+                BaseNet<BaseRespose<GhVO>>(){
+            override fun onStart(request: Request<BaseRespose<GhVO>, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView!!.showLoading("正在加载")
+            }
+
+            override fun onSuccess(response: Response<BaseRespose<GhVO>>?) {
+                if (response!=null){
+                    if (response.body()!=null){
+                        val body = response.body()
+                        if (body.code==0 ){//&& response.body().data.ylEntity!=null
+                            if (body.data!=null){
+                                mView?.onPointKjgh(body.data)
+                            }else{
+                                mView?.showErrorTip("暂无数据")
+                            }
+                        }else{
+                            mView?.showErrorTip("暂无数据")
+                        }
+                    }else{
+                        mView?.showErrorTip("暂无数据")
+                    }
+                }else{
+                    mView?.showErrorTip("暂无数据")
+                }
+                mView!!.stopLoading()
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView!!.stopLoading()
+            }
+
+            override fun onError(response: Response<BaseRespose<GhVO>>?) {
+                super.onError(response)
+                mView?.showErrorTip(response?.exception?.message)
+            }
+
+        })
+    }
+
+    //企业管理-待开发点查
+    override fun getDkfPoint(point: String) {
+        val jsonObject = JSONObject()
+        jsonObject.put("point", point)
+
+        val encrypt = AesEncryptUtils.encrypt(jsonObject.toString())
+        var sss = "{\"requestData\":\"" + encrypt + "\"}"
+        OkGo.post<String> (ApiConstants.QUERYDKFBYPOINT).upJson(sss).execute(object ://EnviorListEntity
+                BaseNet<String>(){
+            override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                mView.showLoading("数据加载中...")
+            }
+
+            override fun onSuccess(response: Response<String>?) {
+                val cash = response?.body()
+                if (cash != null) {
+                    val decrypt = AesEncryptUtils.decrypt(cash)
+                    val json: BaseRespose<List<DkfVO>> = Gson().fromJson(decrypt, object : TypeToken<BaseRespose<List<DkfVO>>?>() {}.type)
+                    if (json.code==0){
+                        if (json.data!=null){
+                            mView.returnDkfPoint(json.data)
+                        }else{
+                            mView.showErrorTip("数据加载为空")
+                        }
+                    }else{
+                        mView.showErrorTip(json.msg)
+                    }
+
+                } else {
+                    mView.showErrorTip("数据加载为空")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                mView.stopLoading()
+            }
+
+            override fun onError(response: Response<String>?) {
+                super.onError(response)
+                mView.showErrorTip("网络错误")
+            }
+
+        })
+    }
+}

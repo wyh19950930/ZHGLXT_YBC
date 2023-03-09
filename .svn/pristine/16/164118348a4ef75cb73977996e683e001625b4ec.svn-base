@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mapback_ffffff"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_500"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="流动人口明细"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/white"
+            />
+            <HorizontalScrollView
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="姓名" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="性别" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="户主姓名" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="居住地址" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="所在村" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="行业类型" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="工作地址" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:text="文化程度" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="身份证号" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="居住证号" />
+                        <TextView
+                            style="@style/table_title_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="操作" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.jcodecraeer.xrecyclerview.XRecyclerView
+                            android:id="@+id/xrl_frame_ldrkmx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+</RelativeLayout>

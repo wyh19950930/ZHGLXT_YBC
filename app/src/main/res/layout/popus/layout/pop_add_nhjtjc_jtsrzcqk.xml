@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/bt_actiive_xaiyoubai_white">
+
+    <RelativeLayout
+        android:background="@drawable/bt_actiive_shangbai_blue2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/margin_zdkd"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="家庭收入支出情况"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:text="单位:元"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"/>
+
+
+    <com.jymj.zhglxt.widget.SizeLimitView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/margin_zdgd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="收入合计（元）"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_srhj"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入收入合计"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="家庭经营收入"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_jtjysr"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入家庭经营收入"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="工资性收入"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_gzxsr"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入工资性收入"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="财产性收入"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_ccxsr"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入财产性收入"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="转移性收入"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_zyxsr"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入转移性收入"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="其他收入"
+                            android:textColor="#666666"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_qtsr"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="#00000000"
+                            android:hint="请输入其他收入"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="支出合计（元）"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_zchj"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入支出合计"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="生产资料"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_sczl"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入生产资料"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="生活消费"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_shxf"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入生活消费"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="教育"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_jy"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入教育"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="医疗"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_yl"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入医疗"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="赡养老人"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_sylr"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入赡养老人"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="社保"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_sb"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入社保"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="其他支出"
+                        android:textColor="#666666"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_zcqtsr"
+                        android:background="@drawable/shape_list_table_title2"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入其他支出"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="附："
+                    android:layout_margin="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="来自村集体经营的收入"/>
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_fucjtjysr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="#00000000"
+                        android:hint="请输入村集体经营收入"
+                        android:textSize="12sp"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家庭经营的收入 "/>
+                    <EditText
+                        android:id="@+id/pop_add_nhjtjc_jtsrzcqk_et_fujtjysr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="#00000000"
+                        android:textSize="12sp"
+                        android:hint="请输入家庭经营收入"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="万元"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </ScrollView>
+    </com.jymj.zhglxt.widget.SizeLimitView>
+
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_confirm"
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jtsrzcqk_close"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#4CA2FE"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

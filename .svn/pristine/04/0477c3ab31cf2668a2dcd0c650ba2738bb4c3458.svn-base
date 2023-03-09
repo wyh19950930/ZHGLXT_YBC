@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/slv_frag_shzl_wwj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="15dp"
+                        android:background="#FE7151"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="分类治理台账"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="12dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单位：个数"
+                        android:textSize="13sp"
+                        android:textColor="#999999"
+                        android:layout_marginRight="19.5dp"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#eeeeee"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#5E7DE7"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未分类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#999999"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待完善类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="917"
+                            android:textColor="#F7C739"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="不纳入类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#57C6B8"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="有证类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13378"
+                            android:textColor="#ED8E78"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="限期整治类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="36721"
+                            android:textColor="#2597D4"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="宅基地"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2086"
+                            android:textColor="#7585A2"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="数据纠正"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5388"
+                            android:textColor="#8064A1"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="持续治理类"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_frag_shzl_wwj"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                </com.github.mikephil.charting.charts.PieChart>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="15dp"
+                        android:background="#FE7151"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="拆违腾地台账（建设面积）"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="12dp"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单位：万平米"
+                        android:textSize="13sp"
+                        android:textColor="#999999"
+                        android:layout_marginRight="19.5dp"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#eeeeee"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wwj_red_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拆违腾地台账2022年拆除进展"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已销账图斑"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="44"
+                                android:textColor="#EB4E4E"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上账量"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="52"
+                                android:textColor="#EB4E4E"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="占比"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="83.27%"
+                            android:textColor="#EB4E4E"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#F6F7FB"
+                    android:layout_marginTop="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wwj_red_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="限期整治类拆除进展（2018至今）"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已销账图斑"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1207"
+                                android:textColor="#EB4E4E"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图斑总量"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1351"
+                                android:textColor="#EB4E4E"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="占比"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="89.35%"
+                            android:textColor="#EB4E4E"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#F6F7FB"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="15dp"
+                        android:background="#FE7151"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="分类治理台账（建设面积）"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="12dp"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单位：万平米"
+                        android:textSize="13sp"
+                        android:textColor="#999999"
+                        android:layout_marginRight="19.5dp"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#eeeeee"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wwj_blue_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类治理台账处置进展（办结进展）"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已销账图斑"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="436"
+                                android:textColor="#51A0FE"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图斑总量"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="878"
+                                android:textColor="#51A0FE"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="占比"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="49.74%"
+                            android:textColor="#51A0FE"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#F6F7FB"
+                    android:layout_marginTop="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wwj_blue_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类治理台账分类进展（一级分类）"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="13.5dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已分类图斑"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="878"
+                                android:textColor="#51A0FE"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图斑总量"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="878"
+                                android:textColor="#51A0FE"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="个"
+                                android:textColor="#666666"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="45dp"
+                        android:background="#dddddd"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="占比"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:textColor="#51A0FE"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.jymj.zhglxt.widget.zdybj.MeTitleLayout
+                android:id="@+id/tv_frag_zcjy_xzsj"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:attr_name="资产经营"
+                app:attr_hidename="请选择时间"
+                app:attr_color="#F98648"
+                app:attr_isleftcheck="false"
+                app:attr_src="@drawable/item_title_down"
+                android:layout_marginLeft="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="工作进度"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_frag_shzl_wwj_gzjdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_frag_shzl_wwj_gzjddsb"
+                        android:text="待上报"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:textColor="#F98648"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_frag_shzl_wwj_gzjdysb"
+                        android:text="已上报"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:textColor="#F98648"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_frag_shzl_wwj_gzjdtjcg"
+                        android:text="提交成功"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:textColor="#F98648"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_frag_shzl_wwj_gzjdbh"
+                        android:text="驳回"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:textColor="#F98648"/>
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_frag_shzl_wwj_gzjdbh"
+                        android:src="@drawable/wenhao"
+                        android:layout_gravity="center"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <com.jymj.zhglxt.widget.zdybj.TimeLineLayout
+                android:id="@+id/tll_frag_shzl_wwj_jtzcqk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                app:attr_ischeck="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#F5F5F5"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <View
+                    android:layout_margin="10dp"
+                    android:background="#FE7151"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"/>
+
+                <com.jymj.zhglxt.widget.zdybj.ZdyTextLayout_1
+                    app:attr_key="集体资产情况"
+                    app:attr_hint=""
+                    android:id="@+id/tv_frag_jtzc_xzsj"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"/>
+                <TextView
+                    android:id="@+id/tv_frag_jtzc_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="操作"
+                    android:textSize="15sp"
+                    android:textColor="#4CA2FE"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:background="@color/title_bt"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="项目"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:paddingLeft="@dimen/margin_yjjz"
+                        android:gravity="left|center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="一、集体经济组织(名称)"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="1.成立时间"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="2.是否进行法人主体登记注册？(A是，在农业经管部门登记；B是，在市场主管部门登记；C 否)"
+                        android:textColor="#333333"
+                        android:textSize="10sp"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="3.改革前一年资产总额(万元)"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="净资产总额(万元)"
+                        />
+                    <TextView
+                        android:paddingLeft="@dimen/margin_yjjz"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="二、股东总数(人)"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="1.集体股东总数"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="2.成员个人股东人数"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="30-60岁股东人数"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="在集体工作股东人数"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="3.非成员个人股东人数"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:paddingLeft="@dimen/margin_yjjz"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="三、股本总额(万元)"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="1.集体股东股本"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="2.成员个人股东股本"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="3.非成员个人股东股本"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="4.其他股东股本"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:paddingLeft="@dimen/margin_yjjz"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="四、经营管理绩效(万元)"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="1.总资产"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="经营性资产"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sijjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(1)经营性物业面积"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sijjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(2)出租物业面积"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="2.净资产"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="3.经营性收入"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="主营业务收入"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="其他业务收入"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="投资收益"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="4.利润总额"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="所得税费用"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="5.净利润"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="6.股金分红总额"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="成员个人股东分红金额"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="非成员个人股东分红金额"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:textColor="#333333"
+                        android:text="7.福利分配总额"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:textColor="@color/black"
+                        android:text="当年扩大再生产支出"
+                        />
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_yjjz"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="补充材料(万元)"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="1.应交税费"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(1)应交增值税"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(2)应交土地增值税"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(3)应交房产税"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(4)应交所得税"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="(5)其他税费"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_ejjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="扩大再生产投入"
+                        android:textColor="#333333"
+                        />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_sjjz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/table_title_textview"
+                        android:text="公益事业支出"
+                        />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_frag_jtzc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jtzc_jtzc"
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

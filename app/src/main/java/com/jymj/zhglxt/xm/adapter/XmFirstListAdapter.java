@@ -1,0 +1,112 @@
+package com.jymj.zhglxt.xm.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+import com.jymj.zhglxt.R;
+import com.jymj.zhglxt.xm.bean.BcProjectEntity;
+import com.jymj.zhglxt.xm.bean.BcProjectFile;
+
+import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+/**
+ * @package com.jymj.projectmanager.ui.main.adapter
+ * @fileName CzlbAdapter
+ * @date 2019/3/717:09
+ * @name qzw
+ */
+
+
+public class XmFirstListAdapter extends RecyclerView.Adapter {
+
+    private Context context;
+    private List<BcProjectEntity> list;
+    private OnXmFirstListItemClick onMyNewsItemClick;
+    public XmFirstListAdapter(Context context, List<BcProjectEntity> list) {
+        this.context = context;
+        this.list = list;
+    }
+
+    public void setOnXmFirstListItemClick(OnXmFirstListItemClick onXmFirstListItemClick) {
+        this.onMyNewsItemClick = onXmFirstListItemClick;
+    }
+
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        View inflate = LinearLayout.inflate(context, R.layout.item_inves_overview, null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.item_xm_first_list, parent,false);
+        return new XmFirstListHolder(inflate);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        XmFirstListHolder xmFirstListHolder = (XmFirstListHolder) holder;
+        BcProjectEntity entity = list.get(position);
+
+        xmFirstListHolder.ll_item_xm_first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onMyNewsItemClick.onClick(position);
+            }
+        });
+        xmFirstListHolder.rlv_item_xm_first_lx.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+
+        xmFirstListHolder.rlv_item_xm_first_lx.setAdapter(new XmFirstListBqAdapter(context,entity.getProjectLxList()));
+
+        xmFirstListHolder.tv_item_xm_first_title.setText(entity.getTitle());
+        xmFirstListHolder.tv_item_xm_first_address.setText(entity.getXzqmc());
+        xmFirstListHolder.tv_item_xm_first_message.setText(entity.getContent());
+        if (entity.getProjectFiles().size()>0){
+            BcProjectFile notesFile = entity.getProjectFiles().get(0);
+            RequestOptions options = new RequestOptions().error(R.drawable.shopping_mall_banner).transforms(new RoundedCorners(30));//图片圆角为30
+            Glide.with(context).load(notesFile.getUrl()) //图片地址
+                    .apply(options)
+                    .into(xmFirstListHolder.iv_item_xm_first);
+        }
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+    class XmFirstListHolder extends RecyclerView.ViewHolder{
+
+
+        private LinearLayout ll_item_xm_first;
+        private ImageView iv_item_xm_first;
+        private TextView tv_item_xm_first_title;
+        private TextView tv_item_xm_first_address;
+        private RecyclerView rlv_item_xm_first_lx;
+        private TextView tv_item_xm_first_message;
+
+        public XmFirstListHolder(View itemView) {
+            super(itemView);
+            ll_item_xm_first = itemView.findViewById(R.id.ll_item_xm_first);
+            iv_item_xm_first = itemView.findViewById(R.id.iv_item_xm_first);
+            tv_item_xm_first_title = itemView.findViewById(R.id.tv_item_xm_first_title);
+            tv_item_xm_first_address = itemView.findViewById(R.id.tv_item_xm_first_address);
+            rlv_item_xm_first_lx = itemView.findViewById(R.id.rlv_item_xm_first_lx);
+            tv_item_xm_first_message = itemView.findViewById(R.id.tv_item_xm_first_message);
+
+        }
+    }
+    public interface OnXmFirstListItemClick{
+        void onClick(int position);
+        void onClickLjcl(BcProjectEntity pjtaskFile);
+    }
+}

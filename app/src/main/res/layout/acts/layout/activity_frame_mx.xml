@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".zjd.activity.zjdgl.FrameMXActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/frame_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <!--院落明细-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frame_yl_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="院落明细"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/white"
+            />
+        <HorizontalScrollView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="编号"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="村名" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="地址" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="户数" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="占地面积(㎡)" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="建筑面积(㎡)" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="人口" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="农" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="非农" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="外来人口" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="是否闲置" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.jcodecraeer.xrecyclerview.XRecyclerView
+                        android:id="@+id/xrl_frame_ylmx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!--土现明细-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frame_tx_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="土现明细"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/white"
+            />
+        <HorizontalScrollView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="村名" />
+
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="地类名称" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="地类编码"
+                        />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="面积" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.jcodecraeer.xrecyclerview.XRecyclerView
+                        android:id="@+id/xrl_frame_txmx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!--土规明细-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frame_tg_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="土规明细"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/white"
+            />
+        <HorizontalScrollView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="村名" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="地块类型" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="面积" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="建筑面积(㎡)"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.jcodecraeer.xrecyclerview.XRecyclerView
+                        android:id="@+id/xrl_frame_tgmx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!--非宅明细-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frame_fz_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="非宅明细"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/white"
+            />
+        <HorizontalScrollView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="村名" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="名称" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="权属" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="占地面积" />
+                    <TextView
+                        android:textColor="@color/black"
+                        style="@style/table_title_textview"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="建筑面积" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.jcodecraeer.xrecyclerview.XRecyclerView
+                        android:id="@+id/xrl_frame_fzmx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</LinearLayout>

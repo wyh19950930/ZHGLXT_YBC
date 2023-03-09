@@ -1,0 +1,351 @@
+package com.jymj.zhglxt.zjd.activity.zjdgl
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.Gravity
+import android.view.View
+import android.widget.*
+import androidx.recyclerview.widget.RecyclerView
+import com.jymj.zhglxt.R
+import com.jymj.zhglxt.util.CommenPop
+import com.jymj.zhglxt.util.TdlyUtils
+import com.jymj.zhglxt.widget.FlowRadioGroup
+import com.jymj.zhglxt.zjd.bean.bcjc.bcqh.*
+import com.jymj.zhglxt.zjd.contract.BcqhContract
+import com.jymj.zhglxt.zjd.presenter.BcqhPresenter
+import com.setsuna.common.base.BaseActivity
+import com.setsuna.common.base.BaseModel
+import kotlinx.android.synthetic.main.activity_bcqh_nhjtjc.*
+
+class BcqhNhjtjcActivity : BaseActivity<BcqhPresenter, BaseModel>(), BcqhContract.View {
+    override fun returnBcqhUpload(msg: String) {
+
+    }
+
+    override fun returnBcjcjtList(msg: List<JtcyjcEntity>) {
+
+    }
+
+    private var addJtcyUpPopu: CommenPop? = null
+    private var addJtTdjyJCcqkUpPopu: CommenPop? = null
+    private var addJtSrzcqkUpPopu: CommenPop? = null
+    private var addJtShbzyCzxqqkUpPopu: CommenPop? = null
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_bcqh_nhjtjc
+    }
+
+    override fun initPresenter() {
+        mPresenter.setVM(this,mModel)
+    }
+    var jtcyjcEntity = JtcyjcEntity()
+    var jtcyjbqkEntity = ArrayList<JtcyjbqkEntity>()
+    var jtjyccqk = Jtjyccqk()
+    var jtsrzcqkEntity = JtsrzcqkEntity()
+    var jtshbzqkEntity = JtshbzqkEntity()
+    override fun initViews() {
+
+        //家庭成员基本信息
+        tv_act_nhjtjc_jbqk_add.setOnClickListener {
+            addJtcyUpPopu = CommenPop.getNormalPopu(this, R.layout.pop_add_nhjtjc_jbqk, ll_act_nhjtjc_top)
+            val contentView: View = addJtcyUpPopu!!.getContentView()
+            val et_name = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jbqk_et_name)
+            val rgp_sex = contentView.findViewById<RadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_sex)
+            val et_age = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jbqk_et_age)
+            val rgp_sjycd = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_sjycd)
+            val rgp_hj = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_hj)
+            val rgp_cqjzd = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_cqjzd)
+            val rgp_yygf = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_yygf)
+            val rgp_zysrqd = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_zysrqd)
+            val rgp_stjkzk = contentView.findViewById<FlowRadioGroup>(R.id.pop_add_nhjtjc_jbqk_rgp_stjkzk)
+            val jbqk_confirm = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jbqk_confirm)
+            val jbqk_close = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jbqk_close)
+
+            CommenPop.backgroundAlpha(0.5f, this)
+            addJtcyUpPopu!!.showAtLocation(ll_act_nhjtjc_top, Gravity.CENTER, 0, 0)
+
+            jbqk_close.setOnClickListener {
+                addJtcyUpPopu!!.dismiss()
+            }
+            var entity = JtcyjbqkEntity()
+            entity.sex = "男"
+            entity.sjycd = "A 小学及以下"
+            entity.hb = "A 农业"
+            entity.cqjzd = "A 农村"
+            entity.zysrqd = "A 家庭经营收入（含务农）"
+            entity.stjkzk = "A 良好"
+            //性别
+            rgp_sex.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_man->{
+                            entity.sex = "男"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_woman->{
+                            entity.sex = "女"
+                        }
+                    }
+                }
+
+            })
+            //受教育程度
+            rgp_sjycd.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_sjycd_a->{
+                            entity.sjycd = "A 小学及以下"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_sjycd_b->{
+                            entity.sjycd = "B 初中"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_sjycd_c->{
+                            entity.sjycd = "C 高中（中专）"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_sjycd_d->{
+                            entity.sjycd = "D 大专及以上"
+                        }
+                    }
+                }
+
+            })
+            //户籍
+            rgp_hj.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_hj_a->{
+                            entity.hb = "A 农业"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_hj_b->{
+                            entity.hb = "B 非农业"
+                        }
+                    }
+                }
+
+            })
+            //长期居住地
+            rgp_cqjzd.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_cqjzd_a->{
+                            entity.cqjzd = "A 农村"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_cqjzd_b->{
+                            entity.cqjzd = "B 小城镇"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_cqjzd_c->{
+                            entity.cqjzd = "C 城市"
+                        }
+                    }
+                }
+
+            })
+            //拥有股份
+            rgp_yygf.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_yygf_a->{
+                            entity.yygf = "A 成员个人股"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_yygf_b->{
+                            entity.yygf = "B 非成员个人股"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_yygf_c->{
+                            entity.yygf = "C 其他"
+                        }
+                    }
+                }
+
+            })
+            //主要收入渠道
+            rgp_zysrqd.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_zysrqd_a->{
+                            entity.zysrqd = "A 家庭经营收入（含务农）"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_zysrqd_b->{
+                            entity.zysrqd = "B 工资性收入（含外出务工）"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_zysrqd_c->{
+                            entity.zysrqd = "C 财产性收入"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_zysrqd_d->{
+                            entity.zysrqd = "D 转移性收入"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_zysrqd_qt->{
+                            entity.zysrqd = "其他收入"
+                        }
+                    }
+                }
+
+            })
+            //身体健康状况
+            rgp_stjkzk.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+
+                    when(checkedId){
+                        R.id.pop_add_nhjtjc_jbqk_rbt_stjkzk_a->{
+                            entity.stjkzk = "A 良好"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_stjkzk_b->{
+                            entity.stjkzk = "B 一般"
+                        }
+                        R.id.pop_add_nhjtjc_jbqk_rbt_stjkzk_c->{
+                            entity.stjkzk = "C 较差"
+                        }
+                    }
+                }
+
+            })
+            jbqk_confirm.setOnClickListener {
+                val editToast = TdlyUtils.setEditToast(et_name,et_age)
+                if (!editToast){
+                    entity.name = et_name.text.toString()
+                    entity.age = et_age.text.toString().toLong()
+                    jtcyjcEntity.zhen = et_act_nhjtjc_xz.text.toString()
+                    jtcyjcEntity.xzqmc = et_act_nhjtjc_cun.text.toString()
+                    jtcyjcEntity.username = et_act_nhjtjc_tbr.text.toString()
+                    jtcyjcEntity.sfname = et_act_nhjtjc_sfzxm.text.toString()
+                    jtcyjcEntity.sfphone = et_act_nhjtjc_sfzsjh.text.toString()
+                    jtcyjcEntity.jtdzzhen = et_act_nhjtjc_jtdzxz.text.toString()
+                    jtcyjcEntity.jtdzxzqmc = et_act_nhjtjc_jtdzcun.text.toString()
+                    jtcyjcEntity.mph = et_act_nhjtjc_mph.text.toString()
+                    jtcyjbqkEntity.add(entity)
+                    jtcyjcEntity.jtcyjbqkEntities = jtcyjbqkEntity
+                    jtcyjcEntity.jtjyccqk = jtjyccqk
+                    jtcyjcEntity.jtsrzcqkEntity = jtsrzcqkEntity
+                    jtcyjcEntity.jtshbzqkEntity = jtshbzqkEntity
+
+                    mPresenter.getBcqhUpload(jtcyjcEntity)
+                }
+
+
+            }
+
+        }
+        //家庭土地经营及财产情况
+        tv_act_nhjtjc_tdjyccqk_add.setOnClickListener {
+            addJtTdjyJCcqkUpPopu = CommenPop.getNormalPopu(this, R.layout.pop_add_nhjtjc_jttdjyjccqk, ll_act_nhjtjc_top)
+            val contentView: View = addJtTdjyJCcqkUpPopu!!.getContentView()
+            val et_cbdmj = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_cbdmj)
+            val et_lz = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_lz)
+            val et_zy = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_zy)
+            val iv_addncp = contentView.findViewById<ImageView>(R.id.pop_add_nhjtjc_jttdjjjccqk_iv_addncp)
+            val rlv_ncp = contentView.findViewById<RecyclerView>(R.id.pop_add_nhjtjc_jttdjjjccqk_rlv_ncp)
+            val et_nyjx = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_nyjx)
+            val et_srqc = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_srqc)
+            val et_zzjzmj = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_zzjzmj)
+            val et_fulzjg = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_fulzjg)
+            val et_fuzzcz = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_fuzzcz)
+            val et_fuczjg = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jttdjjjccqk_et_fuczjg)
+            val confirm = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jttdjjjccqk_confirm)
+            val close = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jttdjjjccqk_close)
+
+            CommenPop.backgroundAlpha(0.5f, this)
+            addJtTdjyJCcqkUpPopu!!.showAtLocation(ll_act_nhjtjc_top, Gravity.CENTER, 0, 0)
+
+            close.setOnClickListener {
+                addJtTdjyJCcqkUpPopu!!.dismiss()
+            }
+        }
+        //家庭收入支出情况
+        tv_act_nhjtjc_srzc_add.setOnClickListener {
+            addJtSrzcqkUpPopu = CommenPop.getNormalPopu(this, R.layout.pop_add_nhjtjc_jtsrzcqk, ll_act_nhjtjc_top)
+            val contentView: View = addJtSrzcqkUpPopu!!.getContentView()
+            val et_srhj = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_srhj)
+            val et_jtjysr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_jtjysr)
+            val et_gzxsr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_gzxsr)
+            val et_ccxsr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_ccxsr)
+            val et_zyxsr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_zyxsr)
+            val et_qtsr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_qtsr)
+            val et_zchj = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_zchj)
+            val et_sczl = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_sczl)
+            val et_shxf = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_shxf)
+            val et_jy = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_jy)
+            val et_yl = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_yl)
+            val et_sylr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_sylr)
+            val et_sb = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_sb)
+            val et_zcqtsr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_zcqtsr)
+            val et_fucjtjysr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_fucjtjysr)
+            val et_fujtjysr = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtsrzcqk_et_fujtjysr)
+            val confirm = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jtsrzcqk_confirm)
+            val close = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jtsrzcqk_close)
+
+            CommenPop.backgroundAlpha(0.5f, this)
+            addJtSrzcqkUpPopu!!.showAtLocation(ll_act_nhjtjc_top, Gravity.CENTER, 0, 0)
+
+            close.setOnClickListener {
+                addJtSrzcqkUpPopu!!.dismiss()
+            }
+        }
+        //家庭社会保障与财政需求情况
+        tv_act_nhjtjc_sbyczxq_add.setOnClickListener {
+            addJtShbzyCzxqqkUpPopu = CommenPop.getNormalPopu(this, R.layout.pop_add_nhjtjc_jtshbzyczxqqk, ll_act_nhjtjc_top)
+            val contentView: View = addJtShbzyCzxqqkUpPopu!!.getContentView()
+            val et_cjgygwrs = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_cjgygwrs)
+            val et_hdnyzcxbt = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_hdnyzcxbt)
+            val et_hzsyyfh = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_hzsyyfh)
+            val et_czzgjbylbxrs = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_czzgjbylbxrs)
+            val et_gxjbylbxrs = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_gxjbylbxrs)
+            val et_czzgjbyanglbxrs = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_czzgjbyanglbxrs)
+            val et_cxjbylbxrs = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_cxjbylbxrs)
+            val et_zxyczzcxm = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_zxyczzcxm)
+            val et_zxypxxm = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_zxypxxm)
+            val et_hqzcxxzyqd = contentView.findViewById<EditText>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_et_hqzcxxzyqd)
+            val confirm = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_confirm)
+            val close = contentView.findViewById<TextView>(R.id.pop_add_nhjtjc_jtshbzyczxqqk_close)
+
+            CommenPop.backgroundAlpha(0.5f, this)
+            addJtShbzyCzxqqkUpPopu!!.showAtLocation(ll_act_nhjtjc_top, Gravity.CENTER, 0, 0)
+
+            close.setOnClickListener {
+                addJtShbzyCzxqqkUpPopu!!.dismiss()
+            }
+        }
+
+        bt_act_nhjtjc_upload.setOnClickListener {
+            val editToast = TdlyUtils.setEditToast(et_act_nhjtjc_xz, et_act_nhjtjc_cun, et_act_nhjtjc_tbr, et_act_nhjtjc_sfzxm,
+                    et_act_nhjtjc_sfzsjh, et_act_nhjtjc_jtdzxz, et_act_nhjtjc_jtdzcun, et_act_nhjtjc_mph)
+            if (!editToast){
+                jtcyjcEntity.zhen = et_act_nhjtjc_xz.text.toString()
+                jtcyjcEntity.xzqmc = et_act_nhjtjc_cun.text.toString()
+                jtcyjcEntity.username = et_act_nhjtjc_tbr.text.toString()
+                jtcyjcEntity.sfname = et_act_nhjtjc_sfzxm.text.toString()
+                jtcyjcEntity.sfphone = et_act_nhjtjc_sfzsjh.text.toString()
+                jtcyjcEntity.jtdzzhen = et_act_nhjtjc_jtdzxz.text.toString()
+                jtcyjcEntity.jtdzxzqmc = et_act_nhjtjc_jtdzcun.text.toString()
+                jtcyjcEntity.mph = et_act_nhjtjc_mph.text.toString()
+
+                jtcyjcEntity.jtcyjbqkEntities = jtcyjbqkEntity
+                jtcyjcEntity.jtjyccqk = jtjyccqk
+                jtcyjcEntity.jtsrzcqkEntity = jtsrzcqkEntity
+                jtcyjcEntity.jtshbzqkEntity = jtshbzqkEntity
+            }
+
+
+        }
+    }
+
+    override fun initDatas() {
+    }
+
+    override fun returnBcjcYears(msg: List<String>) {
+    }
+
+    override fun showLoading(title: String?) {
+    }
+
+    override fun stopLoading() {
+    }
+
+    override fun showErrorTip(msg: String?) {
+    }
+
+
+}

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/bt_actiive_xaiyoubai_white">
+
+    <RelativeLayout
+        android:background="@drawable/bt_actiive_shangbai_blue2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/margin_zdkd"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="添加成员"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"/>
+
+
+    <com.jymj.zhglxt.widget.SizeLimitView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/margin_zdgd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jymj.zhglxt.widget.EnableLinearLayout
+                    android:id="@+id/pop_add_rkbdqk_ell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="姓名"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jbqk_et_name"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入姓名"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="性别"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <RadioGroup
+                            android:id="@+id/pop_add_nhjtjc_jbqk_rgp_sex"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/pop_add_nhjtjc_jbqk_rbt_man"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:background="@drawable/radiobutton_background"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="男"
+                                android:textColor="@drawable/radiobutton_textcolor"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/pop_add_nhjtjc_jbqk_rbt_woman"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/radiobutton_background"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="女"
+                                android:textColor="@drawable/radiobutton_textcolor"
+                                android:textSize="14sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="年龄"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:id="@+id/pop_add_nhjtjc_jbqk_et_age"
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入年龄"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                </com.jymj.zhglxt.widget.EnableLinearLayout>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="受教育程度"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_sjycd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_sjycd_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 小学及以下"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_sjycd_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 初中"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_sjycd_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="C 高中（中专）"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_sjycd_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="D 大专及以上"
+                        android:textColor="#333333"/>
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="户籍"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_hj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_hj_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 农业"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_hj_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 非农业"
+                        android:textColor="#333333"/>
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="长期居住地"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_cqjzd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_cqjzd_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 农村"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_cqjzd_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 小城镇"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_cqjzd_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="C 城市"
+                        android:textColor="#333333"/>
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="拥有股份"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_yygf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_yygf_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 成员个人股"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_yygf_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 非成员个人股"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_yygf_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="C 其他"
+                        android:textColor="#333333"/>
+
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="主要收入渠道"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_zysrqd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_zysrqd_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 家庭经营收入（含务农）"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_zysrqd_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 工资性收入（含外出务工）"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_zysrqd_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="C 财产性收入"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_zysrqd_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="D 转移性收入"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_zysrqd_qt"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="其他收入"
+                        android:textColor="#333333"/>
+
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="身体健康状况"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <com.jymj.zhglxt.widget.FlowRadioGroup
+                    android:id="@+id/pop_add_nhjtjc_jbqk_rgp_stjkzk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_stjkzk_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="A 良好"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_stjkzk_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="B 一般"
+                        android:textColor="#333333"/>
+
+                    <RadioButton
+                        android:id="@+id/pop_add_nhjtjc_jbqk_rbt_stjkzk_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="C 较差"
+                        android:textColor="#333333"/>
+
+                </com.jymj.zhglxt.widget.FlowRadioGroup>
+
+            </LinearLayout>
+
+
+    </ScrollView>
+    </com.jymj.zhglxt.widget.SizeLimitView>
+
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jbqk_confirm"
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>
+        <TextView
+            android:id="@+id/pop_add_nhjtjc_jbqk_close"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#4CA2FE"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

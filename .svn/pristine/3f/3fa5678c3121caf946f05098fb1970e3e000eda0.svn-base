@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/hbbh_item"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="红本编号" />
+
+        <TextView
+            android:id="@+id/hbcm_item"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="村名"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/hbxm_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/hbtm_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="题名"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/hbzrz_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="责任者"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/hbzdmj_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="占地面积" />
+
+        <TextView
+            android:id="@+id/hbjzmj_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="建筑面积" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/hbxcsj_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="形成时间" />
+
+        <TextView
+            android:id="@+id/hbgdnd_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="归档年度" />
+
+        <TextView
+            android:id="@+id/hbcz_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="查看"
+            android:textColor="#67ACFF"
+            />
+    </LinearLayout>
+
+</LinearLayout>

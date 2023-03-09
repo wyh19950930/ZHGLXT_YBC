@@ -1,0 +1,153 @@
+package com.jymj.zhglxt.zjd.bean.bcjc.bcqh;
+
+import java.util.Date;
+
+/**
+ * Created by lc on 2022/11/7.家庭成员基本情况表
+ */
+public class JtcyjbqkEntity {
+    private Long id;
+    private Long jtjcId;
+    private String name;//	成员名称
+    private String sex;//	性别
+    private Long age;//	年龄
+    private String sjycd;//	受教育程度
+    private String hb;//	户籍
+    private String cqjzd;//	长期居住地
+    private String yygf;//	拥有股份
+    private String zysrqd;//	主要收入渠道
+    private String remark;//	备注
+    private String stjkzk;//	身体健康状况
+    private Integer sfhz;//	是否户主
+    private String createTime;
+    private String updateTime;
+    private Long userId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getJtjcId() {
+        return jtjcId;
+    }
+
+    public void setJtjcId(Long jtjcId) {
+        this.jtjcId = jtjcId;
+    }
+
+    public String getName() {
+        return name==null?"":name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex==null?"":sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Long getAge() {
+        return age==null?0:age;
+    }
+
+    public void setAge(Long age) {
+        this.age = age;
+    }
+
+    public String getSjycd() {
+        return sjycd==null?"":sjycd;
+    }
+
+    public void setSjycd(String sjycd) {
+        this.sjycd = sjycd;
+    }
+
+    public String getHb() {
+        return hb==null?"":hb;
+    }
+
+    public void setHb(String hb) {
+        this.hb = hb;
+    }
+
+    public String getCqjzd() {
+        return cqjzd==null?"":cqjzd;
+    }
+
+    public void setCqjzd(String cqjzd) {
+        this.cqjzd = cqjzd;
+    }
+
+    public String getYygf() {
+        return yygf==null?"":yygf;
+    }
+
+    public void setYygf(String yygf) {
+        this.yygf = yygf;
+    }
+
+    public String getZysrqd() {
+        return zysrqd==null?"":zysrqd;
+    }
+
+    public void setZysrqd(String zysrqd) {
+        this.zysrqd = zysrqd;
+    }
+
+    public String getRemark() {
+        return remark==null?"":remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getStjkzk() {
+        return stjkzk==null?"":stjkzk;
+    }
+
+    public void setStjkzk(String stjkzk) {
+        this.stjkzk = stjkzk;
+    }
+
+    public Integer getSfhz() {
+        return sfhz;
+    }
+
+    public void setSfhz(Integer sfhz) {
+        this.sfhz = sfhz;
+    }
+
+    public String getCreateTime() {
+        return createTime==null?"":createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime==null?"":updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+}

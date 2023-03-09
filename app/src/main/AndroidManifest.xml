@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jymj.zhglxt">
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 华为角标 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" /> <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Android Q后台定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.INTENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".app.AppApplication"
+        android:allowBackup="true"
+        android:icon="${appicon}"
+        android:label="${appname}"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NewBzcGlxy"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:label,android:theme">
+        <activity android:name=".xm.activity.XmMapActivity"></activity>
+        <activity android:name=".xm.activity.ScListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".xm.activity.SearchDzActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".xm.activity.XmIssueActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".zjd.activity.zjdgl.CbbsjsxActivity" />
+        <activity android:name=".zjd.activity.SelectZhActivity" />
+        <activity android:name=".zjd.activity.yzt.TjfxDetailActivity" />
+        <activity android:name=".zjd.activity.yzt.TjfxActivity" />
+        <activity android:name=".zjd.activity.AjDetailActivity" />
+        <activity android:name=".zjd.activity.AjlbSearchActivity" />
+        <activity android:name=".zjd.activity.AjlbActivity" />
+        <activity android:name=".zjd.activity.CzdwDetailActivity" />
+        <activity android:name=".zjd.activity.QyglDetailActivity" />
+        <activity android:name=".zjd.activity.HjgxtActivity" />
+        <activity android:name=".rjhj.activity.RjhjDwckActivity" />
+        <activity android:name=".rjhj.activity.RjhjZglpmActivity" /> <!-- ${applicationId}.fileprovider -->
+        <!-- androidx.core.content.FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".personal.activity.PersonalDataActivity" />
+        <activity android:name=".rjhj.activity.HBJCDetailActivity" />
+        <activity android:name=".ldrkgl.personal.activity.MyNewsActivity" />
+        <activity android:name=".ldrkgl.home.activity.SendMessageActivity" />
+        <activity android:name=".ldrkgl.home.activity.LdrkDetailActivity" />
+        <activity android:name=".personal.activity.MeActivity" />
+        <activity android:name=".home.activity.YllbActivity" />
+        <activity android:name=".home.activity.CzlbActivity" />
+        <activity android:name=".ldrkgl.home.activity.ScanActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.PDFActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.FrameYewuDeteil" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.zjdgl.TcglDetailActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.zjdgl.FrameMXActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.zjdgl.CeSuanActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.yzt.CtDetailActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity android:name=".zjd.activity.zjdgl.ImageListActivity" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+        <activity
+            android:name=".home.activity.LdrkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:exported="false" /> <!-- true -->
+        <!-- bd5a0b4cdab024e4fb67acf2aadacbff -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${amapkey}" />
+
+        <service android:name="com.amap.api.location.APSService" /> <!-- 二维码扫描 设置竖屏显示 -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".login.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher"
+            tools:ignore="DuplicateActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="22" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".zjd.Main2Activity" />
+        <activity android:name=".ldrkgl.home.activity.InformationAcquisitionActivity" />
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".rjhj.activity.RjhjHbDetailsActivity" /> <!-- <activity android:name=".rjhj.activity.HBJCDetailActivity"></activity> -->
+        <activity
+            android:name=".ui.activity.FirstActivity"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"  />
+        <activity android:name=".zjd.activity.FjxcActivity" />
+        <activity
+            android:name=".zjd.activity.YdlrActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name=".zjd.activity.ZjdfjglActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".zjd.activity.yqgl.NyyqDetailActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyAddFzActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyFzRoomPicActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyYlfjActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyRzxxActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyTzActivity" />
+        <activity android:name=".zjd.activity.zjdgl.PropertyLszkActivity" />
+        <activity android:name=".zjd.activity.zjdgl.BaseDataActivity" />
+        <activity android:name=".ui.activity.ShoppingMallWebActivity" />
+        <activity android:name=".zjd.activity.UserListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".zjd.activity.AddUserActivity" />
+        <activity android:name=".zjd.activity.zjdgl.BcqhNhjtjcActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".xm.activity.XmTzDetailActivity" />
+    </application>
+
+</manifest>

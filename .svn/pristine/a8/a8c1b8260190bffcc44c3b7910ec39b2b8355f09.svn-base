@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/bt_actiive_xaiyoubai_white">
+
+    <RelativeLayout
+        android:background="@drawable/bt_actiive_shangbai_blue2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/margin_zdkd"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="信息"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"/>
+
+
+    <com.jymj.zhglxt.widget.SizeLimitView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/margin_zdgd">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+                    <!--                选择年份-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="年份"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <!--                android:drawableRight="@drawable/back_down_icon"-->
+                    <TextView
+                        android:id="@+id/tv_pop_add_rkbdqk"
+                        android:textColor="#4CA2FE"
+                        android:hint=""
+                        android:gravity="right|center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <Spinner
+                        android:visibility="gone"
+                        android:id="@+id/pop_add_rkbdqk_spr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#cccccc"/>
+                <com.jymj.zhglxt.widget.EnableLinearLayout
+                    android:id="@+id/pop_add_rkbdqk_ell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="全村户籍人口(户数)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入全村户籍人口"
+                            android:id="@+id/pop_add_rkbdqk_et_qchjrkhs"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="全村户籍人口(人数)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入全村户籍人口"
+                            android:id="@+id/pop_add_rkbdqk_et_qchjrkrs"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="非农业户籍(人)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入非农业户籍"
+                            android:id="@+id/pop_add_rkbdqk_et_nyhjh"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="农业户籍(人)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入农业户籍"
+                            android:id="@+id/pop_add_rkbdqk_et_nyhjr"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="≤30岁"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入≤30岁的人数"
+                            android:id="@+id/pop_add_rkbdqk_et_xydy30"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="≥60岁"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入≤60岁的人数"
+                            android:id="@+id/pop_add_rkbdqk_et_dydy60"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="本村户籍常住人口"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入本村户籍常住人口"
+                            android:id="@+id/pop_add_rkbdqk_et_bchjczrk"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="外来常住人口"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入外来常住人口"
+                            android:id="@+id/pop_add_rkbdqk_et_wlczrk"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                </com.jymj.zhglxt.widget.EnableLinearLayout>
+                <View
+                    android:layout_margin="5dp"
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_sxjg"
+                    android:layout_marginTop="@dimen/margin_sxjg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_bggd"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="操作人姓名"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:background="@drawable/shape_list_table_title2"
+                        android:id="@+id/pop_add_rkbdqk_et_czrname"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pop_add_rkbdqk_ll_reject"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="驳回原因"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/pop_add_rkbdqk_et_reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_pop_add_rkbdqk_1978"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+                    <!--                选择年份-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="年份"
+                        android:textColor="#333333"
+                        android:gravity="center_vertical"/>
+
+                    <!--                android:drawableRight="@drawable/back_down_icon"-->
+                    <TextView
+                        android:id="@+id/tv_pop_add_rkbdqk_1978"
+                        android:textColor="#4CA2FE"
+                        android:hint=""
+                        android:gravity="right|center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#cccccc"/>
+                <com.jymj.zhglxt.widget.EnableLinearLayout
+                    android:id="@+id/pop_add_rkbdqk_ell_1978"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="全村户籍人口(户数)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入全村户籍人口1978"
+                            android:id="@+id/pop_add_rkbdqk_et_qchjrkhs_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="全村户籍人口(人数)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入全村户籍人口1978"
+                            android:id="@+id/pop_add_rkbdqk_et_qchjrkrs_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="非农业户籍(人)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入非农业户籍1978"
+                            android:id="@+id/pop_add_rkbdqk_et_nyhjh_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="农业户籍(人)"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入农业户籍1978"
+                            android:id="@+id/pop_add_rkbdqk_et_nyhjr_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="≤30岁"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入≤30岁的人数1978"
+                            android:id="@+id/pop_add_rkbdqk_et_xydy30_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="≥60岁"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入≤60岁的人数1978"
+                            android:id="@+id/pop_add_rkbdqk_et_dydy60_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="本村户籍常住人口"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入本村户籍常住人口1978"
+                            android:id="@+id/pop_add_rkbdqk_et_bchjczrk_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/margin_sxjg"
+                        android:layout_marginTop="@dimen/margin_sxjg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_bggd"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="外来常住人口"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"/>
+
+                        <EditText
+                            android:background="@drawable/shape_list_table_title2"
+                            android:textColorHint="@color/white"
+                            android:hint="请输入外来常住人口1978"
+                            android:id="@+id/pop_add_rkbdqk_et_wlczrk_1978"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            />
+
+                    </LinearLayout>
+                </com.jymj.zhglxt.widget.EnableLinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    </com.jymj.zhglxt.widget.SizeLimitView>
+
+
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:visibility="gone"
+            android:id="@+id/pop_add_rkbdqk_confirm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="#12C483"
+            android:textSize="16sp"
+            android:gravity="center"/>
+        <!--<View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>-->
+
+
+        <TextView
+            android:background="@drawable/bt_actiive_xaizuobai_blue"
+            android:id="@+id/pop_add_rkbdqk_reject"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="驳回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:background="#E0E0E0"/>
+        <TextView
+            android:id="@+id/pop_add_rkbdqk_close"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#4CA2FE"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

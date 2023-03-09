@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_zjxx_bm"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="编码" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_nzj"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="年租金(元/亩/年)" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_pjyszj"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="平均应收租金(元)" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_zjze"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="租金总额(元)" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_fksj"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="付款时间" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_fkfs"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="付款方式" />
+
+    <TextView
+        android:id="@+id/tv_zjxx_delete"
+        style="@style/table_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:text="删除"
+        android:textColor="@color/red_error" />
+</LinearLayout>

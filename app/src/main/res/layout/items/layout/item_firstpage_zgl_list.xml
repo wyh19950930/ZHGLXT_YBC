@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    style="@style/table_title_textview"-->
+    <LinearLayout
+        android:padding="3dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/firstpage_item_zgl_pm"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="排名" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/firstpage_item_zgl_zm"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="镇名" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/firstpage_item_zgl_fens"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#52CC3A"
+            android:text="当前分数" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/firstpage_item_zgl_fs"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#D63A3B"
+            android:text="发生" />
+        <TextView
+            android:drawableRight="@drawable/back_right_icon"
+            android:gravity="center"
+            android:id="@+id/firstpage_item_zgl_cl"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="处理" />
+    </LinearLayout>
+    <View
+        android:layout_marginLeft="20dp"
+        android:background="#333333"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

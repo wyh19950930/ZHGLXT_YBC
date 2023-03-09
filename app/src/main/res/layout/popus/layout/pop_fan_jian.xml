@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_environmental2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+          android:background="@drawable/popback"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:textStyle="bold"
+              android:textColor="@color/black"
+              android:textSize="18sp"
+              android:gravity="center"
+              android:text="房屋"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"/>
+          <View
+              android:background="@color/gray"
+              android:layout_width="match_parent"
+              android:layout_height="0.2dp"/>
+          <LinearLayout
+              android:visibility="gone"
+              android:id="@+id/ll_zhen_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="村名:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:text="村名"
+                  android:id="@+id/tv_zhen_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:id="@+id/ll_cun_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="村名:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:text="村名"
+                  android:id="@+id/tv_cun_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:id="@+id/ll_hzmc_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="户主名称:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:text="户主名称"
+                  android:id="@+id/tv_hzmc_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:id="@+id/ll_mph_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="门牌号:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:text="门牌号"
+                  android:id="@+id/tv_mph_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:visibility="gone"
+              android:id="@+id/ll_zdmj_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="占地面积:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:text="占地面积"
+                  android:id="@+id/tv_zdmj_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <LinearLayout
+              android:minHeight="50dp"
+              android:id="@+id/ll_remark_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:text="备注:"
+                  android:textSize="15sp"
+                  android:textStyle="bold" />
+
+              <EditText
+                  android:id="@+id/tv_remark_fan_jian"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="8dp"
+                  android:layout_weight="2"
+                  android:clickable="true"
+                  android:hint="备注"
+                  android:textSize="15sp" />
+          </LinearLayout>
+          <TextView
+              android:textColor="@color/black"
+              android:paddingLeft="15dp"
+              android:gravity="center_vertical"
+              android:textSize="15sp"
+              android:text="图片上传"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rlv_fan_jian_upfile"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rlv_fan_jian_upfile1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+          <LinearLayout
+              android:id="@+id/ll_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/ll_pop_environmental2">
+
+              <Button
+                  android:id="@+id/bt_close_fan_jian"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/gray"
+                  android:text="关闭" />
+              <Button
+                  android:textColor="@color/white"
+                  android:id="@+id/bt_delete_fan_jian"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/red"
+                  android:text="删除" />
+              <Button
+                  android:textColor="#FFFFFF"
+                  android:id="@+id/bt_lsbc_fan_jian"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="#FF6B00"
+                  android:text="临时保存" />
+              <Button
+                  android:id="@+id/bt_upload_fan_jian"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/blue"
+                  android:text="下发"
+                  android:textColor="@color/white" />
+              <!--            确定-->
+          </LinearLayout>
+      </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

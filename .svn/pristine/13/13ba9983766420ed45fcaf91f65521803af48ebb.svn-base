@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="80dp"
+    android:layout_height="180dp">
+
+
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_year"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="2022"/>
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_cqwcwgzs"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_bdjy"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_xwqn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_qwsn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_bcjc_wcwgbdqk_wss"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/table_title_textview"
+        android:text="xxx"/>
+</LinearLayout>

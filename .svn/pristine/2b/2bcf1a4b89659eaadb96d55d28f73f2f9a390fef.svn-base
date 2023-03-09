@@ -1,0 +1,643 @@
+package com.jymj.zhglxt.xm.activity
+
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
+import android.content.Intent
+import android.graphics.Bitmap
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.Gravity
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.amap.api.maps2d.model.Marker
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener
+import com.bigkoo.pickerview.view.OptionsPickerView
+import com.bumptech.glide.Glide
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.BaseViewHolder
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.jymj.zhglxt.R
+import com.jymj.zhglxt.api.ApiConstants
+import com.jymj.zhglxt.api.AppMenus
+import com.jymj.zhglxt.ldrkgl.base.BaseNet
+import com.jymj.zhglxt.ldrkgl.home.adapter.PhotoAdapter
+import com.jymj.zhglxt.ldrkgl.home.adapter.RecyclerItemClickListener
+import com.jymj.zhglxt.util.GetFileUtil
+import com.jymj.zhglxt.util.IOHelper
+import com.jymj.zhglxt.widget.zdybj.TagCloudLayout
+import com.jymj.zhglxt.xm.bean.BcProjectEntity
+import com.jymj.zhglxt.xm.bean.BcProjectFile
+import com.jymj.zhglxt.xm.bean.BcProjectLx
+import com.jymj.zhglxt.xm.bean.CjVO
+import com.jymj.zhglxt.xm.contract.XmIssueContract
+import com.jymj.zhglxt.xm.presenter.XmIssuePresenter
+import com.jymj.zhglxt.zjd.adapter.TagBaseAdapter
+import com.jymj.zhglxt.zjd.bean.jsjb.JsjbBean
+import com.jymj.zhglxt.zjd.contract.AddUserContract
+import com.jymj.zhglxt.zjd.presenter.AddUserPresenter
+import com.lzy.okgo.OkGo
+import com.lzy.okgo.model.Response
+import com.lzy.okgo.request.base.Request
+import com.setsuna.common.base.BaseActivity
+import com.setsuna.common.baseapp.AppCache
+import com.setsuna.common.basebean.BaseRespose
+import com.setsuna.common.commonutils.ToastUtils
+import com.setsuna.common.commonwidget.LoadingDialog
+import kotlinx.android.synthetic.main.activity_tjfx.*
+import kotlinx.android.synthetic.main.activity_xm_issue.*
+import kotlinx.android.synthetic.main.fragment_bcqh.*
+import me.iwf.photopicker.PhotoPicker
+import me.iwf.photopicker.PhotoPreview
+import java.io.*
+
+class XmIssueActivity : BaseActivity<XmIssuePresenter, XmIssueContract.Model>(), XmIssueContract.View {
+
+    var tcList1 = ArrayList<String>()
+    var selectedPhotos = ArrayList<String>()
+    var selectedPhotos1 = ArrayList<String>()
+    var photoAdapter: PhotoAdapter? = null
+    var photoAdapter1: PhotoAdapter? = null
+    val notesFileList = ArrayList<BcProjectFile>()
+    val notesFileList1 = ArrayList<BcProjectFile>()
+    var schxtp: BaseQuickAdapter<BcProjectFile, BaseViewHolder>? = null
+    var schxtp1: BaseQuickAdapter<BcProjectFile, BaseViewHolder>? = null
+    var bcProjectEntity = BcProjectEntity()
+    var point = ""
+    var xzq = ""
+    var zhen = ""
+    var cun = ""
+    var code = ""
+//    var type = 1
+    var xmType = 0//项目类型
+
+    var maxPhoto = 0
+    var maxPhoto1 = 0
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_xm_issue
+    }
+
+    override fun initPresenter() {
+        mPresenter.setVM(this,mModel)
+    }
+    override fun initViews() {
+        //AppCache.getInstance().xzCenter
+        iv_xm_issue_back.setOnClickListener {
+            finish()
+        }
+
+        et_act_xm_issue_content.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                et_act_xm_issue_count.setText("${et_act_xm_issue_content.text.toString().length}/500")
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+        })
+        ll_act_xm_issue_tjwz.setOnClickListener {
+            val intent = Intent(this, SearchDzActivity::class.java)
+            startActivity(intent)
+//            ToastUtils.showShort("添加位置")
+        }
+        iv_xm_issue_sure.setOnClickListener {
+            val xmName = et_act_xm_issue_xmname.text.toString()
+            val ydgm = et_act_xm_issue_ydgm.text.toString()
+            val jzgm = et_act_xm_issue_jzgm.text.toString()
+            val cdmj = et_act_xm_issue_cdmj.text.toString()
+            val tzgmMin = et_act_xm_issue_tzgmmin.text.toString()
+            val tzgmMax = et_act_xm_issue_tzgmmax.text.toString()
+            if (notesFileList.size==0){
+                ToastUtils.showShort("请上传项目图片")
+            }else if (notesFileList1.size==0){
+                ToastUtils.showShort("请上传项目介绍")
+            }else if (xmType==0){
+                ToastUtils.showShort("请选择项目类型")
+            }else if (xmName.equals("")){
+                ToastUtils.showShort("请输入项目名称")
+            }else if (et_act_xm_issue_title.text.toString().equals("")){
+                ToastUtils.showShort("请输入标题")
+            }else if (tcList1.size==0){
+                ToastUtils.showShort("请选择标签")
+            }else if (point.equals("")){
+                ToastUtils.showShort("请选择地址")
+            }else{
+                //et_act_xm_issue_xmname       ydgm jzgm cdmj tzgmMin tzgmMax
+                val arrayList = ArrayList<BcProjectLx>()
+                for (i in tcList1){
+                    val bcProjectLx = BcProjectLx()
+                    bcProjectLx.lx = i//i
+                    arrayList.add(bcProjectLx)
+                }
+                bcProjectEntity.projectLxList.addAll(arrayList)
+                bcProjectEntity.xzq = xzq
+                bcProjectEntity.zhen = zhen
+                bcProjectEntity.xzqmc = cun
+                bcProjectEntity.code = code
+                bcProjectEntity.location = point
+                bcProjectEntity.content = et_act_xm_issue_content.text.toString()
+                bcProjectEntity.title = et_act_xm_issue_title.text.toString()
+                bcProjectEntity.xmlx = xmType
+                bcProjectEntity.projectFiles.addAll(notesFileList)
+                bcProjectEntity.projectFiles.addAll(notesFileList1)
+                mPresenter.getAddXmIssue(bcProjectEntity)
+            }
+
+
+        }
+        var typeList = ArrayList<String>()
+        typeList.add("游")
+        typeList.add("娱")
+        typeList.add("居")
+        typeList.add("食")
+        ll_act_xm_issue_xzlx.setOnClickListener {//选择类型
+
+            val pvOptions: OptionsPickerView<String> = OptionsPickerBuilder(this, OnOptionsSelectListener { options1, option2, options3, v ->
+                //                        setCheck(quList,options1)
+                tv_act_xm_issue_xmtype.setText(typeList.get(options1))
+                xmType = typeList.indexOf(typeList.get(options1))+1
+
+//                        getZhenList(xzqList,quList.get(options1).code)
+            })
+                    .isDialog(true)
+                    .isAlphaGradient(true)
+                    .build<String>()
+            pvOptions.setSelectOptions(typeList.indexOf(tv_act_xm_issue_xmtype.text.toString()))
+            pvOptions.setPicker(typeList)
+            pvOptions.setTitleText("项目类型")
+            pvOptions.findViewById(R.id.rv_topbar).setBackgroundResource(R.drawable.bt_actiive_shi_ban_white)
+
+
+            val params = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM)
+            params.leftMargin = 0
+            params.rightMargin = 0
+            val contentContainer = pvOptions.getDialogContainerLayout()
+            contentContainer.setLayoutParams(params)
+            pvOptions.getDialog().getWindow()!!.setGravity(Gravity.BOTTOM)
+            pvOptions.getDialog().getWindow()!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+            pvOptions.show()
+        }
+
+    }
+
+    override fun initDatas() {
+
+        var arrayList1 = ArrayList<JsjbBean>()
+        arrayList1.add(JsjbBean(1,"历史文化类型",false))
+        arrayList1.add(JsjbBean(2,"旅游型",true))
+        arrayList1.add(JsjbBean(3,"其他型A",false))
+        arrayList1.add(JsjbBean(4,"其他型B",false))
+        val mAdapterxl = TagBaseAdapter(mContext, arrayList1) //createData(mListxl, xl)
+
+        tcl_act_xm_issue_bq.setAdapter(mAdapterxl)
+        tcl_act_xm_issue_bq.setItemClickListener(object : TagCloudLayout.TagItemClickListener {
+            override fun itemClick(position1: Int) {
+                changeState(arrayList1, position1)
+                mAdapterxl.notifyDataSetChanged()
+            }
+        })
+
+
+        rlv_act_xm_issue_see.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        rlv_act_xm_issue_add.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
+        photoAdapter = PhotoAdapter(this, selectedPhotos)
+        rlv_act_xm_issue_add.adapter = photoAdapter
+
+        rlv_act_xm_issue_add.addOnItemTouchListener(RecyclerItemClickListener(this, object : RecyclerItemClickListener.OnItemClickListener {
+            override fun onItemClick(view: View?, position: Int) {
+                if (photoAdapter!!.getItemViewType(position) === PhotoAdapter.TYPE_ADD) {
+                    PhotoPicker.builder()
+                            .setPhotoCount(PhotoAdapter.MAX)
+                            .setShowCamera(true)
+                            .setPreviewEnabled(false)
+                            .setSelected(selectedPhotos)
+//                            .start(activity!!)
+                            .start(this@XmIssueActivity)
+                } else {
+                    PhotoPreview.builder()
+                            .setPhotos(selectedPhotos)
+                            .setCurrentItem(position)
+//                            .start(activity!!)
+                            .start(this@XmIssueActivity,20)//context!!
+                }
+            }
+        }))
+
+        schxtp = object : BaseQuickAdapter<BcProjectFile, BaseViewHolder>(R.layout.item_teng_tui_photo, notesFileList) {
+            override fun convert(helper: BaseViewHolder?, item: BcProjectFile?) {
+                val view = helper!!.getView<ImageView>(R.id.iv_teng_photo)
+                val ll_teng_tui = helper.getView<LinearLayout>(R.id.ll_teng_tui)
+                val pic: String = item!!.url//ApiConstants.BASE_URL + item!!.path
+                val s1 = pic.replace("\\", "/")
+                Glide.with(mContext).load(s1)//GlideAppAppApplication.getGlideUrl(s1)
+                        .into(view)
+                helper!!.setText(R.id.tv_teng_photo_name, item.filename)
+                helper.getView<ImageView>(R.id.iv_tent_tui_delete).visibility = View.VISIBLE
+                helper.getView<ImageView>(R.id.iv_tent_tui_delete).setOnClickListener {
+                    var position = helper.adapterPosition
+                    // 通过AlertDialog.Builder这个类来实例化我们的一个AlertDialog的对象
+                    var builder = AlertDialog.Builder(this@XmIssueActivity)
+                    // 设置Title的图标
+                    builder.setIcon(R.mipmap.ic_launcher)
+                    // 设置Title的内容
+                    builder.setTitle("弹出警告框")
+                    // 设置Content来显示一个信息
+                    builder.setMessage("确定删除吗？")
+                    // 设置一个PositiveButton
+                    builder.setPositiveButton("确定", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            var sss = "{\"requestData\":\"[" + item.id + "]\"}"//encrypt
+                            OkGo.post<String> (ApiConstants.PROJECT_DELETE_FILEBYID).upJson("[" + item.id + "]").execute(object :
+                                    BaseNet<String>(){
+                                override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                                    super.onStart(request)
+                                    LoadingDialog.showDialogForLoading(this@XmIssueActivity)
+                                }
+
+                                override fun onSuccess(response: Response<String>?) {
+                                    val cash = response?.body()
+                                    if (cash != null) {
+                                        val json: BaseRespose<*> = Gson().fromJson(cash, object : TypeToken<BaseRespose<*>?>() {}.type)
+                                        if (json.code==0){
+                                            notesFileList.removeAt(position)
+                                            notifyDataSetChanged()
+                                        }else{
+                                            ToastUtils.showShort(json.getMsg())
+                                        }
+
+                                    } else {
+                                        ToastUtils.showShort("确定")
+                                    }
+                                }
+
+                                override fun onFinish() {
+                                    super.onFinish()
+                                    LoadingDialog.cancelDialogForLoading()
+                                }
+
+                                override fun onError(response: Response<String>?) {
+                                    super.onError(response)
+                                    ToastUtils.showShort("网络错误")
+                                }
+
+                            })
+                        }
+                    })
+                    // 设置一个NegativeButton
+                    builder.setNegativeButton("取消", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            dialog!!.dismiss()
+                        }
+                    })
+                    builder.show()
+                }
+                helper.getView<ImageView>(R.id.iv_teng_photo).setOnClickListener {
+                    var pathList = ArrayList<String>()
+                    for (i in notesFileList){
+                        val pic = i.url//ApiConstants.BASE_URL + i.path
+                        val s1 = pic.replace("\\", "/")
+                        pathList.add(s1)
+                    }
+                    PhotoPreview.builder()
+                            .setPhotos(pathList)
+                            .setCurrentItem(helper.adapterPosition)
+                            .setShowDeleteButton(false)
+                            .start(this@XmIssueActivity!!)
+
+
+                }
+            }
+        }
+        rlv_act_xm_issue_see.adapter = schxtp
+
+
+
+        rlv_act_xm_issue_xmjssee.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        rlv_act_xm_issue_xmjsadd.layoutManager = GridLayoutManager(this, 3)
+
+        photoAdapter1 = PhotoAdapter(this, selectedPhotos1)
+        rlv_act_xm_issue_xmjsadd.adapter = photoAdapter1
+
+        rlv_act_xm_issue_xmjsadd.addOnItemTouchListener(RecyclerItemClickListener(this, object : RecyclerItemClickListener.OnItemClickListener {
+            override fun onItemClick(view: View?, position: Int) {
+                if (photoAdapter1!!.getItemViewType(position) === PhotoAdapter.TYPE_ADD) {
+                    PhotoPicker.builder()
+                            .setPhotoCount(PhotoAdapter.MAX)
+                            .setShowCamera(true)
+                            .setPreviewEnabled(false)
+                            .setSelected(selectedPhotos1)
+//                            .start(activity!!)
+                            .start(this@XmIssueActivity,234)
+                } else {
+                    PhotoPreview.builder()
+                            .setPhotos(selectedPhotos1)
+                            .setCurrentItem(position)
+//                            .start(activity!!)
+                            .start(this@XmIssueActivity,20)//context!!
+                }
+            }
+        }))
+
+        schxtp1 = object : BaseQuickAdapter<BcProjectFile, BaseViewHolder>(R.layout.item_teng_tui_photo, notesFileList1) {
+            override fun convert(helper: BaseViewHolder?, item: BcProjectFile?) {
+                val view = helper!!.getView<ImageView>(R.id.iv_teng_photo)
+                val ll_teng_tui = helper.getView<LinearLayout>(R.id.ll_teng_tui)
+                val pic: String = item!!.url//ApiConstants.BASE_URL + item!!.path
+                val s1 = pic.replace("\\", "/")
+                Glide.with(mContext).load(s1)//GlideAppAppApplication.getGlideUrl(s1)
+                        .into(view)
+                helper!!.setText(R.id.tv_teng_photo_name, item.filename)
+                helper.getView<ImageView>(R.id.iv_tent_tui_delete).visibility = View.VISIBLE
+                helper.getView<ImageView>(R.id.iv_tent_tui_delete).setOnClickListener {
+                    var position = helper.adapterPosition
+                    // 通过AlertDialog.Builder这个类来实例化我们的一个AlertDialog的对象
+                    var builder = AlertDialog.Builder(this@XmIssueActivity)
+                    // 设置Title的图标
+                    builder.setIcon(R.mipmap.ic_launcher)
+                    // 设置Title的内容
+                    builder.setTitle("弹出警告框")
+                    // 设置Content来显示一个信息
+                    builder.setMessage("确定删除吗？")
+                    // 设置一个PositiveButton
+                    builder.setPositiveButton("确定", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            var sss = "{\"requestData\":\"[" + item.id + "]\"}"//encrypt
+                            OkGo.post<String> (ApiConstants.PROJECT_DELETE_FILEBYID).upJson("[" + item.id + "]").execute(object :
+                                    BaseNet<String>(){
+                                override fun onStart(request: Request<String, out Request<Any, Request<*, *>>>?) {
+                                    super.onStart(request)
+                                    LoadingDialog.showDialogForLoading(this@XmIssueActivity)
+                                }
+
+                                override fun onSuccess(response: Response<String>?) {
+                                    val cash = response?.body()
+                                    if (cash != null) {
+                                        val json: BaseRespose<*> = Gson().fromJson(cash, object : TypeToken<BaseRespose<*>?>() {}.type)
+                                        if (json.code==0){
+                                            notesFileList1.removeAt(position)
+                                            notifyDataSetChanged()
+                                        }else{
+                                            ToastUtils.showShort(json.getMsg())
+                                        }
+
+                                    } else {
+                                        ToastUtils.showShort("确定")
+                                    }
+                                }
+
+                                override fun onFinish() {
+                                    super.onFinish()
+                                    LoadingDialog.cancelDialogForLoading()
+                                }
+
+                                override fun onError(response: Response<String>?) {
+                                    super.onError(response)
+                                    ToastUtils.showShort("网络错误")
+                                }
+
+                            })
+                        }
+                    })
+                    // 设置一个NegativeButton
+                    builder.setNegativeButton("取消", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            dialog!!.dismiss()
+                        }
+                    })
+                    builder.show()
+                }
+                helper.getView<ImageView>(R.id.iv_teng_photo).setOnClickListener {
+                    var pathList = ArrayList<String>()
+                    for (i in notesFileList1){
+                        val pic = i.url//ApiConstants.BASE_URL + i.path
+                        val s1 = pic.replace("\\", "/")
+                        pathList.add(s1)
+                    }
+                    PhotoPreview.builder()
+                            .setPhotos(pathList)
+                            .setCurrentItem(helper.adapterPosition)
+                            .setShowDeleteButton(false)
+                            .start(this@XmIssueActivity!!)
+
+
+                }
+            }
+        }
+        rlv_act_xm_issue_xmjssee.adapter = schxtp1
+
+    }
+
+    override fun returnAddUser(message: String) {
+        ToastUtils.showShort(message)
+        finish()
+    }
+    override fun returnByPoint(message: CjVO,point: String) {
+
+    }
+
+    override fun showLoading(title: String?) {
+        LoadingDialog.showDialogForLoading(this)
+    }
+
+    override fun stopLoading() {
+        LoadingDialog.cancelDialogForLoading()
+    }
+
+    override fun showErrorTip(msg: String?) {
+        ToastUtils.showShort(msg)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val cjVO = AppMenus.getInstance().cjVO
+        if (cjVO!=null){
+            tv_act_xm_issue.setText("${cjVO.xzq+cjVO.zhen+cjVO.xzqmc}")
+            point = AppMenus.getInstance().cjVO.point
+            xzq = AppMenus.getInstance().cjVO.xzq
+            zhen = AppMenus.getInstance().cjVO.zhen
+            cun = AppMenus.getInstance().cjVO.xzqmc
+            code = AppMenus.getInstance().cjVO.code
+            AppMenus.getInstance().cjVO = null
+        }
+
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {//&&requestCode != 66
+            if (requestCode==233){
+                var photos: ArrayList<String>? = null
+                selectedPhotos.clear()
+
+                if (data != null) {
+                    photos = data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS)
+                }
+                if (photos != null) {
+                    for (i in photos.indices){
+                        val file = File(photos.get(i))
+                        val name = file.name
+
+                        val bitmap = IOHelper.loadBitmap(file.path,true)
+                        val file1: File = compressImages(bitmap, name)
+                        upFile1(file1,1,(maxPhoto+i+1));//file1
+                    }
+                    maxPhoto = maxPhoto+photos.size
+//                    selectedPhotos.addAll(photos)
+                }
+//                if (photoAdapter != null) photoAdapter!!.notifyDataSetChanged()
+            }else if (requestCode==234){
+                var photos: ArrayList<String>? = null
+                selectedPhotos1.clear()
+
+                if (data != null) {
+                    photos = data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS)
+                }
+                if (photos != null) {
+                    for (i in photos.indices){
+                        val file = File(photos.get(i))
+                        val name = file.name
+
+                        val bitmap = IOHelper.loadBitmap(file.path,true)
+                        val file1: File = compressImages(bitmap, name)
+                        upFile1(file1,2,(maxPhoto+i+1));//file1
+                    }
+                    maxPhoto1 = maxPhoto1+photos.size
+//                    selectedPhotos.addAll(photos)
+                }
+//                if (photoAdapter != null) photoAdapter!!.notifyDataSetChanged()
+            }
+        }
+    }
+
+
+    private fun upFile1( file2: File,type: Int,sorting: Int) {
+
+        val request = OkGo.post<BaseRespose<BcProjectFile>>(ApiConstants.PROJECT_UPLOAD_FILE)
+                .isMultipart(true)
+        /*request.params("type", 1)
+        request.params("filetype", 1)
+        request.params("msid", -1)*/
+        request.params("type", type)//file  file2.name
+        request.params("sorting", sorting)//file  file2.name
+        request.params("file", file2)//file  file2.name
+        request.execute(object : BaseNet<BaseRespose<BcProjectFile>>() {//BaseRespose<PjEnviorFileEntity>
+
+            override fun onStart(request: Request<BaseRespose<BcProjectFile>, out Request<Any, Request<*, *>>>?) {
+                super.onStart(request)
+                LoadingDialog.showDialogForLoading(this@XmIssueActivity)
+            }
+            override fun onSuccess(response: Response<BaseRespose<BcProjectFile>>) {
+//                super.onSuccess(response)
+                val body = response.body()
+//                ToastUtils.showShort(body)
+//                val json: BaseRespose <PjEnviorFileEntity> = Gson().fromJson(body, object : TypeToken<BaseRespose<PjEnviorFileEntity>?>() {}.type)
+                if (body.getCode()==0){
+                    if (type==1){
+                        notesFileList.add(body.data)
+                        schxtp!!.setNewData(notesFileList)
+                        schxtp!!.notifyDataSetChanged()
+                    }else{
+                        notesFileList1.add(body.data)
+                        schxtp1!!.setNewData(notesFileList1)
+                        schxtp1!!.notifyDataSetChanged()
+
+                    }
+                }else{
+                    ToastUtils.showShort(file2.name+"上传失败")
+                }
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                LoadingDialog.cancelDialogForLoading()
+            }
+
+            override fun onError(response: Response<BaseRespose<BcProjectFile>>) {
+                super.onError(response)
+                LoadingDialog.cancelDialogForLoading()
+                ToastUtils.showShort(response.exception.message)
+//                ToastUtils.showShort(response.exception.message)
+//                ToastUtils.showShort("上传失败")
+            }
+        })
+    }
+
+    /**
+     * 压缩图片（质量压缩）
+     *
+     * @param bitmap
+     */
+    fun compressImages(bitmap: Bitmap, fileName: String): File {
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos) //质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
+        var options = 100
+        while (baos.toByteArray().size / 1024 > 1536) { //循环判断如果压缩后图片是否大于500kb,大于继续压缩
+            baos.reset() //重置baos即清空baos
+            options -= 5 //每次都减少10
+            bitmap.compress(Bitmap.CompressFormat.JPEG, options, baos) //这里压缩options%，把压缩后的数据存放到baos中
+            val length = baos.toByteArray().size.toLong()
+        }
+//        val format = SimpleDateFormat("yyyyMMddHHmmss")
+//        val date = Date(System.currentTimeMillis())
+//        val filename = format.format(date)
+        //        File file = new File(Environment.getExternalStorageDirectory(), fileName + ".png");
+        val file1 = File(GetFileUtil.getSDCardPath() + "jymj/tzrjhj/pic/")
+        if (!file1.isDirectory) {
+            file1.mkdirs()
+        }
+        val file = File(GetFileUtil.getSDCardPath()+"jymj/tzrjhj/pic/1"+fileName)
+//        val file = File(Environment.getExternalStorageDirectory(), fileName)
+        try {
+            val fos = FileOutputStream(file)
+            try {
+                fos.write(baos.toByteArray())
+                fos.flush()
+                fos.close()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        }
+        recycleBitmap(bitmap)
+        return file
+    }
+
+    //释放
+    fun recycleBitmap(vararg bitmaps: Bitmap?) {
+        if (bitmaps == null) {
+            return
+        }
+        for (bm in bitmaps) {
+            if (null != bm && !bm.isRecycled) {
+                bm.recycle()
+            }
+        }
+    }
+
+    //    选择状态改变
+    private fun changeState(list: List<JsjbBean>, position: Int) {
+        if (list[position].isCheck()) {
+            list[position].setCheck(false)
+            tcList1.remove(list[position].text)
+        } else {
+            tcList1.add(list[position].text)
+            list[position].setCheck(true)
+        }
+    }
+}

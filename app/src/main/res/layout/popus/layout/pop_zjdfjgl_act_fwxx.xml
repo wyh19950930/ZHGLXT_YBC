@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/popback"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_pop_zjdfjgl_act_fwxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="房屋信息"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+                <View
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"/>
+                <LinearLayout
+                    android:id="@+id/ll_pop_zjdfjgl_act_fwmj"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="房屋面积:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:digits="1234567890."
+                        android:inputType="number"
+                        android:id="@+id/tv_pop_zjdfjgl_act_fwmj"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:hint="请输入房屋面积"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="㎡"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pop_zjdfjgl_act_fwcs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="房屋层数:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:id="@+id/tv_pop_zjdfjgl_act_fwcs"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:hint="请输入房屋层数"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="层"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_pop_zjdfjgl_act_fwgd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="房屋高度:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:digits="1234567890."
+                        android:inputType="number"
+                        android:id="@+id/tv_pop_zjdfjgl_act_fwgd"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:hint="请输入房屋高度"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_environmental2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_pop_zjdfjgl_act_fwxx">
+
+                <Button
+                    android:id="@+id/bt_pop_zjdfjgl_act_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:text="关闭" />
+                <Button
+                    android:id="@+id/bt_pop_zjdfjgl_act_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:text="确定"
+                    android:textColor="@color/white" />
+                <!--            确定-->
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</RelativeLayout>

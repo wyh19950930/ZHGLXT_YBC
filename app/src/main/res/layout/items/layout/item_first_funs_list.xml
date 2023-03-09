@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/background_first_funs_list"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/iv_first_funs_list"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_marginLeft="45dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp">
+            <TextView
+                android:id="@+id/tv_first_funs_list"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:textSize="17sp"
+                android:text="基本情况"
+                android:textColor="#333333"
+                android:gravity="center_vertical"
+                />
+            <View
+                android:id="@+id/view_first_funs_list"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#cccccc"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

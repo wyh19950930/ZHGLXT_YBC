@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jymj.zhglxt.xm.activity.ScListActivity">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_act_xm_sc_list_back"
+            android:paddingTop="12.5dp"
+            android:paddingBottom="12.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_left_icon"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="@color/black3"
+            android:text="收藏页面"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/bt_actiive_f3f5fa">
+
+            <EditText
+                android:id="@+id/et_act_xm_sc_list_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:maxLength="15"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="🔍搜索项目标题"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_act_sc_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

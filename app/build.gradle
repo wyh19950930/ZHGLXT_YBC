@@ -1,0 +1,190 @@
+plugins {
+    id 'com.android.application'
+}
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'org.greenrobot.greendao'
+
+greendao {
+    schemaVersion 3
+    daoPackage 'com.anye.greendao.gen'
+    targetGenDir 'src/main/java'
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.jymj.zhglxt"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 33
+        versionName "0.3.3"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+    }
+
+    productFlavors {
+        hcz {
+            applicationId "com.jymj.hczzhglxt"
+            manifestPlaceholders = [
+//                    黄村镇综合管理系统
+appname     : "智慧城镇系统",
+appicon     : "@mipmap/ic_launcher",
+fileprovider: "com.jymj.hczzhglxt",
+//com.jymj.hczzhglxt_file
+            ]
+        }
+        bcjc {
+            applicationId project.ApplicationID_BCJC
+            manifestPlaceholders = [//智慧城镇系统
+                                    appname     : project.AppName_BCJC,
+                                    appicon     : "@mipmap/ic_launcher",//黄山店的图标
+                                    fileprovider: project.FileProvider_BCJC,
+                                    amapkey     : project.AMapKey_BCJC
+            ]
+        }
+        hsd {
+            applicationId project.ApplicationID_BCJC1
+            manifestPlaceholders = [//智慧城镇系统
+                                    appname     : project.AppName_BCJC1,
+                                    appicon     : "@mipmap/ic_launcher1",//智慧城镇的图标
+                                    fileprovider: project.FileProvider_BCJC1,
+                                    amapkey     : project.AMapKey_BCJC1
+            ]
+        }
+    }
+
+    kotlinOptions { jvmTarget = '1.8' }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    def listSubFile = {
+        def resFolder = 'src/main/res/layout'
+        def files = file(resFolder).listFiles()
+        def folders = []
+
+        files.each {
+
+            item -> folders.add(item.absolutePath)
+
+        }
+
+        folders.add(file(resFolder).parentFile.absolutePath)
+
+        return folders
+
+    }
+
+    sourceSets {
+
+        main {
+
+            res.srcDirs = listSubFile()
+
+        }
+
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+//    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //kotlin语言
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'org.greenrobot:greendao-generator:3.3.0'
+    //控制数据库方法
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    //设置动态权限
+    implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    //按钮的一些动画效果
+    implementation project(':common')
+    implementation project(':PhotoPicker')
+    //这个导入的是基类  和一些工具类
+    /*网络框架*/
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    //这个应该是弹出框的框架
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //okgo   网络框架
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.amap.api:map2d:5.2.0'
+    //地图控件
+    implementation 'com.amap.api:location:4.1.0'
+    //地图定位
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
+    implementation 'com.github.zagum:Android-SwitchIcon:1.3.7'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.amap.api:search:latest.integration'
+    //底部联动弹出框
+    //    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    /*implementation 'com.android.support:support-media-compat:27.1.1'
+            implementation 'com.android.support:support-fragment:27.1.1'
+            implementation 'com.android.support:support-v4:27.1.1'
+            implementation 'com.android.support:appcompat-v7:27.1.1'
+            implementation 'com.android.support:recyclerview-v7:27.1.1'
+            implementation 'androidx.slidingpanelayout:slidingpanelayout:1.0.0'
+            implementation 'androidx.legacy:legacy-support-core-ui:1.0.0'*/
+    implementation files('libs/Parse-1.9.4.jar')
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    //加载图片的框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'es.voghdev.pdfviewpager:library:1.0.3'
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.8'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    implementation 'com.github.itlwy:PaginationExample:0.0.20'
+    //    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.1'
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+    implementation 'es.voghdev.pdfviewpager:library:1.0.3'
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.8'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    implementation 'com.github.itlwy:PaginationExample:0.0.20'
+    api project(path: ':DateRangePicker')
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'//侧滑删除
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'//侧滑删除2
+    implementation 'com.github.SilenceDut:jpinyin:v1.0'
+    implementation group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12'//导入/导出excel表格
+    implementation 'com.qianwen:okhttp-utils:3.8.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all { output ->
+                def date = new Date().format("yyMMdd", TimeZone.getTimeZone("GMT+08"))
+                if (variant.buildType.name == 'debug') {
+//                "项目名称_${android.defaultConfig.versionName}_${date}_debug.apk"
+                    output.outputFileName = "项目名称_${android.defaultConfig.versionName}_${date}_debug.apk"
+                } else if (variant.buildType.name == 'release') {
+//                "项目名称_${android.defaultConfig.versionName}_${date}_release.apk
+                    output.outputFileName = "${variant.productFlavors[0].properties.get("manifestPlaceholders").getAt("appname")}_${date}.apk"
+                }
+            }
+    }
+}

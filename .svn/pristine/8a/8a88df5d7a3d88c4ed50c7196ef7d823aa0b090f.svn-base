@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_xm_first"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bt_actiive_fdfdfd_kuang"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_item_xm_first"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/shopping_mall_banner"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_xm_first_title"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="童话森林"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_xm_first_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京市"
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/xm_first_point_icon"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_item_xm_first_lx"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/tv_item_xm_first_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打造以自然原生态、科普教育、趣味生活为一体的绿色
+生态融合发展产业。"
+        android:textColor="#666666"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="12dp"/>
+
+</LinearLayout>

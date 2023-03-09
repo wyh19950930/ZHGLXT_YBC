@@ -1,0 +1,72 @@
+package com.jymj.zhglxt.xm.bean;
+
+import java.util.Date;
+
+/**
+ * Created by lc on 2022/12/5.
+ */
+public class BcProjectLx {
+    private Long id;
+    private Long projectId;
+    private String createTime;
+    private String updateTime;
+    private Long userId;
+    private String lx;//Integer
+    private String color;//Integer
+
+    public String getColor() {
+        return color==null?"#4CA2FE":color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Long projectId) {
+        this.projectId = projectId;
+    }
+
+    public String getCreateTime() {
+        return createTime==null?"":createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime==null?"":updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getLx() {
+        return lx;
+    }
+
+    public void setLx(String lx) {
+        this.lx = lx;
+    }
+}

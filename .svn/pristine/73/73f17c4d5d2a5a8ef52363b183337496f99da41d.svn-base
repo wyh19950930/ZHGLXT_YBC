@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_ct_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.main.activity.CtDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_ct_detail_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="拆腾详情"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map_ct_detail"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="项目名称" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_xmmc"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="承担单位" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_cddw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="项目规模" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_xmgm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="腾退状态" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_ttzt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="支付情况" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_zfqk"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_list1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#BFF1FF"
+                        android:gravity="center"
+                        android:text="支付金额" />
+
+                    <TextView
+                        android:id="@+id/tv_ct_detail_zfje"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_list1"
+                        android:gravity="center_vertical"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--    *****************新的详情分界线-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="项目名称:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_xmmc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xx项目" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="村名:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_cm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xx村" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="承担单位:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_cddw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xx公司" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="支付情况:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_zfqk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未支付" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="档案编号:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_dabh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="007" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="标段组别:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_bhzb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未动工" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="权属:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_qs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产权人或承租人:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_cqr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="张三" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="企业名称:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_qymc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xx公司" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="合同期限:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_chtqx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020-2-06-06" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="合同租地面积:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_htzdmj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1000㎡" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实测占地面积:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_sczzd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1000㎡" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实测建筑面积:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_scjzmj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2000㎡" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="有无产权证:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_ywcqz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="有" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系电话:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv1_ct_detail_lxdh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13934339275" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--<LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <LinearLayout
+                    android:background="@drawable/shape_list1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#BFF1FF"
+                        android:text="认定情况"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:background="@drawable/shape_list1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/shape_list1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#BFF1FF"
+                        android:text="认定金额"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:background="@drawable/shape_list1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <LinearLayout
+                    android:background="@drawable/shape_list1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#BFF1FF"
+                        android:text="支付情况"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:background="@drawable/shape_list1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/shape_list1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#BFF1FF"
+                        android:text="祝福金额"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:background="@drawable/shape_list1"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/ic_ct_jdb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:text="进度表"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_ct_detail_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="修改"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/black" />
+
+            <com.jymj.zhglxt.widget.TimeLineView
+                android:id="@+id/tlv_tent_tui"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="3dp"
+                app:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_ct_detail_zt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="现场照片"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传时间: 2020-06-01"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_teng_see_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

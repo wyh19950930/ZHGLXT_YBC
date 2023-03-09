@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_environmental2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+          android:background="@drawable/popback"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:textStyle="bold"
+              android:textColor="@color/black"
+              android:textSize="18sp"
+              android:gravity="center"
+              android:text="翻建处理"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"/>
+          <View
+              android:background="@color/gray"
+              android:layout_width="match_parent"
+              android:layout_height="0.2dp"/>
+
+          <LinearLayout
+              android:id="@+id/ll_fan_jian"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/ll_pop_environmental2">
+
+              <Button
+                  android:id="@+id/bt_close_fan_jian_zg_upfile"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/gray"
+                  android:text="关闭" />
+
+              <Button
+                  android:id="@+id/bt_upload_fan_jian_zg_upfeile"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:layout_weight="1"
+                  android:background="@color/blue"
+                  android:text="处理"
+                  android:textColor="@color/white" />
+              <!--            确定-->
+          </LinearLayout>
+      </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

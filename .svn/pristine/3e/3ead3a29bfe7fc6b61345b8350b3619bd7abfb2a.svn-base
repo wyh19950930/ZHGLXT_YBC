@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/item_marker_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/colorPrimary"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp"
+        android:textStyle="bold"
+        android:text="速度"
+        />
+
+    <ImageView
+        android:id="@+id/iv_item_marker"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:src="@drawable/ic_hbjc_dcl_ls"/>
+
+</LinearLayout>

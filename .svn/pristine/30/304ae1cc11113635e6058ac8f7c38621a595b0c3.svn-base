@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/item_ctgl_pct"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            />
+
+        <Button
+            android:id="@+id/item_ctgl_btn"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/bt_actiive_blue"
+            android:text="进入项目"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/mapback_ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/item_ctgl_name"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#78E3FE"
+                android:text="黄村镇A片区"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/table_title_textview"
+                android:text="承担单位"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_cddw"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="某某项目"
+                android:textColor="@color/black" />
+
+            <TextView
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="总计"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_zj"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="555"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/table_title_textview"
+                android:text="总成本金额"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_zcbje"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="222"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/table_title_textview"
+                android:text="已拆"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_yc"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="555"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/table_title_textview"
+                android:text="已支付金额"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_yzfje"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="222"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/table_title_textview"
+                android:text="未拆"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_ctgl_wc"
+                style="@style/table_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="555"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

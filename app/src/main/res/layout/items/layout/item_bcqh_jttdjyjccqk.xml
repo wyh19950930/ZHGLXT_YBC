@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="480dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_year"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_cbdmj"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="承包地面积(亩)" />
+
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_lz"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="流转(亩)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_zy"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="自营(亩)" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_bcqh_jttdjyjccqk_ncp_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_nyjx"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="农业机械(马力)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_srqc"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="私人汽车(辆)" />
+
+    <TextView
+        android:id="@+id/item_bcqh_jttdjyjccqk_zzjzmj"
+        style="@style/table_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="住宅建筑面积(平方米)" />
+
+
+</LinearLayout>

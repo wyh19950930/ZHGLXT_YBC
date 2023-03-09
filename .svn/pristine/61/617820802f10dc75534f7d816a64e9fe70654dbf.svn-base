@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dddddd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginBottom="0.5dp"
+        >
+        <TextView
+            android:id="@+id/tv_item_xm_jbqk_jsqk_child"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="前期准备"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021-08-29"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:layout_marginRight="19dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="查看"
+            android:textSize="14sp"
+            android:textColor="#4CA2FE"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

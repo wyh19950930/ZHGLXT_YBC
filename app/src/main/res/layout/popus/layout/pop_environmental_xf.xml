@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:background="@drawable/mapback_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:text="问题下发"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"/>
+            <LinearLayout
+                android:id="@+id/ll_zgyq_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="整改要求:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_zgyq_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请输入整改要要求"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_jsry_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="接收人员:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:spinnerMode="dialog"
+                    android:id="@+id/tv_jsry_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请输入整改要要求"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_clshijian_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="处理时间:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:focusable="false"
+                    android:id="@+id/tv_clshijian_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请选择处理时间"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_clsj_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="处理期限(天):"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:spinnerMode="dialog"
+                    android:id="@+id/sp_clqx_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请选择处理期限"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:visibility="gone"
+                    android:focusable="false"
+                    android:id="@+id/tv_clsj_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请选择处理期限"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_xfjy_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="备注:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_xfjy_environmental"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:hint="请输入下发建议"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="上传图片"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recy_pop_environmental_xf"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="上传视频"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rlv_pop_video_add_xf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/ll_xf_environmental"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_clear_environmental_xf"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="2"
+                    android:background="@color/gray"
+                    android:text="关闭" />
+
+                <Button
+                    android:id="@+id/bt_upload_environmental_xf"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:text="确定"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
